@@ -1,0 +1,104 @@
+\input{../LaTeX/header}
+\usepackage{longtable}
+
+\begin{document}
+    \tableofcontents
+    
+    \newpage
+    \section{Zielsetzung}
+    Mit dem Versuch "`Wärmepumpe"' soll die Funktionsweise einer Wärmepumpe verstanden und zudem soll eine Aussage über die Güteziffer und den Masssendurchsatz,
+    sowie den Wirkungsgrad des Kompressors getroffen werden.
+
+    \section{Theoretische Grundlage}
+    Beobachtungen und der zweite Hauptsatz der Thermodynamik zeigen, dass der Wärmefluss zwischen zwei gekoppelten Medien (z.B. durch ein Transportmedium), unterschiedlicher Temperatur, immer vom wärmeren zum kälterem zeigt.
+
+    Es ist jedoch möglich diesen Wärmefluss umzudrehen. Dafür muss jedoch zusätzliche Energie aufgebracht werden zum Beispiel in Form von mechanischer. Eine Vorrichtung die in der Lage ist dies zu tun ist 
+    eine sogenannte Wärmepumpe. Dazu nutzt es eines Kompressors und ein Transportmedium, sowie ein Ventil. 
+
+        \subsection{Bestimmung der realen Güteziffer}
+    	Das Verhältnis der transportierenden Wärmemenge und der dafür notwendigen Arbeit($A$) beschreibt die Größe der Güteziffer($\upsilon$) (unter idalisierten Bedingungen).
+        Diese kann aus dem ersten Hauptsatz deer Thermodynamik hergeleitet werden:
+
+        Der erste Hauptsatz der Thermodynamik besagt, dass Energien ineinander umwandelbar sind, aber nicht gebildet, bzw. vernichtet werden können. 
+        Dies bedeutet im Kontext der Wärmepumpe, dass
+
+        \begin{equation}
+            Q_1 = Q_2 + A
+            \label{eqn:Th1}
+        \end{equation}
+
+        gilt, wobei $Q_1$ die Wärme, welche von dem Transportmedium abgegeben wird und $Q_2$ die Wärme, welche an das Transportmedium abgegeben wird, darstellt. Daraus ergibt sich für die Güteziffer:
+        \begin{equation}
+            \upsilon = \frac{Q_\text{transp}}{A} \stackrel{(\ref{eqn:irev})}{\implies} \upsilon_\text{id} = \frac{T_1}{T_1 - T_2}.
+            \label{eqn:Gueteziffer}
+        \end{equation}
+
+        Aus dem zweiten Hauptsatz der Thermodynamik und der Annahme, dass während der Wärmeübertragung kein Wärmeverlust der beiden Resoervoire stattfindet
+         und die Wärmeübertragung reversibel verläuft,ergibt sich idialisiert:
+
+        \begin{equation}
+            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} = 0.
+            \label{eqn:irev}
+        \end{equation}
+        
+        Da jedoch eine Wärmepumpe in der Realität nicht in der Lage ist den Prozess der Wärmeübertragung vollständig reversibel durchzuführen und dieser dardurch irreversibel wird, gilt:
+
+        \begin{equation}
+            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} > 0.
+            \label{eqn:rev}
+        \end{equation}
+
+        So ergibt sich für eine reale Wärmepumpe mit \ref{eqn:Th1} und \ref{eqn:rev}
+
+        \begin{equation}
+            \upsilon_\text{id} < \frac{T_1}{T_1 - T_2}.
+            \label{eqn:Gueteziffer_real}
+        \end{equation}
+
+        
+
+
+
+
+        \subsection{Bestimmung des Massendurchsatzes}
+
+        \subsection{Bestimmung der mechanischen Kompressorleistung $N_\text{mech}$}
+
+    \newpage
+    \section{Durchführung: ebenfalls}
+
+    \newpage
+    \section{Messwerte}
+    Die folgenden Messwerte wurden uns zur Verfügung gestellt:
+    \input{table}
+
+    \newpage
+    \section{Auswertung}
+        \subsection{Aufgabenteil a)}
+        \begin{figure}
+               \centering
+               \includegraphics[width=\textwidth]{grafic.pdf}
+               \caption{Auswertung mit ausgleichsgeraden}
+               \label{fig:grafic}
+        \end{figure}
+
+
+            
+
+        \subsection{Aufgabenteil b)}
+
+
+        \subsection{Aufgabenteil c)}
+
+
+        \subsection{Aufgabenteil d)}
+
+
+        \subsection{Aufgabenteil e)}
+
+
+        \subsection{Aufgabenteil f)}
+
+
+        \subsection{Aufgabenteil g)}
+\end{document}
