@@ -1,5 +1,4 @@
 \input{../LaTeX/header}
-\usepackage{longtable}
 
 \begin{document}
     \tableofcontents
@@ -15,6 +14,7 @@
     Es ist jedoch möglich diesen Wärmefluss umzudrehen. Dafür muss jedoch zusätzliche Energie aufgebracht werden zum Beispiel in Form von mechanischer. Eine Vorrichtung die in der Lage ist dies zu tun ist 
     eine sogenannte Wärmepumpe. Dazu nutzt es eines Kompressors und ein Transportmedium, sowie ein Ventil. 
 
+        %2.1
         \subsection{Bestimmung der realen Güteziffer}
     	Das Verhältnis der transportierenden Wärmemenge und der dafür notwendigen Arbeit($A$) beschreibt die Größe der Güteziffer($\upsilon$) (unter idalisierten Bedingungen).
         Diese kann aus dem ersten Hauptsatz deer Thermodynamik hergeleitet werden:
@@ -41,37 +41,105 @@
             \label{eqn:irev}
         \end{equation}
         
-        Da jedoch eine Wärmepumpe in der Realität nicht in der Lage ist den Prozess der Wärmeübertragung vollständig reversibel durchzuführen und dieser dardurch irreversibel wird, gilt:
+        Da jedoch eine Wärmepumpe in der Realität nicht in der Lage ist den Prozess der Wärmeübertragung vollständig reversibel durchzuführen und dieser Prozess dardurch irreversibel wird, gilt:
 
         \begin{equation}
             \frac{Q_1}{T_1} - \frac{Q_2}{T_2} > 0.
             \label{eqn:rev}
         \end{equation}
 
-        So ergibt sich für eine reale Wärmepumpe mit \ref{eqn:Th1} und \ref{eqn:rev}
+        So ergibt sich für eine reale Wärmepumpe mit (\ref{eqn:Th1}) und (\ref{eqn:rev}):
 
         \begin{equation}
-            \upsilon_\text{id} < \frac{T_1}{T_1 - T_2}.
+            \upsilon_\text{real} < \frac{T_1}{T_1 - T_2}.
             \label{eqn:Gueteziffer_real}
         \end{equation}
 
-        
+        Aus dieser Gleichung (\ref{eqn:Gueteziffer_real}) folgt, dass die Wärmepumpe umso weniger Arbeit braucht, desto geringer die Differenz der beiden Temperaturen ist.
 
 
 
-
+        %2.2
         \subsection{Bestimmung des Massendurchsatzes}
 
+        Der Massendurchsatz berechnet sich nach [D206 verlinken, S. 5] über den Differenzquotienten über:
+        \begin{equation}
+            \frac{\Delta Q_2}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t}
+            \label{eqn:mass1}
+        \end{equation}
+
+        und 
+
+        \begin{equation}
+            \frac{\Delta Q_2}{\Delta t} = L \frac{\Delta m}{\Delta t}
+            \label{eqn:mass2}
+        \end{equation}
+
+        mit (\ref{eqn:mass1}) und (\ref{eqn:mass2}) folgt:
+
+        \begin{equation}
+            L \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t} \iff \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{1}{L} \frac{\Delta T_2}{\Delta t},
+        \end{equation}
+        
+        falls die Verdampfungswärme $L$ bekannt ist.
+
+
+        %2.3
         \subsection{Bestimmung der mechanischen Kompressorleistung $N_\text{mech}$}
 
-    \newpage
-    \section{Durchführung: ebenfalls}
+        Für die Arbeit $A_\text{m}$ des Kompressors, wenn er das Gasvolumen $V_\text{a}$ auf den Wert $V_\text{b}$ verringert, gilt:
 
+        \begin{equation}
+            A_\text{m} = - \int_{V_\text{a}}^{V_\text{b}} p \, \symup{d}V.
+        \end{equation}
+
+        $N_\text{mech}$
+
+        %3
+        \section{Prinzipieller Aufbau einer Wärmepumpe}
+    	Die Wärmepumpe benutzt als Transportmedium ein reales Gas,welches durch Phasenumwandlung in der Lage ist Wärme zu transportieren. 
+        Um dies besonders effizient tun zu können ist es sinnvoll ein Gas mit einer möglichst hoher Kondensationswärme zu verwenden. 
+        Der schematische Aufbau einer Wärmepumpe ist in \autoref{fig:prinzW} zu sehen.
+        \begin{figure}
+            \centering
+               \includegraphics[scale=0.75]{aufbau_1.pdf}
+               \caption{Prinzipieller Aufbau einer Wärmepumpe ($p_\text{b}$ > $p_\text{a}$; $T_1$ > $T_2$)}
+               \label{fig:prinzW}
+        \end{figure}
+        Der Kompressor K erzeugt eine annähernd adiabatische Kompression, also eine Kompression ohne Wärmeverluste an die Umgebung. 
+        Zusätzlich wird durch diese Kompression ein Mediumskreislauf im System ingang gebracht. Durch das Drosselventil D und dem hohen Strömungswiderstand diesem baut sich ein Druckunterschied
+        zwischen vor dem Ventil und dannach auf ($p_\text{b}-p_\text{a}$).
+
+        Die Apparatur ist so konzipiert, dass das Gas Reservoir 2 und 1 durchströmt und jeweils sein Zustand in einem der beiden ändert. Dies bedeutet, dass das Gas sich im Reservoir 2 
+        vergasförmigt und in Reservoir 1 durch den erhöhten Druck ($p_\text{b}$) wieder verflüssigt und so seine, durch die Vergasung, aufgenommene Wärme wieder abgibt. Die Messgröße der 
+        Verdampfungswärme ist L pro Gramm Substanz.  Somit ist das Reservoir 1 das wärmere und Reservoir 2 das kältere.
+
+        Damit die Apparatur störungsfrei arbeiten kann ist es notwendig weitere Armaturen ins System zu integrieren. Diese haben jedoch keinen direkten Einfluss auf die prinzipielle Wirkungsweise. 
+        So benutzt man einen sogennanten "`Reiniger"' R, welches das verflüssigte Transportmedium von Gasblasen reinigt, sodass eine blasenfreie Flüssigkeitszufuhr zum Drosselventil D gewährleistet werden kann.
+        Zudem wird eine "`Steuerungsvorrichtung"' S für das Drosselventil benutzt, sodass die Durchlässigkeit der Drosselventils über die Temperaturdifferenz zwischen Eingang und Ausgang ($T_2 - T_1$) 
+        des Reservoirs 2 gesteuert werden kann.
+
+    %4
+    \newpage
+    \section{Durchführung}
+    Der Versuchsbau ist folgendermaßen:
+    \begin{figure}
+               \centering
+               \includegraphics[width=\textwidth]{aufbau_2.pdf}
+               \caption{Schematische Darstellung der kompletten Messapparatur}
+               \label{fig:scheW}
+    \end{figure}
+    Sobald der Kompressor eingeschaltet wird, werden die Temperaturen T1 und T2, die Drücke p1
+    und p2 und die Kompressorleistung N an den Anzeigegeräten abgelesen. Damit die Zeitabstände
+    beim Ablesen möglichst gleich sind, werden die Größen immer in derselben Reihenfolge notiert. Um die Drücke p1 und p2 zu erhalten, muss noch 1 bar auf die gemessenen Drücke p*1 und p*2 addiert werden.
+
+    %4
     \newpage
     \section{Messwerte}
     Die folgenden Messwerte wurden uns zur Verfügung gestellt:
     \input{table}
 
+    %5
     \newpage
     \section{Auswertung}
         \subsection{Aufgabenteil a)}
@@ -101,4 +169,8 @@
 
 
         \subsection{Aufgabenteil g)}
+
+    %6
+    \section{Literatur}
+    %Biber
 \end{document}
