@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.19)  30 OCT 2020 14:13
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.19)  30 OCT 2020 15:48
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -1290,36 +1290,32 @@ Package luatex.def Info: aufbau_1.pdf  used on input line 105.
 <aufbau_2.pdf, id=85, 536.75531pt x 442.65375pt>
 File: aufbau_2.pdf Graphic file (type pdf)
 <use aufbau_2.pdf>
-Package luatex.def Info: aufbau_2.pdf  used on input line 129.
+Package luatex.def Info: aufbau_2.pdf  used on input line 128.
 (luatex.def)             Requested size: 418.25555pt x 344.9308pt.
- [5<./aufbau_2.pdf>] (./table.tex) [6] [7]
-<grafic.pdf, id=102, 722.7pt x 578.16pt>
+ [5<./aufbau_2.pdf>] (./table.tex) [6]
+<grafic.pdf, id=98, 722.7pt x 578.16pt>
 File: grafic.pdf Graphic file (type pdf)
 <use grafic.pdf>
-Package luatex.def Info: grafic.pdf  used on input line 150.
+Package luatex.def Info: grafic.pdf  used on input line 148.
 (luatex.def)             Requested size: 418.25555pt x 334.6008pt.
- [8<./grafic.pdf>] (./protokoll.aux)
-
-Package rerunfilecheck Warning: File `protokoll.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `protokoll.aux':
-(rerunfilecheck)             Before: A9969260017F4B965AB38A88D5DB349D;10446
-(rerunfilecheck)             After:  AE7E6C78D58E5D74189394C71CDF0F2E;10446.
+ [7<./grafic.pdf>] (./protokoll.aux)
+Package rerunfilecheck Info: File `protokoll.aux' has not changed.
+(rerunfilecheck)             Checksum: 50D81E67F890CFFC4FB8345F4F3D463A;10446.
 Package rerunfilecheck Info: File `protokoll.toc' has not changed.
-(rerunfilecheck)             Checksum: D3F142569AA4B84807A2C0323D5734F4;1485.
+(rerunfilecheck)             Checksum: 71613DD4EE97BC8942A50BE2CF3C3D42;1485.
 )
 
 Here is how much of LuaTeX's memory you used:
  25229 strings out of 479059
- 156265,1373583 words of node,token memory allocated
+ 156268,1373583 words of node,token memory allocated
  723 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 48 attribute, 68 gl
 ue_spec, 26 attribute_list, 1 write nodes
-   avail lists: 1:1,2:9183,3:654,4:19,5:4458,6:53,7:8320,8:97,9:4424,10:12,11:54
+   avail lists: 1:2,2:9173,3:655,4:18,5:4464,6:54,7:8498,8:97,9:4430,10:12,11:54
 7
- 43837 multiletter control sequences out of 65536+600000
- 121 fonts using 35440227 bytes
- 110i,17n,114p,10659b,1127s stack positions out of 5000i,500n,10000p,200000b,200000s
+ 43838 multiletter control sequences out of 65536+600000
+ 121 fonts using 35440355 bytes
+ 110i,17n,114p,10659b,1119s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmrom
 an5-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype
 /public/lm-math/latinmodern-math.otf></home/tahirbanane/.local/texlive/2020/texm
@@ -1328,10 +1324,10 @@ exlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home
 /tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-r
 egular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/publ
 ic/lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (8 pages, 144248 bytes).
+Output written on protokoll.pdf (7 pages, 143980 bytes).
 
-PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 131072)
+PDF statistics: 226 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 131072)
  137 words of extra memory for PDF output out of 10000 (max. 100000000)
 
