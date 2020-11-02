@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  3 NOV 2020 00:46
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  3 NOV 2020 00:54
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -994,33 +994,59 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
+in chemistry (CN)
+\l__chemgreek_tmpa_int=\count312
+\g__chemgreek_tmpa_int=\count313
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count314
+\__mhchem_arrow_extPgfLength_skip=\skip77
+\mhchem@minispace@tmp=\skip78
+\mhchem@minibackspace@tmp=\skip79
+\mhchem@bondwidth=\skip80
+\mhchem@bondheight=\skip81
+\mhchem@smallbondwidth@tmpA=\skip82
+\mhchem@smallbondwidth@tmpB=\skip83
+\mhchem@smallbondwidth=\skip84
+\mhchem@bondtmp@minussidebearingleft=\skip85
+\mhchem@bondtmp@minussidebearingright=\skip86
+\l__mhchem_option_version_int=\count315
+\mhchem@option@minusmathsidebearingleft=\dimen198
+\mhchem@option@minusmathsidebearingright=\dimen199
+\mhchem@option@minustextsidebearingleft=\dimen256
+\mhchem@option@minustextsidebearingright=\dimen257
+)
 (./protokoll.aux)
 \openout1 = protokoll.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-Package scrbase Info: activating ngerman \figurename on input line 3.
-Package scrbase Info: activating ngerman \tablename on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+Package scrbase Info: activating ngerman \figurename on input line 5.
+Package scrbase Info: activating ngerman \tablename on input line 5.
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring OFF on input line 3.
+Package hyperref Info: Link coloring OFF on input line 5.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1032,26 +1058,26 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 3.
-LaTeX Info: Redefining \pageref on input line 3.
-LaTeX Info: Redefining \nameref on input line 3.
+LaTeX Info: Redefining \ref on input line 5.
+LaTeX Info: Redefining \pageref on input line 5.
+LaTeX Info: Redefining \nameref on input line 5.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
-\scratchdimen=\dimen198
+\scratchcounter=\count317
+\scratchdimen=\dimen258
 \scratchbox=\box63
-\nofMPsegments=\count314
-\nofMParguments=\count315
+\nofMPsegments=\count318
+\nofMParguments=\count319
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count316
-\MPscratchDim=\dimen199
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen259
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
 \everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1063,20 +1089,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/LatinModernMath(1)/m/n --> TU/lmr/m/n on input line 3
+(Font)                  TU/LatinModernMath(1)/m/n --> TU/lmr/m/n on input line 5
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 3.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 3.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 3.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 3.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 3.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 3.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 5.
 
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
@@ -1103,14 +1129,18 @@ Dictionary: translator-basic-dictionary, Language: English
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-) (./protokoll.toc)
+)
+
+Package chemgreek Info: Activating mapping `fontspec' on line 5.
+
+ (./protokoll.toc)
 \tf@toc=\write3
 
 \openout3 = protokoll.toc
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.15869pt too wide) in paragraph at lines 19--21
+Overfull \hbox (2.15869pt too wide) in paragraph at lines 21--23
 \TU/lmr/m/n/10.95 Das Ver-hält-nis der trans-por-tie-ren-den Wär-me-men-ge und
  der da-für not-wen-di-gen Arbeit($\TU/LatinModernMath(1)/m/n/10.95 𝐴$\TU/l
 mr/m/n/10.95 )
@@ -1118,91 +1148,89 @@ mr/m/n/10.95 )
 
 [2]
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 88.
+(Font)              scaled to size 12.00128pt on input line 90.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 88.
+(Font)              scaled to size 8.00085pt on input line 90.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 88.
+(Font)              scaled to size 6.00064pt on input line 90.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 88.
+(Font)              scaled to size 11.99872pt on input line 90.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 88.
+(Font)              scaled to size 7.99915pt on input line 90.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 88.
+(Font)              scaled to size 5.99936pt on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 88.
+(hyperref)                removing `subscript' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 90.
 
-<aufbau_1.pdf, id=66, 456.95718pt x 344.78813pt>
+[3]
+<aufbau_1.pdf, id=81, 456.95718pt x 344.78813pt>
 File: aufbau_1.pdf Graphic file (type pdf)
 <use aufbau_1.pdf>
-Package luatex.def Info: aufbau_1.pdf  used on input line 105.
+Package luatex.def Info: aufbau_1.pdf  used on input line 126.
 (luatex.def)             Requested size: 342.71704pt x 258.59045pt.
-[3] [4<./aufbau_1.pdf>]
-<aufbau_2.pdf, id=85, 536.75531pt x 442.65375pt>
+ [4<./aufbau_1.pdf>] [5]
+<aufbau_2.pdf, id=94, 536.75531pt x 442.65375pt>
 File: aufbau_2.pdf Graphic file (type pdf)
 <use aufbau_2.pdf>
-Package luatex.def Info: aufbau_2.pdf  used on input line 128.
+Package luatex.def Info: aufbau_2.pdf  used on input line 149.
 (luatex.def)             Requested size: 418.25555pt x 344.9308pt.
- [5<./aufbau_2.pdf>] (./table.tex) [6] [7]
-<grafic.pdf, id=102, 722.7pt x 578.16pt>
+ [6<./aufbau_2.pdf>] (./table.tex) [7] [8]
+<grafic.pdf, id=111, 722.7pt x 578.16pt>
 File: grafic.pdf Graphic file (type pdf)
 <use grafic.pdf>
-Package luatex.def Info: grafic.pdf  used on input line 148.
+Package luatex.def Info: grafic.pdf  used on input line 169.
 (luatex.def)             Requested size: 418.25555pt x 334.6008pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
- [8<./grafic.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
+ [9<./grafic.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
  (./protokoll.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
 
 
 Package rerunfilecheck Warning: File `protokoll.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `protokoll.aux':
-(rerunfilecheck)             Before: 862D6D3961998E7FFD64AD4D975AAC5C;10446
-(rerunfilecheck)             After:  B9247B867216624A3B5721C13F84F54D;10305.
-
-Package rerunfilecheck Warning: File `protokoll.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `protokoll.toc':
-(rerunfilecheck)             Before: D3F142569AA4B84807A2C0323D5734F4;1485
-(rerunfilecheck)             After:  2D78A6B4EA51FA9CD1896357712287DA;1420.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
+(rerunfilecheck)             Before: FD78BB57146E6552DA93F0674550D4F8;10306
+(rerunfilecheck)             After:  D25959B2C6DF1F5F4CBA0643B3365796;10306.
+Package rerunfilecheck Info: File `protokoll.toc' has not changed.
+(rerunfilecheck)             Checksum: 11153C6552A0D432B16F4F4247244E48;1420.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
 )
 
 Here is how much of LuaTeX's memory you used:
- 25193 strings out of 480992
+ 25966 strings out of 480992
  100000,1373583 words of node,token memory allocated
- 718 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 48 attribute, 68 glue_spec
-, 26 attribute_list, 1 write nodes
-   avail lists: 1:2,2:9169,3:536,4:18,5:486,6:35,7:4248,8:97,9:2214,10:12,11:279
-
- 42029 multiletter control sequences out of 65536+600000
+ 754 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 60 attribute, 68 glue_spec
+, 32 attribute_list, 1 write nodes
+   avail lists: 1:2,2:9169,3:613,4:18,5:486,6:35,7:4248,8:134,9:2214,10:12,11:27
+9
+ 42784 multiletter control sequences out of 65536+600000
  121 fonts using 35440731 bytes
  59i,17n,114p,10159b,1119s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.ot
-f></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-
-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-r
-egular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/lat
-inmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/l
-mroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/l
-m/lmsans10-bold.otf>
-Output written on protokoll.pdf (8 pages, 147441 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
+th.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-reg
+ular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latin
+modern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmr
+oman8-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-m
+ath/latinmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
+ublic/lm/lmsans10-bold.otf>
+Output written on protokoll.pdf (9 pages, 153266 bytes).
 
-PDF statistics: 235 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 131072)
+PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 131072)
  137 words of extra memory for PDF output out of 10000 (max. 100000000)
 
