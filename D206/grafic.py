@@ -48,12 +48,12 @@ plt.tight_layout()
 plt.savefig('grafic.pdf')
 
 
-# c) 4 Temperaturen t=8, 16, 24, 32  
+# c) 4 Temperaturen t= 8, 16, 24, 32  
 
 x = sympy.var('x')
 T_1f = f(x, *parameter1)
 T_2f = f(x, *parameter2)
 
-T_1fdif1 = T_1f.diff(x)
-T_2fdif1 = T_2f.diff(x)
+T_1f_1 = T_1f.diff(x)
+T_2f_1 = T_2f.diff(x)
 
