@@ -64,7 +64,7 @@ for value in range(1,5):
 
 
 
-print(f"\n \n \n Aufgabe d):")
+print(f"\n \n \n Aufgabe d): ")
 
 #Temperatur bei t=8 , T_1 =  ;T_2 =  
 #Temperatur bei t=16, T_1 =  ;T_2 = 
