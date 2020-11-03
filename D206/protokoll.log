@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  3 NOV 2020 13:38
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  3 NOV 2020 20:44
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -1190,33 +1190,22 @@ File: grafic.pdf Graphic file (type pdf)
 <use grafic.pdf>
 Package luatex.def Info: grafic.pdf  used on input line 185.
 (luatex.def)             Requested size: 418.25555pt x 334.6008pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
  [9<./grafic.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
  (./protokoll.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
-
-
-Package rerunfilecheck Warning: File `protokoll.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `protokoll.aux':
-(rerunfilecheck)             Before: C2908556D3492D9EEA660C6BBBC64D72;10306
-(rerunfilecheck)             After:  E113B0457EB2470DD3B268B2D375627A;10307.
-
-Package rerunfilecheck Warning: File `protokoll.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `protokoll.toc':
-(rerunfilecheck)             Before: 11153C6552A0D432B16F4F4247244E48;1420
-(rerunfilecheck)             After:  C072949EC089B7298F0762DBECEA47A4;1420.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package rerunfilecheck Info: File `protokoll.aux' has not changed.
+(rerunfilecheck)             Checksum: 23F80A95B7B202252BF0FC6770A8B664;10308.
+Package rerunfilecheck Info: File `protokoll.toc' has not changed.
+(rerunfilecheck)             Checksum: 7AD381595BDAE995EF86222631D485BF;1421.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
 )
 
 Here is how much of LuaTeX's memory you used:
- 25968 strings out of 480992
+ 25969 strings out of 480992
  100000,1373583 words of node,token memory allocated
  778 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 68 attribute, 68 glue_spec
@@ -1234,10 +1223,10 @@ oman8-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-m
 ath/latinmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/publ
 ic/lm/lmroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
 ublic/lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (9 pages, 154973 bytes).
+Output written on protokoll.pdf (10 pages, 156377 bytes).
 
-PDF statistics: 252 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 131072)
+PDF statistics: 256 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 131072)
  137 words of extra memory for PDF output out of 10000 (max. 100000000)
 
