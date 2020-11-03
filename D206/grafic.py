@@ -53,24 +53,71 @@ T_2f_1 = T_2f.diff(x)
 cash = np.array([0., 0., 0., 0., 0., 0., 0., 0.]) #Array mit den Ergebnissen des einsetzens 0-3 T_1f_1 und 4-7 T_2f_1
 #weil ich nicht herausbekkomen hab wie man zahlen einsetzt die quick and unrelayable version
 #Für dT_1/dt gilt:
+
+#Eleganter ist es, an den Kurvenverlauf ein Polynom 2ten Grades anzupassen und dieses Polynom
+#zu differenzieren
 for value in range(1,5):
-    cash[value - 1] = parameter1[0] + parameter1[1] * (8*value)
-    print(f"Das Ergebnis für T_1f_1(t={8*value}) = {cash[value - 1]} ")
+    cash[value - 1] = parameter1[1] + 2* parameter1[0] * (8*value*60)
+#    print(f"Das Ergebnis für T_1f_1(t={8*value}) = {cash[value - 1]} ")
 
 #Für dT_2/dt gilt:
 for value in range(1,5):
-    cash[value+3] = parameter2[0] + parameter2[1] * (8*value)
-    print(f"Das Ergebnis für T_2f_1(t={8*value}) = {cash[value+3]} ")
+    cash[value+3] = parameter2[1] +2*parameter2[0] * (8*value*60)
+#    print(f"Das Ergebnis für T_2f_1(t={8*value}) = {cash[value+3]} ")
+
+
+
+
+#mit dem ansatz von bene und niklas
+t_v, a_v, b_v , c_v=sympy.var("t_v a_v b_v c_v")
+ae_v, be_v , ce_v=sympy.var("ae_v be_v ce_v")
+
+T1test= a_v *t_v**2 + b_v *t_v + c_v
+
+def F1dt(t):
+    F1=T1test.diff(t_v)
+    F1dt_value = F1.evalf(subs={t_v:t,a_v:parameter1[0], b_v:parameter1[1] , c_v:parameter1[2] })
+
+    #mit fehlerfortpflanzung
+    F1_error = T1test.diff(a_v) * ae_v + T1test.diff(b_v) * be_v + T1test.diff(c_v) * ce_v
+    F1dt_error = F1_error.evalf(subs={t_v:t, ae_v: uncertainties1[0], be_v: uncertainties1[1], ce_v: uncertainties1[2]})
+    
+    return ufloat(F1dt_value, F1dt_error)
+
+def F2dt(t):
+    F1=T1test.diff(t_v)
+    F2dt_value = F1.evalf(subs={t_v:t,a_v:parameter2[0], b_v:parameter2[1] , c_v:parameter2[2] })
+
+    #ohne fehlerfortpflanzung
+    F2dt_error = F1.evalf(subs={t_v:t,a_v:parameter2[0], b_v:parameter2[1] , c_v:parameter2[2] })-F1.evalf(subs={t_v:t,a_v:parameter2[0]+uncertainties2[0], b_v:parameter2[1]+uncertainties2[1] , c_v:parameter2[2]+uncertainties2[2]})
+    
+    return ufloat(F2dt_value, -F2dt_error)
+
+
+
+
+for i in range(1,5):
+    print(f"F1dt({8*i})={F1dt(t[8*i-1]):.4f} , F2dt({8*i})={F2dt(t[8*i-1]):.4f}")
+
+
+
 
 
 
 print(f"\n \n \n Aufgabe d): ")
 
-#Temperatur bei t=8 , T_1 =  ;T_2 =  
-#Temperatur bei t=16, T_1 =  ;T_2 = 
-#Temperatur bei t=24, T_1 =  ;T_2 = 
-#Temperatur bei t=32, T_1 =  ;T_2 = 
+m_kg_k = 750#J/K mc?
+m = 4 #kg
+c_w = 4183 #J/kg/K
 
+for i in range(0,4):
+    print(f"Die reale Güteziffer bei t={(i+1)*8} ist: \n {((m*c_w + m_kg_k)*cash[i])/(N[(i+1)*8])} \nDie theoretische Güteziffer bei t={(i+1)*8} ist: \n {(T_1[(i+1)*8])/(T_1[(i+1)*8] - T_2[(i+1)*8])}")
+   # print(N[(i+1)*8])
+
+
+print(f"\n \n \n Aufgabe e): ")
+
+L = 0#Verdampfungswärme
 
 
 
