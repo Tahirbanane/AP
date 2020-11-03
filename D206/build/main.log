@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.11.3)  3 NOV 2020 20:42
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.11.3)  3 NOV 2020 21:23
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1490,52 +1490,52 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 98.
 
-[4]) (./content/durchfuehrung.tex
-<aufbau_1.pdf, id=91, 456.95718pt x 344.78813pt>
+[4]) (./content/durchfuehrung.tex [5]
+<aufbau_1.pdf, id=97, 456.95718pt x 344.78813pt>
 File: aufbau_1.pdf Graphic file (type pdf)
 <use aufbau_1.pdf>
-Package luatex.def Info: aufbau_1.pdf  used on input line 7.
+Package luatex.def Info: aufbau_1.pdf  used on input line 8.
 (luatex.def)             Requested size: 342.71704pt x 258.59045pt.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 8.
+(Font)              scaled to size 5.00053pt on input line 9.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 8.
- [5]
-<aufbau_2.pdf, id=102, 536.75531pt x 442.65375pt>
+(Font)              scaled to size 4.99947pt on input line 9.
+ [6<./aufbau_1.pdf>] [7]
+<aufbau_2.pdf, id=112, 536.75531pt x 442.65375pt>
 File: aufbau_2.pdf Graphic file (type pdf)
 <use aufbau_2.pdf>
-Package luatex.def Info: aufbau_2.pdf  used on input line 30.
+Package luatex.def Info: aufbau_2.pdf  used on input line 31.
 (luatex.def)             Requested size: 418.25555pt x 344.9308pt.
-) (./content/auswertung.tex [6<./aufbau_1.pdf>] [7<./aufbau_2.pdf>] (./content/table.tex) [8] [9]
-<grafic.pdf, id=127, 722.7pt x 578.16pt>
+) (./content/auswertung.tex [8<./aufbau_2.pdf>] (./content/table.tex) [9] [10]
+<grafic.pdf, id=129, 722.7pt x 578.16pt>
 File: grafic.pdf Graphic file (type pdf)
 <use grafic.pdf>
 Package luatex.def Info: grafic.pdf  used on input line 12.
 (luatex.def)             Requested size: 418.25555pt x 334.6008pt.
-) (./content/diskussion.tex) [10<./grafic.pdf>] [11] (./build/main.aux)
+) (./content/diskussion.tex) [11<./grafic.pdf>] [12] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: EDCBDBF1140E3553344178EE1C76FD18;11967.
+(rerunfilecheck)             Checksum: D0691D7D62F50F9CF03FF791D26BFA20;11540.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 4B1669793338A112C76195FE9C0AED95;1665.
+(rerunfilecheck)             Checksum: 5FEA1E5B1179A4A436E6098130172EAD;1583.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35736 strings out of 479005
- 156259,1977958 words of node,token memory allocated
+ 35735 strings out of 479005
+ 156267,1977958 words of node,token memory allocated
  879 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 74 attribute, 80 glue_spec, 39 attribute_list, 1 write, 3 pdf_action nodes
-   avail lists: 1:10,2:9188,3:668,4:55,5:4460,6:59,7:8333,8:122,9:4424,10:17,11:660
- 54018 multiletter control sequences out of 65536+600000
- 196 fonts using 71836699 bytes
+   avail lists: 1:5,2:9190,3:654,4:51,5:4460,6:58,7:8335,8:123,9:4424,10:17,11:545
+ 54017 multiletter control sequences out of 65536+600000
+ 196 fonts using 71835787 bytes
  110i,17n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/xits/XITSMath-Regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/tahirbanane/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (11 pages, 184343 bytes).
+Output written on main.pdf (12 pages, 185592 bytes).
 
-PDF statistics: 322 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
+PDF statistics: 321 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  56 named destinations out of 1000 (max. 131072)
- 145 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 137 words of extra memory for PDF output out of 10000 (max. 100000000)
 

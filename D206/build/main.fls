@@ -1,4 +1,4 @@
-PWD /mnt/c/Users/Tahirs PC/Desktop/Praktikum_1/AP/D206
+PWD /mnt/c/Users/Tahirs PC/Desktop/Praktikum_1/AnfängerPraktikum/AP/D206
 INPUT /home/tahirbanane/.local/texlive/2020/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT build/main.log
