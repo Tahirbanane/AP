@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.2}Bestimmung des Massendurchsatzes}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Bestimmung der mechanischen Kompressorleistung $N_\text {mech}$}{3}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Prinzipieller Aufbau einer Wärmepumpe}{4}{section.3}%
-\contentsline {section}{\numberline {4}Durchführung}{6}{section.4}%
+\contentsline {section}{\numberline {4}Durchführung}{5}{section.4}%
 \contentsline {section}{\numberline {5}Messwerte}{7}{section.5}%
 \contentsline {section}{\numberline {6}Auswertung}{9}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Aufgabenteil a)}{9}{subsection.6.1}%
