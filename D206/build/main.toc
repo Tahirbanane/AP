@@ -16,5 +16,3 @@
 \contentsline {subsection}{\numberline {6.5}Aufgabenteil e)}{11}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Aufgabenteil f)}{11}{subsection.6.6}%
 \contentsline {section}{\numberline {7}Diskussion}{11}{section.7}%
-\contentsline {section}{\nonumberline Literatur}{12}{section*.7}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
