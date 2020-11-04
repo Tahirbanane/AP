@@ -6,5 +6,7 @@ aufgaben c - g noch erledigen
 
 massendurchsatz m_2 erklärung ergänzen
 
+fehler von realer güteziffer ergänzen
+
 Wenn es gelingt, mit Hilfe von Ausgleichsrechnungen aus den Messwertepaaren { ti1T;i)} und {; ti2Ti)} einfache Funktionen T1 = f(t) und T2 = f(t) zu bestimmen,
 können sämtliche Differenzenquotienten in den Kapiteln 3a bis 3c durch Differentialquotienten ersetzt werden.
