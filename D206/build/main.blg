@@ -1,0 +1,16 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'build/main.blg'
+[98] biber-darwin:322> INFO - === Mi Nov  4, 2020, 01:56:38
+[123] Biber.pm:415> INFO - Reading 'build/main.bcf'
+[232] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[247] Biber.pm:4256> INFO - Processing section 0
+[247] Utils.pm:75> INFO - Globbing data source 'lit.bib'
+[248] Utils.pm:91> INFO - Globbed data source 'lit.bib' to lit.bib
+[248] Utils.pm:75> INFO - Globbing data source 'programme.bib'
+[248] Utils.pm:91> INFO - Globbed data source 'programme.bib' to programme.bib
+[268] Biber.pm:4455> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[270] bibtex.pm:1653> INFO - LaTeX decoding ...
+[273] bibtex.pm:1471> INFO - Found BibTeX data source 'lit.bib'
+[300] Biber.pm:4455> INFO - Looking for bibtex format file 'programme.bib' for section 0
+[468] Utils.pm:320> ERROR - Cannot find 'programme.bib'!
+[468] Biber.pm:132> INFO - ERRORS: 1
