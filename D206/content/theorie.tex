@@ -57,6 +57,7 @@
 
         \begin{equation}
         \frac{\Delta Q_1}{\Delta t} = (m_1 c_\text{w} + m_\text{k} c_\text{k}) \frac{\Delta T_1}{\Delta t},
+        \label{gueteziffer2}
         \end{equation}
 
         wobei $m_1 c_\text{w}$ die Wärmekapazität des Wassers im Reservoir 1 und $m_\text{k} c_\text{k}$ die Wärmekapazität der Kupferschlange und des Eimers bedeuten.
@@ -64,6 +65,7 @@
 
         \begin{equation}
         \upsilon = \frac{\Delta Q_1}{\Delta t N}
+        \label{eqn:gueteziffer3}
         \end{equation}
 
         mit N als die vom Wattmeter angezeigte und über das Zeitintervall $\Delta t$ gemittelte Kompressorleistung.
@@ -101,6 +103,7 @@
 
         \begin{equation}
             A_\text{m} = - \int_{V_\text{a}}^{V_\text{b}} p \, \symup{d}V.
+            \label{eqn:nmech1}
         \end{equation}
 
 Näherungsweise wird nun angenommen, dass die Kompression adiabatisch erfolgt.
@@ -108,18 +111,21 @@ Für den Zusammenhang zwischen Druck und Volumen gilt die Poissonsche Gleichung
 
 \begin{equation}
 p_\text{a}V^\kappa_\text{a} = p_\text{b}V^\kappa_\text{b} = pV^\kappa.
+\label{eqn:poisson}
 \end{equation}
 Damit erhält man für $A_\text{m}$
 \begin{equation}
 A_\text{m} = - p_\text{a}V^\kappa_\text{a}\int_{V_\text{a}}^{V_\text{b}} V^{-\kappa} \, \symup{d}V = \frac{1}{\kappa-1}p_\text{a}V^\kappa_\text{a}\Bigl(V^{-\kappa+1}_\text{b}-V^{-\kappa+1}_\text{a}\Bigr) = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) V_\text{a}
+\label{eqn:A_m}
 \end{equation}
 
 und für die mechanische Kompressorleistung $N_\text{mech}$
 \begin{equation}
 N_\text{mech} = \frac{\Delta A_\text{m}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{\Delta V_\text{a}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{1}{\rho} \frac{\Delta m}{\Delta t}.
+\label{eqn:nmech2}
 \end{equation}
 
 $\rho$ ist dabei die Dichte des Transportmediums im gasförmigen Zustand beim Druck $p_\text{a}$.
 Das hier benutzte Transportgas ist Dichlordiflourmethan ($\ce{Cl2F2C}$) mit $\rho_0 = 5,51\frac{g}{l}$. 
 Mit Hilfe der idealen Gasgleichung kann nun $\rho$ für Normalbedingungen (p = 1 Bar, T = $\SI{0}{\celsius}$) berrechnet werden.
-Außerdem gilt $\kappa=1,14$.
+
