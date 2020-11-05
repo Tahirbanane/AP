@@ -112,16 +112,16 @@ T_g1, T_g2 = sympy.var('T_g1 T_g2')
 
 g_t = (T_g1)/(T_g1 - T_g2)
 
-def theorie_error(T_g1f, T_g2f):
-    return (g_t.diff(T_g1) * T_g1f + g_t.diff(T_g2) * T_g2f)
+#def theorie_error(T_g1f, T_g2f):
+#    return (g_t.diff(T_g1) * T_g1f + g_t.diff(T_g2) * T_g2f)
 
-def theorie_error_1(i):
+def theorie_error(i):
     return (-T_2[(i+1)*8])/((T_1[(i+1)*8] - T_2[(i+1)*8])*(T_1[(i+1)*8] - T_2[(i+1)*8])) * 0.1 + (T_1[(i+1)*8])/((T_1[(i+1)*8] - T_2[(i+1)*8])*(T_1[(i+1)*8] - T_2[(i+1)*8])) * 0.1 #how do you square in python | Ableitung per Hand gebildet, da schwierigkeiten beim einsetzen es gab
 
 
 
 for i in range(0,4):
-    print(f"Die reale Güteziffer bei t={(i+1)*8} ist: {((m*c_w + m_kg_k)*cash[i])/(N[(i+1)*8])}, die theoretische ist: \n {(T_1[(i+1)*8])/(T_1[(i+1)*8] - T_2[(i+1)*8])} mit dem Fehler {theorie_error_1(i)}")
+    print(f"Die reale Güteziffer bei t={(i+1)*8} ist: {((m*c_w + m_kg_k)*F1dt(t[(i+1)*8]))/(N[(i+1)*8])}, die theoretische ist: \n {(T_1[(i+1)*8])/(T_1[(i+1)*8] - T_2[(i+1)*8])} mit dem Fehler {theorie_error(i)}")
 
 
 print(f"\n \n \n Aufgabe e): ")
@@ -194,4 +194,3 @@ plt.ylabel("log(p/p0)")
 plt.tight_layout()
 plt.legend()
 plt.savefig("grfic_2.pdf")
-
