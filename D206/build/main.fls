@@ -405,6 +405,8 @@ INPUT ./table_3.tex
 INPUT ./table_3.tex
 INPUT ./table_4.tex
 INPUT ./table_4.tex
+INPUT ./table_6.tex
+INPUT ./table_6.tex
 INPUT ./table_5.tex
 INPUT ./table_5.tex
 INPUT ./content/diskussion.tex

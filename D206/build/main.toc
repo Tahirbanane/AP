@@ -14,5 +14,5 @@
 \contentsline {subsection}{\numberline {6.3}Aufgabenteil c)}{12}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Aufgabenteil d)}{13}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Aufgabenteil e)}{13}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Aufgabenteil f)}{13}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Diskussion}{13}{section.7}%
+\contentsline {subsection}{\numberline {6.6}Aufgabenteil f)}{14}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Diskussion}{14}{section.7}%
