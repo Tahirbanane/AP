@@ -104,39 +104,93 @@ for i in range(1,5):
 
 print(f"\n \n \n Aufgabe d): ")
 
-m_kg_k = 750#J/K mc? # es fehlt die wärmekapazität des eimers
-m = 4 #kg
-c_w = 4183 #J/kg/K
+m_kg_k = 750. #J/K mc? # es fehlt die wärmekapazität des eimers
+m = 4. #kg
+c_w = 4183. #J/kg/K
 
-def M_r(t):
-    return ((m*c_w + m_kg_k)*cash[t])/(N[(t+1)*8])
+T_g1, T_g2 = sympy.var('T_g1 T_g2')
 
-def M_t(t):
-    return (T_1[(t+1)*8])/(T_1[(t+1)*8] - T_2[(t+1)*8])
+g_t = (T_g1)/(T_g1 - T_g2)
+
+#def theorie_error(T_g1f, T_g2f):
+#    return (g_t.diff(T_g1) * T_g1f + g_t.diff(T_g2) * T_g2f)
+
+def theorie_error(i):
+    return (-T_2[(i+1)*8])/((T_1[(i+1)*8] - T_2[(i+1)*8])*(T_1[(i+1)*8] - T_2[(i+1)*8])) * 0.1 + (T_1[(i+1)*8])/((T_1[(i+1)*8] - T_2[(i+1)*8])*(T_1[(i+1)*8] - T_2[(i+1)*8])) * 0.1 #how do you square in python | Ableitung per Hand gebildet, da schwierigkeiten beim einsetzen es gab
+
+
 
 for i in range(0,4):
-    print(f"Die reale Güteziffer bei t={(i+1)*8} ist: \n {((m*c_w + m_kg_k)*cash[i])/(N[(i+1)*8])} \nDie theoretische Güteziffer bei t={(i+1)*8} ist: \n {(T_1[(i+1)*8])/(T_1[(i+1)*8] - T_2[(i+1)*8])}")
-   # print(N[(i+1)*8])
+    print(f"Die reale Güteziffer bei t={(i+1)*8} ist: {((m*c_w + m_kg_k)*F1dt(t[(i+1)*8]))/(N[(i+1)*8])}, die theoretische ist: \n {(T_1[(i+1)*8])/(T_1[(i+1)*8] - T_2[(i+1)*8])} mit dem Fehler {theorie_error(i)}")
 
 
 print(f"\n \n \n Aufgabe e): ")
 
-L = 0#Verdampfungswärme
+#Verdampfungswärme
+P1=np.log(p_1)
+P2=np.log(p_2)
+parameter3, covariance_matrix_3 = np.polyfit(1/T_1,P1, deg=1, cov=True)
+parameter4, covariance_matrix_4 = np.polyfit(1/T_2,P2, deg=1, cov=True)
+
+uncertainties3 = np.sqrt(np.diag(covariance_matrix_3))
+uncertainties4 = np.sqrt(np.diag(covariance_matrix_4))
+
+L= -1*parameter4[0] * 8.314 #L= -m*R
+L_fehler = -1*uncertainties4[0]*8.314
+L_float = ufloat(L, -1*L_fehler)
+L_float /= 0.120910
+print(f'L ={L_float} in Joule pro Kilogramm')
+
+for names ,value, uncertaintie in zip("DE", parameter4,uncertainties4):
+    names = ufloat(value, uncertaintie)
+    print(f"Die beiden Werte der Gerade mit den Fehler sind: \n {names:.8f}")
 
 
+def dMdt(i):
+    dMdt_n = ((m*c_w + m_kg_k)*F2dt(t[8*(i+1)])).n/L_float.n
+    dMdt_e = -1*(((m*c_w + m_kg_k)*F2dt(t[8*(i+1)]).n)/(L_float.n*L_float.n))*L_float.s + (((m*c_w + m_kg_k)*F2dt(t[8*(i+1)])).n/L_float.n)*F2dt(t[8*(i+1)]).s
+    return ufloat(dMdt_n, dMdt_e ) #nur der betragsmäßige fehler ist von interesse
 
+for i in range(0,4):
+    print(f"Der Massendurchsatz bei t={(i+1)*8} ist: {dMdt(i):.5f}")
 
 #Grafik
 #plt.plot(t,T_1,'.', label=r"$Eimer 1$")
+
+
+print(f"\n \n \n Aufgabe f): ")
+
+def N_m (kappa,pb, pa, roh, i):
+    return (1/(kappa-1)) * (pb *  (pa/pb)**(1/kappa) -pa ) * (1/roh) * dMdt(i)
+
+
+for i in range(0,4):
+    print(f"Die mechanische Kompressoreistung bei t={(i+1)*8} ist: {N_m(1.14 , p_1[(i+1)*8] ,p_2[(i+1)*8], 5.51, i)} in W")
+
+
+
+
+plt.figure()
 plt.xlabel(r'$t \, [s]$')
 plt.ylabel(r'$T  \, [K]$')
-
 plt.plot(t, f(t, *parameter1), label=r'$Fit \, T_1(t)$')
 plt.errorbar(t, T_1, xerr=0, yerr=0.1, fmt='.', label = r'$T_1(t)$')
-
 plt.plot(t, f(t, *parameter2), label=r'$Fit \, T_2(t)$')
 plt.errorbar(t, T_2, xerr=0, yerr=.1, fmt='.', label = r'$T_2(t)$')
-
 plt.legend()
 plt.tight_layout()
 plt.savefig('grafic.pdf')
+
+x = np.linspace(0,2100,50)
+x2=np.linspace(0.0031,0.0034,50)
+x3=np.linspace(0.00339,0.00363,50)
+plt.figure()
+plt.plot(1/T_1,P1,".",label="Werte von T1")
+plt.plot(x2, parameter3[0]*x2 + parameter3[1], label="Regression zu 1")
+plt.plot(1/T_2,P2,".",label="Werte von T2")
+plt.plot(x3, parameter4[0]*x3 + parameter4[1], label="Regression zu 2")
+plt.xlabel("1/T [1/K]")
+plt.ylabel("log(p/p0)")
+plt.tight_layout()
+plt.legend()
+plt.savefig("grfic_2.pdf")
