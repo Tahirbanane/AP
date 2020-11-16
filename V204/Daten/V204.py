@@ -32,6 +32,19 @@ plt.savefig('grafic.pdf')
 #statische Methode 700s:
 print(f'Die Temperatur bei T1 beträgt: {T_1_1[7000]}, \n Die Temperatur bei T4 beträgt: {T_4_1[7000]}, \n Die Temperatur bei T5 beträgt: {T_5_1[7000]}, \n Die Temperatur bei T8 beträgt: {T_1_1[7000]}, \n')
 
-
+#Wärmestrom:
 def kappa(roh,c, x, t, A_nah, A_fern):
-    return (roh*c*x**2)/(2*t*np.log(A_nah/A_fern))
+    return (roh*c*x**2)/(2*t*np.log(A_nah/A_fern)) #hier ist A die Amplitude
+
+T_12_1 = T_1_1 - T_2_1
+
+#Amplitudenberechnung:
+def A:
+    
+
+
+for i in range(1,5):
+    print(f'Der Wärmestrom zum Zeitpunkt t={i*100} beträgt {-kappa(8520, 385, 0.03, 80, T_1_1[i*1000], T_2_1[i*1000])*0.012*0.004*T_12_1[i*1000]} ')
+
+
+
