@@ -1,5 +1,6 @@
 \section{Zielsetzung}
-    Mit dem Versuch "`Wärmeleitung von Metallen"' soll die Wärmeleitung von Aluminium, Messing und Edelstahl untersucht werden.
+    Mit dem Versuch "`Wärmeleitung von Metallen"' soll die Wärmeleitung von Aluminium, Messing und Edelstahl untersucht werden,
+    um daraus die Wärmeleitfähigkeit dieser Metalle zu bestimmen.
 
     \section{Theoretische Grundlage}
       Befindet sich in einem System ein Temperaturunterschied, kommt es zu einem Wärmetransort entlang des Temperaturgefälles.
@@ -38,7 +39,7 @@
       Diese kann wie folgt beschrieben werden: 
 
       \begin{equation}
-      T(x,t) = T_\text{max} e^{\sqrt{\frac{\omega \rho c}{2 \kappa}}x} cos(\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}} x)
+      T(x,t) = T_\text{max} \symup{e}^{\sqrt{\frac{\omega \rho c}{2 \kappa}}x} cos(\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}} x)
         \label{eqn:temperaturwelle}
       \end{equation}  
 
@@ -49,5 +50,12 @@
         \label{eqn:phasengeschwindigkeit}
       \end{equation}
 
-      Aus dem Amplitudenverhältis von $A_\text{nah}$ und $A_\text{fern}$ an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$ an der Welle wird die Dämpfung.
+      Aus dem Amplitudenverhältis von $A_\text{nah}$ und $A_\text{fern}$ an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$ an der Welle wird die Dämpfung ermittelt.
+      Wird nun berücksichtigt, dass $\omega = \frac{2 \pi}{T'}$ (mit Periodendauer T') und und für die Phase $\Phi = \frac{2 \pi \Delta t}{T'}$ ergibt sich für die Wärmeleitfähigkeit
 
+      \begin{equation}
+      \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \, ln (\frac{A_\text{nah}}{A_\text{fern}})}
+        \label{eqn:waermeleitfaehigkeit}
+      \end{equation}
+
+      mit dem Abstand der beiden Messstellen $\Delta x$ und der Phasendifferenz $\Delta t$ der Temperaturwelle zwischen den beiden Messstellen.
