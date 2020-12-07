@@ -1,20 +1,20 @@
 \section{Zielsetzung}
-    Mit dem Versuch "`Wärmeleitung von Metallen"' soll die Wärmeleitung von Aluminium, Messing und Edelstahl untersucht werden,
+    Im Versuch 'Wärmeleitung von Metallen' wird die Wärmeleitung von Aluminium, Messing und Edelstahl untersucht,
     um daraus die Wärmeleitfähigkeit dieser Metalle zu bestimmen.
 
     \section{Theoretische Grundlage}
-      Befindet sich in einem System ein Temperaturunterschied, kommt es zu einem Wärmetransort entlang des Temperaturgefälles.
-      Dies geschieht entweder durch Konvektion, Wärmestrahlung oder Wärmeleitung, wobei wir uns hier auf die Wärmeleitung beschränken.
+      Bei einem System Temperaturunterschied im System kommt es zu einem Wärmetransport entlang des Temperaturgefälles.
+      Hier wird unterschieden zwischen Konvektion, Wärmestrahlung und Wärmeleitung, wobei sich hier auf die Wärmeleitung beschränkt wird.
 
-      Betrachtet wird ein Stab der Länge L, der Querschnittsfläche A, dessen Material die Dichte $\rho$ und spezifische Wärme c hat. 
-      Wenn die Enden des Stabes unterschiedlicher Temperatur sind, so fließt in der Zeit dt durch die Querschnittsfläche A die Wärmemenge
+      \noindent Wenn die Enden eines Stabes der Länge L, der Querschnittsfläche A, der aus einem Material mit der spezifischen Wärme c und der Dichte $\rho$ besteht, unterschiedlicher Temperatur sind,
+      fließt in der Zeit dt durch A die Wärmemenge 
 
       \begin{equation}
       \symup{d}Q = - \kappa A \frac{\partial T}{\partial x} \symup{d}t .
         \label{eqn:waermemenge}
       \end{equation}
 
-      Dabei ist $\kappa$ die vom Material abhängige Wärmeleitfähigkeit. 
+      \noindent Dabei ist $\kappa$ die vom Material abhängige Wärmeleitfähigkeit. 
       Das Minuszeichen ergibt sich daraus, dass der Wärmestrom entlang des Temperaturgefälles fließt.
       Für die Wärmestromdichte $j_\text{w}$ ergibt sich
 
@@ -23,19 +23,17 @@
         \label{eqn:waermestromdichte}
       \end{equation}       
       
-      Hieraus kann die Wärmeleitungsgleichung aus der Kontinuitätsgleichung abgeleitet werden:
+      \noindent Hieraus kann die Wärmeleitungsgleichung aus der Kontinuitätsgleichung abgeleitet werden:
 
       \begin{equation}
       \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c} \frac{\partial^2 T}{\partial x^2}.
         \label{eqn:waermeleitungsgleichung}
       \end{equation}  
 
-      Diese gibt die räumliche- und zeitliche Entwicklung der Temperaturverteilung an.
-      Die Größe $\sigma_\text{T} = \frac{\kappa}{\rho c}$, 
-      die als Temperaturleitfähigkeit bezeichnet wird, gibt an, wie schnell sich der Temperaturunterschied ausgleicht.
-      Die Lösung dieser Differentialgleichung hängt von der Stabgeometrie und den Anfangsbedingungen ab.
+      \noindent Diese gibt die räumliche- und zeitliche Entwicklung der Temperaturverteilung an.
+      Dabei ist $\sigma_\text{T} = \frac{\kappa}{\rho c}$ die Temperaturleitfähigkeit, die ein Maß für die Geschwindigkeit des Temperaturausgleichs ist.
 
-      Wird nun ein langer Stab mit der Periode T abwechseln erhitzt und abgekühlt, breitet sich eine räumliche und zeitliche Temperaturwelle im Stab aus. 
+      \noindent Wenn ein Stab periodisch abwechselnd erhitzt und abgekühlt wird, breitet sich eine räumliche und zeitliche Temperaturwelle im Stab aus. 
       Diese kann wie folgt beschrieben werden: 
 
       \begin{equation}
@@ -43,19 +41,19 @@
         \label{eqn:temperaturwelle}
       \end{equation}  
 
-      Die Phasengeschwindigkeit mit der sich die Welle fortbewegt ergibt sich zu:
+      \noindent Die Phasengeschwindigkeit mit der sich die Welle fortbewegt ergibt sich zu:
 
       \begin{equation}
       v = \frac{\omega}{k} = \frac{\omega}{\sqrt{\frac{\omega \rho c}{2 \kappa}}} = \sqrt{\frac{2 \kappa \omega}{\rho c}}
         \label{eqn:phasengeschwindigkeit}
       \end{equation}
 
-      Aus dem Amplitudenverhältis von $A_\text{nah}$ und $A_\text{fern}$ an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$ an der Welle wird die Dämpfung ermittelt.
-      Wird nun berücksichtigt, dass $\omega = \frac{2 \pi}{T'}$ (mit Periodendauer T') und und für die Phase $\Phi = \frac{2 \pi \partial t}{T'}$ ergibt sich für die Wärmeleitfähigkeit
+      \noindent Aus dem Amplitudenverhältis von $A_\text{nah}$ und $A_\text{fern}$ an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$ an der Welle wird die Dämpfung ermittelt.
+      Wird nun berücksichtigt, dass $\omega = \frac{2 \pi}{T'}$ (mit Periodendauer T') und für die Phase $\Phi = \frac{2 \pi \Delta t}{T'}$ ergibt sich für die Wärmeleitfähigkeit
 
       \begin{equation}
       \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \, ln (\frac{A_\text{nah}}{A_\text{fern}})}
         \label{eqn:waermeleitfaehigkeit}
       \end{equation}
 
-      mit dem Abstand der beiden Messstellen $\Delta x$ und der Phasendifferenz $\Delta t$ der Temperaturwelle zwischen den beiden Messstellen.
+     \noindent mit dem Abstand der beiden Messstellen $\Delta x$ und der Phasendifferenz $\Delta t$ der Temperaturwelle zwischen den beiden Messstellen.
