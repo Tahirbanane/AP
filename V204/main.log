@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  24 NOV 2020 19:18
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.7)  7 DEC 2020 12:51
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1607,246 +1607,13 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 [2
 
 ] (./content/theorie.tex [3]) (./content/durchfuehrung.tex [4]
-<V204_aufbau.pdf, id=65, 845.04689pt x 597.50789pt>
+<V204_aufbau.pdf, id=67, 845.04689pt x 597.50789pt>
 File: V204_aufbau.pdf Graphic file (type pdf)
 <use V204_aufbau.pdf>
 Package luatex.def Info: V204_aufbau.pdf  used on input line 25.
 (luatex.def)             Requested size: 362.16391pt x 256.0748pt.
- [5<./V204_aufbau.pdf>]
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-? return
-OK, entering \nonstopmode...
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-\endgroup 
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.64 \end{align*}
-               
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-\endgroup 
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.64 \end{align*}
-               
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-\endgroup 
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.64 \end{align*}
-               
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-\endgroup 
-l.64 \end{align*}
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.64 \end{align*}
-               
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing { inserted.
-<inserted text> 
-{
-l.64 \end{align*}
-               
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-) (./content/auswertung.tex [6] [7]
-<Daten/grafic.pdf, id=87, 417.7206pt x 258.0049pt>
+ [5<./V204_aufbau.pdf>] [6]) (./content/auswertung.tex [7]
+<Daten/grafic.pdf, id=93, 417.7206pt x 258.0049pt>
 File: Daten/grafic.pdf Graphic file (type pdf)
 <use Daten/grafic.pdf>
 Package luatex.def Info: Daten/grafic.pdf  used on input line 13.
@@ -1855,20 +1622,20 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 5.00053pt on input line 14.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 14.
-) (./content/diskussion.tex)
+) (./content/diskussion.tex [8<./Daten/grafic.pdf>])
 
 LaTeX Warning: Empty bibliography on input line 23.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
-[8<./Daten/grafic.pdf>]
+[9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 2C10D7290C4A7718863E0EEFB54FE094;7881.
+(rerunfilecheck)             Checksum: 94917FFB9363FA2E84D3AC4E32A6C388;7951.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 76D42D3945181476AA99EAEF6E622C75;990.
+(rerunfilecheck)             Checksum: 1EA3FDD5A8861C78C9F1B6CF7542B694;990.
 
 
 LaTeX Warning: There were undefined references.
@@ -1884,14 +1651,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35437 strings out of 480992
+ 35436 strings out of 480992
  100000,1977958 words of node,token memory allocated
- 712 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 79 glue_spec
-, 19 attribute_list, 1 write nodes
-   avail lists: 1:1,2:518,3:105,4:47,5:254,6:23,7:3519,8:53,9:228,10:24,11:366
- 51969 multiletter control sequences out of 65536+600000
- 294 fonts using 110802207 bytes
+ 724 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 39 attribute, 79 glue_spec
+, 21 attribute_list, 1 write nodes
+   avail lists: 1:1,2:641,3:104,4:42,5:239,6:23,7:2287,8:53,9:220,10:24,11:233
+ 51966 multiletter control sequences out of 65536+600000
+ 294 fonts using 110803207 bytes
  59i,28n,114p,10117b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.ot
@@ -1904,10 +1671,10 @@ ic/lm/lmroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
 ublic/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentyp
 e/public/lm/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype
 /public/lm/lmroman12-bold.otf>
-Output written on main.pdf (8 pages, 729084 bytes).
+Output written on main.pdf (9 pages, 732419 bytes).
 
-PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 131072)
+PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
  89 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,6 +1,6 @@
 \section{Vorbereitung}
 Vor der Durchführung ist sich anhand der Literatur über die Dichte $\rho$, die spezifische Wärme c und die Wärmeleitfähigkeit $\kappa$ für Aluminium, Messing und Edelstahl zu informieren.
-Folgende Werte wurden zusammengetragen:
+Diese Werte wurden  in Tabelle (\ref{tab:literaturwerte}) zusammengetragen:
 
 \begin{table}
 \centering
@@ -27,14 +27,16 @@ Edelstahl & 8000 & 500 & 21  \\
                \label{fig:aufbauwaermeleitung}
         \end{figure}
 
-In der Abbildung ist das Experiment zur Bestimmung der Wärmeleitfähigkeit zu sehen.
-Auf der Grundplatte befinden sich vier rechteckige Probenstäbe, darunter einer aus Aluminium, einer aus Edelstahl und zwei unterschiedlicher Breite aus Messing.
+\noindent
+In der Abbildung (\ref{fig:aufbauwaermeleitung}) ist das Experiment zur Bestimmung der Wärmeleitfähigkeit zu sehen.
+Auf der Grundplatte befinden sich vier rechteckige Probenstäbe unterschiedlicher Art.
+Darunter einer aus Aluminium, einer aus Edelstahl und zwei unterschiedlicher Breite aus Messing.
 Die Probenstäbe können mithilfe des Peltierelements durch betätigen des Schalters abwechselnd gekühlt oder erhitzt werden.
-Die Betriebsspannung des Peltierelements ist für die statische Methode $U_P = 5V$ und für die dynamische Methode $U_P = 8V$.
+An das Peltierelement wird für die statische Methode eine Spannung von $U_P=5V$ und für die dynamische Methode eine Spannung von $U_P=8V$ angelegt.
 Pro Stab gibt es zwei Thermoelemente mit denen die Temperatur an der jeweiligen Stelle gemessen werden kann.
 Die Temperaturen und Temperaturverläufe werden über ein 'Temperatur Array' an einen Datenlogger (Xplorer GLX) weitergegeben und können dort eingesehen, bearbeitet und graphisch dargestellt werden.
 Außerdem wurde seperat eine Stoppuhr zur Verfügung gestellt.
-Diese Daten für die Probenstäbe wurden bereitgestellt:
+Diese Daten (\ref{tab:probenstaebe}) für die Probenstäbe wurden bereitgestellt:
 
 \begin{table}
 \centering
@@ -56,19 +58,24 @@ Edelstahl (breit) & 9 x 1.2 x 0.4 & 8000 & 400 \\
 Vorerst wird die Verkabelung überprüft.                                                                                                                                                                                    
 Der Abstand $\Delta x$ der Messstellen zwischen den Thermoelementen wird mithilfe eines Lineals mit der Messunsicherheit $\Delta s = \pm 0.05 \si{\centi\meter}$ gemessen.
 
+\begin{equation}
+_\text{Diese Abstände wurden gemessen}
+\label{eqn:abstand}
+\end{equation}
+
 \begin{align*}
-    \Delta x_\text{T1T2} &= 2.9 $\si{\centi\meter}$ \\
-    \Delta x_\text{T3T4} &= 3.0 $\si{\centi\meter}$ \\
-    \Delta x_\text{T5T6} &= 3.1 $\si{\centi\meter}$ \\
-    \Delta x_\text{T7T8} &= 3.1 $\si{\centi\meter}$ 
+    \Delta x_\text{T1T2} &= 2.9 \si{\centi\meter} \\
+    \Delta x_\text{T3T4} &= 3.0 \si{\centi\meter} \\
+    \Delta x_\text{T5T6} &= 3.1 \si{\centi\meter} \\
+    \Delta x_\text{T7T8} &= 3.1 \si{\centi\meter} 
 \end{align*}
 
-Es werden Messungen verschiedener Methoden durchgeführt.
+\noindent Es werden Messungen verschiedener Methoden durchgeführt.
 
 \subsection{Statische Methode}
 Bei der statischen Methode wird die Temperatur als Funktion der Zeit an den zwei Messstellen pro Stab gemessen, um über den zeitlichen Temperaturverlauf die Wärmeleitfähigkeit zu bestimmen.
 
-Hierzu wird zunächst die Abtastrate $\Delta t_\text{GLX}$ am Datenlogger auf 5s gesetzt.
+\noindent Hierzu wird zunächst die Abtastrate $\Delta t_\text{GLX}$ am Datenlogger auf 5s gesetzt.
 Unter Menüpunkt Digital werden die Temperaturen aller acht Sensoren eingesehen.
 Die Isolierung wird auf die Stäbe gelegt.
 Nun wird bei maximalem Strom eine Spannung von 5V angelegt und der Schalter wird von 'COOL' auf 'HEAT' umgelegt,
@@ -79,11 +86,12 @@ Die Isolierung wird abgenommen und der Schalter wird auf 'COOL' umgelegt.
 Die Probenstäbe werden so lange gekühlt, bis jedes Thermoelement eine Temperatur von 30 Grad oder kälter hat.
 Um längeren Wartezeiten vorzubeugen wurde die Platine mit einer nicht benutzten Platine ausgetauscht.
 
+\newpage
 \subsection{Dynamische Methode}
 Bei der Angström Methode wird die Wärmeleitfähigkeit aus der Ausbreitungsgeschwindigkeit der Temperaturwelle berechnet,
 die sich ergibt, wenn ein Probenstab periodisch geheizt wird.
 
-Dazu wird die Abtastrate $\Delta t_\text{GLX}$ am Datenlogger auf 2s gesetzt.
+\noindent Dazu wird die Abtastrate $\Delta t_\text{GLX}$ am Datenlogger auf 2s gesetzt.
 Im Unterverzeichnis Digital wird überprüft, ob die Probenstäbe an jeder Messstelle hinreichend abgekühlt sind (30 Grad oder kälter).
 Die Isolierung wird auf die Stäbe gelegt und die Messung wird gestartet, sobald eine Spannung von 8V angelegt wird.
 Die Probenstäbe werden daraufhin mit einer Periode von 80s geheizt.
@@ -92,7 +100,7 @@ Als Hilfsmittel wird hier die Stoppuhr verwendet.
 Die Messung wird nach 11 Perioden beendet und die Daten per Stick gesichert.
 Die Isolierung wird abgenommen und der Schalter bleibt auf 'COOL'.
 
-Nachdem die Platine wieder aufgrund der langen Abkühlzeit der Probenstäbe ausgetauscht wurde, wird eine neue Messung gestartet.
+\noindent Nachdem die Platine wieder aufgrund der langen Abkühlzeit der Probenstäbe ausgetauscht wurde, wird eine neue Messung gestartet.
 Dabei wird der eben beschriebene Vorgang wiederholt, allerdings mit einer Periode von 200s.
 Dafür werden die Stäbe 100s erhitzt und anschließend 100s gekühlt.
 Hierfür wird wieder eine Stoppuhr verwendet.
