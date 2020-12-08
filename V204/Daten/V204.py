@@ -194,25 +194,25 @@ x1, _ = find_peaks(T_1_2, distance = 15)
 x2, _ = find_peaks(-T_1_2, distance = 15)
 A11 = T_1_2[x1] - T_1_2[x2]
 A1 = ds(A11)
-print(f'Die mittlere Amplitude von T1 beträgt A1 = {A11} ')
+print(f'Die mittlere Amplitude von T1 beträgt A1 = {A1} ')
 
 #Berechnung von der Amplitude T2
 x3, _ = find_peaks(T_2_2, distance = 15)
 x4, _ = find_peaks(-T_2_2, distance = 15)
 A22 = T_2_2[x3] - T_2_2[x4]
 A2 = ds(A22)
-print(f'Die Amplitude von T2 beträgt A2 = {A22} ')
+print(f'Die Amplitude von T2 beträgt A2 = {A2} ')
 
 #Berechnung der mittleren Phasendifferenz
 
 t_ph = (t_2[x1] - t_2[x3] + t_2[x2] - t_2[x4])/2
 
 
-print(f'Die Phasendifferenz beträgt t = {t_ph}')
+print(f'Die Phasendifferenz beträgt t = {ds(t_ph)}')
 
 #Berechnung der mittleren Wärmeleitfähigkeit
 
-print(f'Die Wärmeleitfähigkeit beträgt k = {kappa(8400, 377, 0.029, t_ph, A11, A22) } (Messing dick) ' )
+print(f'Die Wärmeleitfähigkeit beträgt k = {kappa(8400, 377, 0.029, ds(t_ph), A1, A2) } (Messing dick) ' )
 
 #Aluminium
 #Berechnung von der Amplitude T5
@@ -240,7 +240,7 @@ print(f'Die durschnittliche Phasendifferenz beträgt t = {ds(t_ph)}')
 #Berechnung der mittleren Wärmeleitfähigkeit
 
 print(f'Die mittleren Wärmeleitfähigkeit beträgt k = {kappa(2700, 896, 0.03, ds(t_ph), A5, A6) } (Aluminium) ' )
-print(f'Die mittleren Wellenlänge beträgt lambda = {lam(kappa(2700, 896, 0.03, ds(t_ph), A5, A6),0.01228,2700,896) } (Aluminium)')
+#print(f'Die mittleren Wellenlänge beträgt lambda = {lam(kappa(2700, 896, 0.03, ds(t_ph), A5, A6),0.01228,2700,896) } (Aluminium)')
 
 
 # Dynamisch Periode 200s
@@ -265,7 +265,7 @@ x2, _ = find_peaks(-T_7_3, distance = 15)
 A77 = T_7_3[x1][0:-1] - T_7_3[x2]
 A7 = ds(A77)
 
-print(f'Die mittlere Amplitude von T7 beträgt A7 = {A77} ')
+print(f'Die mittlere Amplitude von T7 beträgt A7 = {A7} ')
 
 
 
@@ -283,7 +283,7 @@ A88 = T_8_3[x3] - T_8_3[x4]
 A8 = ds(A88)
 
 
-print(f'Die mittlere Amplitude von T8 beträgt A8 = {A88} ')
+print(f'Die mittlere Amplitude von T8 beträgt A8 = {A8} ')
 
 #Berechnung der mittleren Phasendifferenz
 
@@ -296,4 +296,4 @@ print(f'Die durschnittliche Phasendifferenz beträgt t = {ds(t_ph)}')
 
 #Berechnung der Wärmeleitfähigkeit
 
-print(f'Die Anzahl an ermittelten Perioden ist {len(A77)} Wärmeleitfähigkeit beträgt k = {kappa(8000, 500, 0.031, ds(t_ph), A77, A88) } (Edelstahl) ' )
+print(f'Die Anzahl an ermittelten Perioden ist {len(A77)} Wärmeleitfähigkeit beträgt k = {kappa(8000, 500, 0.031, ds(t_ph), A7, A8) } (Edelstahl) ' )
