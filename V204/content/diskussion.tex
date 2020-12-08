@@ -1,12 +1,13 @@
 \newpage
 \section{Diskussion}
+\subsection{Allgemein}
 Während der Durchführung des Versuchs sind einige Fehlerquellen aufgefallen, die die Ergebnisse beeinflussen.
 Beim auflegen der Isolierung auf die Probenstäbe fiel auf, dass die Isolierung die Probenstäbe nicht vollständig bedeckt.
 Dadurch ist der Wärmeaustausch, der mit der Umgebung statt findet, noch schlechter zu verhindern.
 
-\noindent Außerdem birgt das manuelle stoppen der Zeit und gleichzeitigem umlegen des Schalters von 'COOL' auf 'HEAT' bei der dynamischen Methode eine Messunsicherheit, 
+\noindent Außerdem birgt das manuelle stoppen der Zeit und gleichzeitigem umlegen des Schalters von 'COOL' auf 'HEAT' bei der dynamischen Methode eine Messunsicherheit mit sich, 
 da es hier auch auf die Reaktionszeit ankommt.
-Daher ist davon auszugehen, dass die exakten Perioden nicht eingehalten wurden und minimal unregelmäßig gemessen wurde.
+Daher ist davon auszugehen, dass die exakten Perioden nicht eingehalten und minimal unregelmäßig gemessen wurden.
 
 \noindent Zudem wurden die Platinen im Laufe des Versuchs zweimal ausgetauscht, da diese die Probenstäbe nicht ausreichend gekühlt haben.
 Da die unterschiedlichen Platinen möglicherweise voneinander abweichende Ergebnisse hervorrufen, 
@@ -15,16 +16,43 @@ zum Beispiel durch ein unterschiedlich schnell oder ungleichmäßig heizendes Pe
 \noindent Möglich ist auch ein Fehler durch Schwankungen der an der Platine anliegenden Spannung aufgrund von technischen Mängeln der Spannungsquelle.
 
 \noindent Die Ergebnisse aus (\ref{eqn:abstand})
-wurden mit einem Lineal gemessen und die Messunsicherheit wurde auf $\Delta s=\pm 0.05 \si{\centi\meter}$ geschätzt.
-Beim weiterrechnen mit diesen Werten pflanzt sich der Fehler natürlich fort.
+wurden mit einem Lineal gemessen. Dies sorgt beim weiterrechnen mit diesen Werten natürlich für einen Fehler.
 
 \noindent
 Des Weiteren gab es auch bei der Messung große Probleme.
 Es wurden am Ende Messergebnisse einer anderen Gruppe verwendet, da die ermittelten Daten nicht vollständig gespeichert wurden und so alle Messungen hinfällig waren. 
 
 \label{sec:Diskussion}
+
+\subsection{Messwerte}
 \noindent
-Es gab bei der Berechnung der Wärmeleitfähigkeit einen systematischen Fehler, welcher sich durch alle Rechnungen gezogen hat. Dardurch konnten keine korrekten Zahlenwerte errechnet werden.
+Beim Vergleich der Mittelwerte der Wärmeleitfähigkeit der einzelnen Matalle mit den Literaturwerten fällt schnell auf, dass diese nciht übereinstimmen. Der Mittelwert der Wärmeleitfähigkeit von
+Messing liegt bei $\kappa_\text{Messing} = 132,280 \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$, von Aluminium bei $\kappa_\text{Aluminium} = 201,7020 \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$
+und von Edelstahl bei $\kappa_\text{Edelstahl} = 11,2616 \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$. 
+
+Mit den Literaturwerten aus der Tabelle (\ref{tab:literaturwerte}) folgen folgende Fehler:
+
+\begin{table}
+\centering
+\begin{tabular}{c c}
+\toprule
+{Material} &{relativer Fehler}\\
+\midrule
+Aluminium & 0.0873 \\
+Messing   & 0.0685 \\
+Edelstahl & 0.4637 \\
+\bottomrule
+\end{tabular}
+\caption{relative Fehler der Wärmeleitfähigkeit im Vergleich zur Literatur}
+\label{tab:Fehler}
+\end{table}
+
 \noindent
-Zudem gab es bereits bei der Messung große Probleme. Es wurden am Ende Messergebnisse einer anderen Gruppe verwendet, da die ermittelten Daten nicht vollständig gespeichert wurden und so 
-alle Messungen hinfällig waren.
+Die Fehler vom Messing und Aluminium können durch die schon oben angeführten Begründugnen gut erklärt werden, jedoch fällt der Fehler von Edelstahl von fast 50 \% stark auf. Dieser kann aber 
+bei der Betrachtung der GRößenordnung sehr schnell aufgeklärt werden. Die absoluten Abweichungen sind nicht besonders groß, jedoch durch die niedrige Wärmeleitfähigkeit des Metalls im Vergleich 
+mit den anderen fällt auf, dass absolut kleine Fehler schnell große relative Fehler produzieren. 
+Um wirklich genau die Eigenschaften der Metalle zu untersuchen empfehlt sich eine deutliche bessere Isolierung im Labor, zum Beispiel durch eine Vakuumkammer und durch genauere Temperatursensoren
+die nicht direkt in Kontakt mit dem zu untersuchenden Metall stehen.
+\noindent
+Daher wenn man Metalle oder andere Stoffe in dem uns gegebenen Versuchsaufbau untersuchen will, empfehlt es sich Stoffe mit einer voraussichtlich sehr hohen Wärmeleitfähigkeit zu nutzen, um die 
+relativen Fehler durch Messungenaugkeit und Versuchsaufbau klein zu halten.
