@@ -80,11 +80,11 @@ plt.savefig('Daten/grafic.pdf')
 
 x2, _ = find_peaks(-UBr/Us, distance = 15)
 
-print(f'UBr/Us minima: {get_minmax(UBr/Us[x2])}')
+print(f'UBr/Us minima: {(w[x2]),w0}')
 
 U2 = UBr/(np.sqrt(1/9*((2)**2-1)**2/((1-(2)**2)**2+9*(2)**2)))
 
-print(f'U2: {U2}')
+print(f'U2: {ds(U2)}')
 
 k = U2/Us
 
