@@ -1,0 +1,11 @@
+#     Aus Daten und Hinweise importiert
+# C2      R2      R3     R4
+# nF      Ohm     Ohm    Ohm
+#Wert 8
+450     371     606     394
+399     418     578     422
+597     278     673     327
+#Wert 9
+450     466     511     489
+399     524     481     519
+597     352     581     419
