@@ -2,7 +2,7 @@ all: build/main.pdf
 
 # hier Python-Skripte:
 build/grafic.pdf: V353.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python V353.py
+	TEXINPUTS=$$(pwd): touch wtf.txt
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/main.pdf: build/grafic.pdf

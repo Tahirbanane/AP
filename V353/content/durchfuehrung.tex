@@ -1,36 +1,60 @@
-\section{Prinzipieller Aufbau einer Wärmepumpe}
-    	Die Wärmepumpe benutzt als Transportmedium ein reales Gas,welches durch Phasenumwandlung in der Lage ist Wärme zu transportieren. 
-        Um dies besonders effizient tun zu können ist es sinnvoll ein Gas mit einer möglichst hoher Kondensationswärme zu verwenden. 
-        Der schematische Aufbau einer Wärmepumpe ist in \autoref{fig:prinzW} zu sehen.
-        \begin{figure}
+\section{Durchführung}
+Es wurden ein Oszilloskop und eine Spannungsquelle zur Verfügung gestellt.
+
+\subsection{Aufgabe a)}
+Um die Zeitkonstante zu bestimmen, wird das Experiment nach Abbildung (\ref{fig:rcaa}) aufgebaut.
+
+\begin{figure}
             \centering
-               \includegraphics[scale=0.75]{aufbau_1.pdf}
-               \caption{Prinzipieller Aufbau einer Wärmepumpe ($p_\text{b}$ > $p_\text{a}$; $T_1$ > $T_2$)}
-               \label{fig:prinzW}
-        \end{figure}
-        Der Kompressor K erzeugt eine annähernd adiabatische Kompression, also eine Kompression ohne Wärmeverluste an die Umgebung. 
-        Zusätzlich wird durch diese Kompression ein Mediumskreislauf im System ingang gebracht. Durch das Drosselventil D und dem hohen Strömungswiderstand baut sich ein Druckunterschied
-        zwischen dem Eingang des Ventils und dessen Ausgang auf ($p_\text{b}-p_\text{a}$).
+               \includegraphics[height=5cm]{rcaa.pdf}
+               \caption{Aufbau zur Bestimmung der Zeitkonstante.}
+               \label{fig:rcaa}
+\end{figure}
 
-        Die Apparatur ist so konzipiert, dass das Gas Reservoir 2 und 1 durchströmt und jeweils sein Zustand in einem der beiden ändert. Dies bedeutet, dass das Gas sich im Reservoir 2 
-        vergasförmigt und in Reservoir 1 durch den erhöhten Druck ($p_\text{b}$) wieder verflüssigt und so seine, durch die Vergasung, aufgenommene Wärme wieder abgibt. Die Messgröße der 
-        Verdampfungswärme ist L pro Gramm Substanz.  Somit ist das Reservoir 1 das wärmere und Reservoir 2 das kältere.
+\noindent
+Mithilfe des Oszilloskops wird die Kondensatorspannung in Abhängigkeit von der Zeit graphisch dargestellt und ein geeigneter Ausschnitt der Entladekurve betrachtet.
+Mit dem Cursor werden nun verschiedene Punkte auf der Kurve eingelesen.
+Diese wurden vermessen, notiert und in Tabelle (\ref{tab:a}) aufgeführt.
 
-        Damit die Apparatur störungsfrei arbeiten kann ist es notwendig weitere Armaturen ins System zu integrieren. Diese haben jedoch keinen direkten Einfluss auf die prinzipielle Wirkungsweise. 
-        So benutzt man einen sogennanten "`Reiniger"' R, welches das verflüssigte Transportmedium von Gasblasen reinigt, sodass eine blasenfreie Flüssigkeitszufuhr zum Drosselventil D gewährleistet werden kann.
-        Zudem wird eine "`Steuerungsvorrichtung"' S für das Drosselventil benutzt, sodass die Durchlässigkeit der Drosselventils über die Temperaturdifferenz zwischen Eingang und Ausgang ($T_2 - T_1$) 
-        des Reservoirs 2 gesteuert werden kann.
+\subsection{Aufgabe b)}
+Die Abhängigkeit der Kondensatorspannungsamplitude von der Frequenz kann mit dem in Abbildung (\ref{fig:rcab}) dargestellten Aufbau untersucht werden.
 
-    %4
-    \newpage
-    \section{Durchführung}
-    Der Versuchsbau ist folgendermaßen:
-    \begin{figure}
-               \centering
-               \includegraphics[width=\textwidth]{aufbau_2.pdf}
-               \caption{Schematische Darstellung der kompletten Messapparatur}
-               \label{fig:scheW}
-    \end{figure}
+\begin{figure}
+            \centering
+               \includegraphics[height=4.5cm]{rcab.pdf}
+               \caption{Aufbau zur Untersuchung der Abhängigkeit der Kondensatorspannungsamplitude von der Frequenz.}
+               \label{fig:rcab}
+\end{figure}
 
-    Sobald der Kompressor eingeschaltet wird, werden die Temperaturen T1 und T2, die Drücke p1 und p2 und die Kompressorleistung N an den Anzeigegeräten abgelesen. Damit die Zeitabstände
-    beim Ablesen möglichst gleich sind, werden die Größen immer in derselben Reihenfolge notiert. Um die Drücke p1 und p2 zu erhalten, muss noch 1 bar auf die gemessenen Drücke p*1 und p*2 addiert werden.
+\noindent
+Dazu wird der Spannungsverlauf auf dem Oszilloskop betrachtet und mit dem Cursor vermessen, wobei die Frequenz verändert wird.
+Die Kondensatorspannungsamplituden werden in Abhängigkeit von verschiedenen Frequenzen $10\si{\hertz} < \text{f} < 5\si{\kilo\hertz}$ vermessen, notiert und in Tabelle (\ref{tab:b}) aufgeführt.
+
+\subsection{Aufgabe c)}
+Um die Phasenverschiebung $\phi$ zwischen der Generatorspannung und der Kondensatorspannung zu messen, kann der Versuch nach Abbildung (\ref{fig:rcac}) aufgebaut werden.
+
+\newpage
+\begin{figure}
+            \centering
+               \includegraphics[height=5cm]{rcac.pdf}
+               \caption{Aufbau zur Bestimmung der Phasenverschiebung.}
+               \label{fig:rcac}
+\end{figure}
+
+\noindent
+Nun können am Oszilloskop beide Spannungsverläufe gleichzeitig beobachtet werden.
+Diese werden ähnlich zur Abbildung (\ref{fig:rcac2}) auf dem Oszilloskop dargestellt:
+
+\begin{figure}
+            \centering
+               \includegraphics[height=5cm]{rcac2.pdf}
+               \caption{Form der beiden Spannungsverläufe am Oszilloskop.}
+               \label{fig:rcac2}
+\end{figure}
+
+\noindent
+Die Wellenlänge a sowie die Schwingungsdauer b werden für verschiedene Frequenzen mit dem Cursor vermessen, notiert und in Tabelle (\ref{tab:c}) aufgeführt. 
+
+\subsection{Aufgabe d)}
+Um zu zeigen dass ein RC-Kreis auch als Integrator arbeiten kann, wird die Schaltung in Abbildung (\ref{fig:rcac}) verwendet.
+Nun wird nacheinander eine Rechteck-, Sinus- und Dreiecksspannung auf das RC-Glied gegeben von dessen Verlauf auf dem Oszilloskop jeweils ein Foto gemacht wird. 

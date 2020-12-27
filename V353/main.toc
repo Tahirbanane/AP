@@ -1,0 +1,19 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{3}{section.2}%
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Aufgabe a)}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Aufgabe b)}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Aufgabe c)}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Aufgabe d)}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Messwerte}{9}{section.4}%
+\contentsline {section}{\numberline {5}Auswertung}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Aufgabenteil a)}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Aufgabenteil b)}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Aufgabenteil c)}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Aufgabenteil d)}{11}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Aufgabenteil e)}{11}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Aufgabenteil f)}{11}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Aufgabenteil g)}{11}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Diskussion}{11}{section.6}%

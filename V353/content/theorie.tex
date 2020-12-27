@@ -1,125 +1,225 @@
 \section{Zielsetzung}
-    Mit dem Versuch "`Wärmepumpe"' soll die Funktionsweise einer Wärmepumpe verstanden und zudem soll eine Aussage über die Güteziffer und den Masssendurchsatz,
-    sowie den Wirkungsgrad des Kompressors getroffen werden.
+In diesem Versuch wird das Relaxationsverhalten des RC-Kreises untersucht. 
+Dazu werden Größen wie die Zeitkonstante, Amplituden der Kondensatorspannung und Phasenverschiebungen gemessen.
 
-    \section{Theoretische Grundlage}
-    Beobachtungen und der zweite Hauptsatz der Thermodynamik zeigen, dass der Wärmefluss zwischen zwei gekoppelten Medien (z.B. durch ein Transportmedium), unterschiedlicher Temperatur, immer vom wärmeren zum kälterem zeigt.
+\section{Theoretische Grundlagen}
 
-    Es ist jedoch möglich diesen Wärmefluss umzudrehen. Dafür muss jedoch zusätzliche Energie aufgebracht werden zum Beispiel in Form von mechanischer. Eine Vorrichtung die in der Lage ist dies zu tun ist 
-    eine sogenannte Wärmepumpe. Dazu nutzt es eines Kompressors und ein Transportmedium, sowie ein Ventil. 
-
-        %2.1
-        \subsection{Bestimmung der realen Güteziffer}
-    	Das Verhältnis der transportierenden Wärmemenge und der dafür notwendigen Arbeit($A$) beschreibt die Größe der Güteziffer($\upsilon$) (unter idalisierten Bedingungen).
-        Diese kann aus dem ersten Hauptsatz der Thermodynamik hergeleitet werden:
-
-        Der erste Hauptsatz der Thermodynamik besagt, dass Energien ineinander umwandelbar sind, aber nicht gebildet, bzw. vernichtet werden können. 
-        Dies bedeutet im Kontext der Wärmepumpe, dass
-
-        \begin{equation}
-            Q_1 = Q_2 + A
-            \label{eqn:Th1}
-        \end{equation}
-
-        gilt, wobei $Q_1$ die Wärme, welche von dem Transportmedium abgegeben wird und $Q_2$ die Wärme, welche an das Transportmedium abgegeben wird, darstellt. Daraus ergibt sich für die Güteziffer:
-        \begin{equation}
-            \upsilon = \frac{Q_\text{transp}}{A} \stackrel{(\ref{eqn:irev})}{\implies} \upsilon_\text{id} = \frac{T_1}{T_1 - T_2}.
-            \label{eqn:Gueteziffer}
-        \end{equation}
-
-        Aus dem zweiten Hauptsatz der Thermodynamik und der Annahme, dass während der Wärmeübertragung kein Wärmeverlust der beiden Resoervoire stattfindet
-         und die Wärmeübertragung reversibel verläuft, ergibt sich idialisiert:
-
-        \begin{equation}
-            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} = 0.
-            \label{eqn:irev}
-        \end{equation}
-        
-        Da jedoch eine Wärmepumpe in der Realität nicht in der Lage ist den Prozess der Wärmeübertragung vollständig reversibel durchzuführen und dieser Prozess dardurch irreversibel wird, gilt:
-
-        \begin{equation}
-            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} > 0.
-            \label{eqn:rev}
-        \end{equation}
-
-        So ergibt sich für eine reale Wärmepumpe mit (\ref{eqn:Th1}) und (\ref{eqn:rev}):
-
-        \begin{equation}
-            \upsilon_\text{real} < \frac{T_1}{T_1 - T_2}.
-            \label{eqn:Gueteziffer_real}
-        \end{equation}
-
-        Aus dieser Gleichung (\ref{eqn:Gueteziffer_real}) folgt, dass die Wärmepumpe umso weniger Arbeit braucht, desto geringer die Differenz der beiden Temperaturen ist.
-
-        Des weiteren lässt sich die pro Zeiteinheit gewonnene Wärmemenge $\frac{\Delta Q_1}{\Delta t}$ errechnen, 
-        indem aus einer Messreihe $T_1$ als Funktion der Zeit t die Größe $\frac{\Delta T_1}{\Delta t}$ für ein geeignet gewähltes Zeitintervall $\Delta t$ ermittelt wird.
-        Daraus ergibt sich dann 
-
-        \begin{equation}
-        \frac{\Delta Q_1}{\Delta t} = (m_1 c_\text{w} + m_\text{k} c_\text{k}) \frac{\Delta T_1}{\Delta t},
-        \end{equation}
-
-        wobei $m_1 c_\text{w}$ die Wärmekapazität des Wassers im Reservoir 1 und $m_\text{k} c_\text{k}$ die Wärmekapazität der Kupferschlange und des Eimers bedeuten.
-        Für die Güteziffer $\upsilon$ ergibt sich dann
-
-        \begin{equation}
-        \upsilon = \frac{\Delta Q_1}{\Delta t N}
-        \end{equation}
-
-        mit N als die vom Wattmeter angezeigte und über das Zeitintervall $\Delta t$ gemittelte Kompressorleistung.
-
-
-        %2.2
-        \subsection{Bestimmung des Massendurchsatzes}
-
-        Der Massendurchsatz berechnet sich nach [D206 verlinken, S. 5] über den Differenzquotienten über:
-        \begin{equation}
-            \frac{\Delta Q_2}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t}
-            \label{eqn:mass1}
-        \end{equation}
-
-        und 
-
-        \begin{equation}
-            \frac{\Delta Q_2}{\Delta t} = L \frac{\Delta m}{\Delta t}
-            \label{eqn:mass2}
-        \end{equation}
-
-        mit (\ref{eqn:mass1}) und (\ref{eqn:mass2}) folgt:
-
-        \begin{equation}
-            L \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t} \iff \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{1}{L} \frac{\Delta T_2}{\Delta t},
-        \end{equation}
-        
-        falls die Verdampfungswärme $L$ bekannt ist.
-
-
-        %2.3
-        \subsection{Bestimmung der mechanischen Kompressorleistung $N_\text{mech}$}
-
-        Für die Arbeit $A_\text{m}$ des Kompressors, wenn er das Gasvolumen $V_\text{a}$ auf den Wert $V_\text{b}$ verringert, gilt:
-
-        \begin{equation}
-            A_\text{m} = - \int_{V_\text{a}}^{V_\text{b}} p \, \symup{d}V.
-        \end{equation}
-
-Näherungsweise wird nun angenommen, dass die Kompression adiabatisch erfolgt.
-Für den Zusammenhang zwischen Druck und Volumen gilt die Poissonsche Gleichung
+\noindent
+Eine Relaxationserscheinung tritt auf, wenn ein System aus seinem Ausgangszustand entfernt wird und es nicht-oszillatorisch in den Ausgangszustand zurückkehrt.
+Wird eine Größe A betrachtet, lässt sich ihre Änderungsgeschwindigkeit zum Zeitpunkt t darstellen als:
 
 \begin{equation}
-p_\text{a}V^\kappa_\text{a} = p_\text{b}V^\kappa_\text{b} = pV^\kappa.
-\end{equation}
-Damit erhält man für $A_\text{m}$
-\begin{equation}
-A_\text{m} = - p_\text{a}V^\kappa_\text{a}\int_{V_\text{a}}^{V_\text{b}} V^{-\kappa} \, \symup{d}V = \frac{1}{\kappa-1}p_\text{a}V^\kappa_\text{a}\Bigl(V^{-\kappa+1}_\text{b}-V^{-\kappa+1}_\text{a}\Bigr) = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) V_\text{a}
+\frac{\text{dA}}{\text{dt}}=\text{c} [ \text{A} ( \text{t} ) - \text{A} ( \text{\infty} ) ]  .
 \end{equation}
 
-und für die mechanische Kompressorleistung $N_\text{mech}$
+\noindent
+Durch Integration vom Zeitpunkt 0 bis t und umstellen ergibt sich dann 
+
 \begin{equation}
-N_\text{mech} = \frac{\Delta A_\text{m}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{\Delta V_\text{a}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{1}{\rho} \frac{\Delta m}{\Delta t}.
+\text{A} ( \text{t} ) = \text{A} ( \text{\infty} ) + [ \text{A} ( 0 ) - \text{A} ( \text{\infty} ) ] \, \symup{e}^\text{ct}  
 \end{equation}
 
-$\rho$ ist dabei die Dichte des Transportmediums im gasförmigen Zustand beim Druck $p_\text{a}$.
-Das hier benutzte Transportgas ist Dichlordiflourmethan ($\ce{Cl2F2C}$) mit $\rho_0 = 5,51\frac{g}{l}$. 
-Mit Hilfe der idealen Gasgleichung kann nun $\rho$ für Normalbedingungen (p = 1 Bar, T = $\SI{0}{\celsius}$) berrechnet werden.
-Außerdem gilt $\kappa=1,14$.
+\noindent
+mit $\text{c}<0$.
+
+\noindent
+Die Ent- und Aufladevorgänge eines Kondensators über einen Widerstand sind Beispiele für Relaxationsvorgänge, die im Folgenden näher untersucht werden.
+
+\noindent
+\begin{figure}
+            \centering
+               \includegraphics[height=5cm]{rc.pdf}
+               \caption{Entladung (1) und Aufladung (2) eines Kondensators über einen Widerstand.}
+               \label{fig:rc}
+\end{figure}
+
+\begin{enumerate}
+\item \textbf{Entladevorgang}
+
+Auf den Platten eines Kondensators mit der Kapazizät C und der Ladung Q ist die Spannung zwischen ihnen durch
+
+\begin{equation}
+\text{U}_\text{C}=\frac{\text{Q}}{\text{C}}
+\label{eqn:u}
+\end{equation}
+
+gegeben.
+Mit
+
+\begin{equation}
+\text{I}=\frac{\text{U}_\text{C}}{\text{R}}
+\label{eqn:i}
+\end{equation}
+
+und
+
+\begin{equation}
+\text{dQ}=-\text{Idt}
+\label{eqn:dq}
+\end{equation}
+
+lässt sich nun eine Differentialgleichung für den zeitlichen Verlauf der Ladung auf dem Plattenkondensator aufstellen.
+
+\begin{equation}
+\frac{\text{dQ}}{\text{dt}}=-\frac{1}{\text{RC}} \text{Q}(\text{t})
+\label{eqn:dgl}
+\end{equation}
+
+Mit der Randbedingung 
+
+\begin{equation}
+\text{Q}(\infty)=0
+\end{equation}
+
+lässt sich die DGL (\ref{eqn:dgl}) lösen zu
+
+\begin{equation}
+\text{Q}(\text{t}) = \text{Q}(0) \symup{e}^{-\frac{\text{t}}{\text{RC}}}.
+\end{equation}
+
+\item \textbf{Aufladevorgang}
+
+Mit den Randbedingungen für den Aufladevorgang
+
+\begin{equation}
+\text{Q}(\infty)=\text{CU}_0
+\end{equation}
+
+und 
+
+\begin{equation}
+\text{Q}(0)=0
+\end{equation}
+
+
+lässt sich die DGL (\ref{eqn:dgl}) lösen zu
+
+\begin{equation}
+\text{Q}(\text{t}) = \text{CU}_0 (1 - \symup{e}^{-\frac{\text{t}}{\text{RC}}}).
+\end{equation}
+
+Dabei ist der Ausdruck RC die Zeitkonstante, die angibt, wie schnell das System seinen Endzustand Q($\infty$) anstrebt.
+Das bedeutet, dass sich pro Zeitraum $\Delta$T=RC die Ladung auf dem Plattenkondensator und den Faktor
+
+\begin{equation}
+\frac{\text{Q}(\text{t}=\text{RC})}{\text{Q}(0)} = \frac{1}{\text{e}}
+\end{equation}
+
+ändert.
+
+\end{enumerate}
+
+\newpage
+\noindent
+\textbf{Relaxationsphänomene, die unter dem Einfluss einer periodischen Auslenkung aus der Gleichgewichtslage auftreten}
+
+\noindent
+Nun wird das Relaxationsphänomen auf einen RC-Kreis mit Wechselspannung nach Abbildung (\ref{fig:rcwechsel})betrachtet.
+
+\begin{figure}
+            \centering
+               \includegraphics[height=5cm]{rcwechsel.pdf}
+               \caption{RC-Kreis mit Wechselspannung.}
+               \label{fig:rcwechsel}
+\end{figure}
+
+\noindent
+Wenn die Kreisfrequenz $\omega$ klein genug ist, also $\omega << \frac{1}{\text{RC}}$ gilt, kann angenommen werden, dass $\text{U}(\text{t}) = \text{U}_\text{C}$ gilt.
+Mit zumehmender Frequenz tritt eine Phasenverschiebung $\phi$ zwischen den Spannungen $\text{U}(\text{t})$ und $\text{U}_\text{C}$ auf, da die Ent- und aufladung des Kondensators zeitlich hinter der äußeren Spannung zurück bleibt.
+Mit der Amplitude A ergibt sich der Ansatz:
+
+\begin{equation}
+\text{U}_\text{C} (\text{t}) = \text{A} (\omega) \text{cos}(\omega\text{t} + \phi)
+\end{equation}
+
+\noindent
+Mithilfe des Maschensatzes lässt sich aus Abbildung (\ref{fig:rcwechsel}) folgender Ausdruck formulieren:
+
+\begin{equation}
+\text{U}_0 \text{cos}(\omega \text{t}) = \text{I}(\text{t})\text{R} + \text{A} (\omega) \text{cos}(\omega\text{t} + \phi).
+\label{eqn:masch}
+\end{equation}
+
+\noindent
+Mit Gleichung (\ref{eqn:u}) und (\ref{eqn:dq}) kann I(t) umgeschrieben werden zu
+
+\begin{equation}
+\text{I}(\text{t}) = \text{C} \frac{\text{dU}_\text{C}}{\text{dt}}
+\label{eqn:it}
+\end{equation}
+
+\noindent 
+und kann in (\ref{eqn:masch}) eingesetzt werden.
+Daraus ergibt sich:
+
+\begin{equation}
+\text{U}_0 \, \text{cos}(\omega \text{t}) = -\text{A}\omega\text{RC} \, \text{sin} (\omega\text{t} + \phi ) + \text{A} (\omega) \, \text{cos}(\omega\text{t} + \phi).
+\label{eqn:u0}
+\end{equation}
+
+\noindent
+Wird nun $\omega \text{t} = \frac{\pi}{2}$ gewählt und ausgenuntzt, dass $\text{sin}(\frac{\pi}{2} + \phi) = \text{cos}(\phi)$ und $\text{cos}(\frac{\pi}{2} + \phi) = -\text{sin}(\phi)$ gilt, folgt aus Gleichung (\ref{eqn:u0})
+
+\begin{equation}
+0 = -\text{A}\omega\text{RC}\, \text{cos}(\phi) - \text{A} (\omega) \, \text{sin}(\phi) \\
+\iff \phi = \text{arctan}(-\omega\text{RC})
+\label{eqn:phi}
+\end{equation}
+
+\noindent
+Weiter folgt aus (\ref{eqn:u0}) für $\omega\text{t} + \phi = \frac{\pi}{2}$
+
+\begin{equation}
+\text{U}_0 \, \text{cos}(\frac{\pi}{2} - \phi) = -\text{A}\omega\text{RC}
+\iff \text{A}(\omega) = - \frac{\text{sin} \, \phi}{\omega\text{RC}} \text{U}_0
+\label{eqn:a}
+\end{equation}
+
+\noindent
+Wird nun Gleichung (\ref{eqn:phi}) weiter umgeformt zu 
+
+\begin{equation}
+\text{sin} \, \phi = \frac{\omega \text{RC}}{\sqrt{1 + \omega^2 \text{R}^2 \text{C}^2 }}
+\end{equation}
+
+\noindent
+kann dieser Ausdruck in Gleichung (\ref{eqn:a}) eingesetzt werden. Daraus ergibt sich 
+
+\begin{equation}
+\text{A}(\omega) = \frac{\text{U}_0}{\sqrt{1 + \omega^2 \text{R}^2 \text{C}^2 }}
+\end{equation}
+
+\noindent
+Unter bestimmten Vorraussetzungen ist es möglich, eine zeitlich veränderte Spannung in einem wie in Abbildung (\ref{fig:rcwechsel}) gezeigten System zu Integrieren.
+Zunächst wird die Maschenregel auf die in Abbildung (\ref{fig:rcwechsel}) gezeigte Schaltung angewendet. Daraus folgt:
+
+\begin{equation}
+\text{U}(\text{t}) = \text{I}(\text{t})\text{R} + \text{U}_\text{C}.
+\end{equation}
+
+\noindent
+Nun wird für $\text{I}(\text{t})$ der Ausdruck aus Gleichung (\ref{eqn:it}) eingesetzt.
+
+\begin{equation}
+\text{U}(\text{t}) = \text{RC} \frac{\text{dU}_\text{C}}{\text{dt}} + \text{U}_\text{C}.
+\label{eqn:utt}
+\end{equation}
+
+\noindent
+Unter der Vorraussetzung, dass $\omega >> \frac{1}{\text{RC}}$ gilt, ist $|\text{U}_\text{C}| << |\text{U}_\text{R}|$ und  $|\text{U}_\text{C}| << |\text{U}|$
+Näherungsweise kann die Gleichung (\ref{eqn:utt}) nun vereinfacht werden zu
+
+\begin{equation}
+\text{U}(\text{t}) = \text{RC} \frac{\text{dU}_\text{C}}{\text{dt}}.
+\end{equation}
+
+\noindent
+Umgestellt nach $\text{U}_\text{C}$ ergibt dies
+
+\begin{equation}
+\text{U}_\text{C} = \frac{1}{\text{RC}} \int_0^\text{t} \text{U}(\text{t'}) \text{dt'}
+\label{eqn:int}
+\end{equation}
+
+\noindent
+Gleichung (\ref{eqn:int}) ist zu entnehmen, dass $\text{U}_\text{C}$ proportional zu $\int \text{U}(\text{t})$ ist, wenn $\omega >> \frac{1}{\text{RC}}$ gilt.
