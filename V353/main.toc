@@ -7,13 +7,11 @@
 \contentsline {subsection}{\numberline {3.2}Aufgabe b)}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Aufgabe c)}{7}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Aufgabe d)}{8}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Messwerte}{9}{section.4}%
-\contentsline {section}{\numberline {5}Auswertung}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Aufgabenteil a)}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Aufgabenteil b)}{11}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Aufgabenteil c)}{11}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Aufgabenteil d)}{11}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Aufgabenteil e)}{11}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Aufgabenteil f)}{11}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Aufgabenteil g)}{11}{subsection.5.7}%
-\contentsline {section}{\numberline {6}Diskussion}{11}{section.6}%
+\contentsline {section}{\numberline {4}Auswertung}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Entladevorgange des Kondensators}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Amplitude und Frequenz}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Phasenverschiebung}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Integrator-Funktion des RC-Kreises}{16}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Diskussion}{16}{section.5}%
+\contentsline {section}{\nonumberline Literatur}{17}{section*.17}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

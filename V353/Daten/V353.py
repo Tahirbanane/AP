@@ -5,6 +5,7 @@ import sympy
 import statistics
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
+from scipy.signal import find_peaks
 import pandas as pd
 
 print (f'-----------------------------------Aufgabe a-----------------------------------' )
@@ -23,14 +24,15 @@ params1, covariance_matrix = curve_fit(UC, t[1:-1], U[1:-1], p0 =p0)
 fehler = np.sqrt(np.diag(covariance_matrix))
 
 
+
 plt.figure()
-plt.plot(t, U,'+', label = r'$U_C Spannung am Kondensator$')
+plt.plot(t, U,'+', label = 'Spannung U am Kondensator')
 plt.plot(t[1:-1], UC(t,params1[0],params1[1])[1:-1])
-plt.xlabel(r'$Zeit in s$')
-plt.ylabel(r'$ln(U_C)$')
+plt.xlabel('Zeit in s')
+plt.ylabel('U in V')
 plt.xscale('log')
+plt.legend()
 plt.tight_layout()
-#plt.show()
 plt.savefig('a.pdf')
 
 print(params1,fehler)
@@ -52,11 +54,12 @@ params, covariance_matrix = curve_fit(AC, f, UC/U0, p0 = [0.0001])
 fehler = np.sqrt(np.diag(covariance_matrix))
 
 plt.figure()
-plt.plot(f, UC/U0,'+', label = r'$U_C Spannung am Kondensator$')
+plt.plot(f, UC/U0,'+', label = 'Spannung am Kondensator')
 plt.plot(f, AC(f, params[0]) ,label = r'$Fit$')
-plt.xlabel(r'$Frequenz in s$')
+plt.xlabel('Frequenz in s')
 plt.ylabel(r'$U_C/U_0$')
 plt.xscale('log')
+plt.legend()
 plt.tight_layout()
 #plt.show()
 plt.savefig('b.pdf')
@@ -76,11 +79,12 @@ params, covariance_matrix = curve_fit(ph, f, phi)
 fehler = np.sqrt(np.diag(covariance_matrix))
 
 plt.figure()
-plt.plot(f, phi,'+', label = r'$U_C Spannung am Kondensator$')
-plt.plot(f, ph(f, params[0]) ,label = r'$Fit$')
-plt.xlabel(r'$Frequenz in s$')
-plt.ylabel(r'Phasenverschiebung')
+plt.plot(f, phi,'+', label = 'Spannung am Kondensator')
+plt.plot(f, ph(f, params[0]) ,label = 'Fit')
+plt.xlabel('Frequenz in s')
+plt.ylabel('Phasenverschiebung')
 plt.xscale('log')
+plt.legend()
 plt.tight_layout()
 
 plt.savefig('c.pdf')
