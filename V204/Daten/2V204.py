@@ -81,6 +81,3 @@ def betrag_z(A):
     if(A < 0):
         return -A
     return A
-
-
-

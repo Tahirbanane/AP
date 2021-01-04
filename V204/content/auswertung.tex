@@ -107,6 +107,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
     \end{figure}
     \noindent
     Aus der Grafik lassen sich die doppelten Amplituden $A1 \, \text{und} \, A2$ sowie die Phasendifferenz $\Delta t$ bestimmen. Daraus lässt sich die dazugehörige Wärmeleitfähigkeit berechnen:
+    \newpage
     \begin{table}
         \centering
             \begin{tabular}{
@@ -137,7 +138,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
         \label{tab:MesMess}
     \end{table}
     \noindent
-    Es fällt auf das diese stark schwankt, jedoch ist nach einer Mittelung der Werte der Fehler zum Literaturwert aus (\ref{tab:literaturwerte}) nicht mehr so groß.
+    Es fällt auf das diese stark schwankt, jedoch ist nach einer Mittelung von der Wärmeleitfähigfkeit zu $\bar{\kappa}_\text{Messing} = 131,8212 \pm 1.8130 \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$, der Fehler zum Literaturwert aus (\ref{tab:literaturwerte}) nicht mehr so groß.
 
     %Aluminium
 \newpage
@@ -156,7 +157,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
                 S[table-format=1.3]
                 S[table-format=1.3]
                 S[table-format=2.3]
-                S[table-format=3.3]
+                c
             }
             \toprule
             {$ {A5}         \mathbin{/} \si[per-mode=fraction]{\kelvin} $}
@@ -164,7 +165,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
             & {$\Delta t \mathbin{/} \si[per-mode=fraction]{\second} $}
             & {$\kappa   \mathbin{/} \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$} \\
             \midrule
-            6.477 & 5.497 & 32.889 & 201.702  \\
+            6.477 & 5.497 & 32.889 & 201,7020 \pm 1.2271  \\
             \bottomrule
             \end{tabular}
         \caption{Errechnete Daten fürs Aluminium aus dem Graphen}
@@ -200,14 +201,12 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
     Daraus lässt sich Mithilfe der Formel $\lambda f = \upsilon$ und der Formel (\ref{eqn:phasengeschwindigkeit}), sowie dem Literaturwerten aus (\ref{tab:literaturwerte}), die Frequenz berechnen zu:
 \begin{table}
         \centering
-            \begin{tabular}{c c c c}
+            \begin{tabular}{c c}
             \toprule
-            {$   \lambda_1 \mathbin{/} \si{\meter} $}
-            & {$ \lambda_2 \mathbin{/} \si{\meter} $}
-            & {$ \lambda_5 \mathbin{/} \si{\meter} $}
-            & {$ \lambda_6 \mathbin{/} \si{\meter} $} \\
+            {$   \lambda_\text{Messing} \mathbin{/} \si{\meter} $}
+            & {$ \lambda_\text{Aluminium} \mathbin{/} \si{\meter} $} \\
             \midrule
-            0.00256 & 0.00261 & 0.00379 & 0.00379\\
+            0.2009 & 0.2895 \\
             \bottomrule
             \end{tabular}
         \caption{Wellenlänge errechnet}
@@ -226,7 +225,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
                \caption{Temperaturverläufe der Thermoelemente $T7$ und $T8$}
                \label{fig:dyn_edel}
         \end{figure}
-
+\newpage
     \begin{table}
         \centering
             \begin{tabular}{
@@ -250,6 +249,7 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
         \caption{Errechnete Daten aus den Graphen}
         \label{tab:MesAlum}
     \end{table}
+    Wenn man die Wärmeleitfähigkeit mittelt ergibt dies:$\bar{\kappa}_\text{Edelstahl} = 10.8017 \pm 1.0546 \si[per-mode=fraction]{\watt\per\meter\per\kelvin}$
 \newpage
     \subsection{Wellenlänge und Frequenz beim Edelstahl}
     Auch beim Edelstahl ist es möglich die Frequenz aus dem Graphen zu bestimmen und im selben Verfahren wie zuvor die Wellenlänge rechnerisch zu bestimmen:
@@ -270,12 +270,11 @@ Jedoch fällt der Graph von $T2-T1$ deutlich stärker als $T7-T8$. Das globale M
     Daraus lässt sich Mithilfe der Formel $\lambda f = \upsilon$ und der Formel (\ref{eqn:phasengeschwindigkeit}), sowie dem Literaturwerten aus (\ref{tab:literaturwerte}), die Frequenz berechnen zu:
 \begin{table}
         \centering
-            \begin{tabular}{c c}
+            \begin{tabular}{c}
             \toprule
-            {$   \lambda_7 \mathbin{/} \si{\meter} $}
-            & {$ \lambda_8 \mathbin{/} \si{\meter} $} \\
+            {$   \lambda\text{Edelstahl} \mathbin{/} \si{\meter} $} \\
             \midrule
-            0.00057 & 0.00058 \\
+            0.0848 \\
             \bottomrule
             \end{tabular}
         \caption{Wellenlänge errechnet}

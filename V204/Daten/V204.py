@@ -45,17 +45,17 @@ T_7_3 += 273.15
 
 
 #statische Methode Plot:
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_1, T_1_1, label=r'$T1 = Messing(dick)$')
-plt.plot(t_1, T_4_1, label=r'$T4 = Messing(dünn)$')
-plt.plot(t_1, T_5_1, label=r'$T5 = Aluminium$')
-plt.plot(t_1, T_8_1, label=r'$T8 = Edelstahl$')
-plt.legend()
-plt.tight_layout()
-plt.savefig('Daten/grafic.pdf')
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_1, T_1_1, label=r'$T1 = Messing(dick)$')
+#plt.plot(t_1, T_4_1, label=r'$T4 = Messing(dünn)$')
+#plt.plot(t_1, T_5_1, label=r'$T5 = Aluminium$')
+#plt.plot(t_1, T_8_1, label=r'$T8 = Edelstahl$')
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('Daten/grafic.pdf')
 
 #statische Methode 700s:
 print(f'Die Temperatur bei T1 beträgt: {T_1_1[7000]}, \n Die Temperatur bei T4 beträgt: {T_4_1[7000]}, \n Die Temperatur bei T5 beträgt: {T_5_1[7000]}, \n Die Temperatur bei T8 beträgt: {T_1_1[7000]}, \n')
@@ -88,16 +88,39 @@ def A(T):
             k += l[i]
         return l/len(x)
 
-#Durchschnitt:
-def ds(A):
-    return statistics.mean(A)
-
 #Betrag:
 def betrag(A):
-    for i in range(0,len(A)-1):
+    for i in range(0,A.shape[0]-1):
         if A[i] < 0:
             A[i] *= -1
     return A
+
+#Durchschnitt:
+def ds(A):
+    #A = betrag(A)
+    return statistics.mean(A)
+    
+    #sum = 0
+    #for i in range(0,A.shape[0]-1):
+    #    sum += A[i]
+    #return sum/A.shape[0]
+
+# Fehler vom Mittelwert:
+def dsf(A):
+    dsA = ds(A)
+    sum = 0
+    for i in range(0,A.shape[0]-1):
+        sum += (A[i] - dsA)**2
+    return np.sqrt(sum/(A.shape[0]**2 - A.shape[0]))
+
+#Standardabweichung:
+def sigma1(A):
+    dsA = ds(A)
+    sum = 0
+    for i in range(0,A.shape[0]-1):
+        sum += (A[i] - dsA)**2
+    return np.sqrt(sum/(A.shape[0] - 1))
+
 
 def betrag_z(A):
     if(A < 0):
@@ -140,52 +163,52 @@ for i in range(0,5):
 
 # T7- T8 und T2 - T1
 
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_1, T_7_1- T_8_1, label=r'$T7- T8$')
-
-plt.legend()
-plt.tight_layout()
-plt.savefig('grafic1.pdf')
-
-
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_1, T_2_1 - T_1_1, label=r'$T2 - T1$')
-
-plt.legend()
-plt.tight_layout()
-plt.savefig('grafic2.pdf')
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_1, T_7_1- T_8_1, label=r'$T7- T8$')
+#
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('grafic1.pdf')
+#
+#
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_1, T_2_1 - T_1_1, label=r'$T2 - T1$')
+#
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('grafic2.pdf')
 
 
 
 # Dynamisch Periode 80s
 
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_2, T_1_2, label=r'$T1$')
-plt.plot(t_2, T_2_2, label=r'$T2$')
-
-plt.legend()
-plt.tight_layout()
-plt.savefig('grafic3.pdf')
-
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_2, T_5_2, label=r'$T5$')
-plt.plot(t_2, T_6_2, label=r'$T6$')
-
-plt.legend()
-plt.tight_layout()
-plt.savefig('grafic5.pdf')
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_2, T_1_2, label=r'$T1$')
+#plt.plot(t_2, T_2_2, label=r'$T2$')
+#
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('grafic3.pdf')
+#
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_2, T_5_2, label=r'$T5$')
+#plt.plot(t_2, T_6_2, label=r'$T6$')
+#
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('grafic5.pdf')
 
 
 #Messing
@@ -211,8 +234,9 @@ t_ph = (t_2[x1] - t_2[x3] + t_2[x2] - t_2[x4])/2
 print(f'Die Phasendifferenz beträgt t = {ds(t_ph)}')
 
 #Berechnung der mittleren Wärmeleitfähigkeit
-
-print(f'Die Wärmeleitfähigkeit beträgt k = {kappa(8400, 377, 0.029, ds(t_ph), A1, A2) } (Messing dick) ' )
+k = kappa(8400, 377, 0.029, t_ph, A11, A22)
+print(f'Die Wärmeleitfähigkeit beträgt k = {k} (Messing) ' )
+print(f'Die mittlere Wärmeleitfähigkeit beträgt k = {ds(k) } +- {dsf(k)} (Messing) ' )
 
 #Aluminium
 #Berechnung von der Amplitude T5
@@ -238,23 +262,24 @@ t_ph = (t_ph1[0:-1] + t_ph2)/2
 print(f'Die durschnittliche Phasendifferenz beträgt t = {ds(t_ph)}')
 
 #Berechnung der mittleren Wärmeleitfähigkeit
-
+k = kappa(2700, 896, 0.03, t_ph, A5, A6)
 print(f'Die mittleren Wärmeleitfähigkeit beträgt k = {kappa(2700, 896, 0.03, ds(t_ph), A5, A6) } (Aluminium) ' )
+print(f'Die mittlere Wärmeleitfähigkeit beträgt k = {ds(k)} +- {dsf(k)} (Aluminium) ' )
 #print(f'Die mittleren Wellenlänge beträgt lambda = {lam(kappa(2700, 896, 0.03, ds(t_ph), A5, A6),0.01228,2700,896) } (Aluminium)')
 
 
 # Dynamisch Periode 200s
 
-plt.figure()
-plt.xlabel(r'$t \, [s]$')
-plt.ylabel(r'$T  \, [K]$')
-
-plt.plot(t_3, T_7_3, label=r'$T7$')
-plt.plot(t_3, T_8_3, label=r'$T8$')
-
-plt.legend()
-plt.tight_layout()
-plt.savefig('grafic4.pdf')
+#plt.figure()
+#plt.xlabel(r'$t \, [s]$')
+#plt.ylabel(r'$T  \, [K]$')
+#
+#plt.plot(t_3, T_7_3, label=r'$T7$')
+#plt.plot(t_3, T_8_3, label=r'$T8$')
+#
+#plt.legend()
+#plt.tight_layout()
+#plt.savefig('grafic4.pdf')
 
 
 #Amplituden
@@ -291,9 +316,16 @@ t_ph1 = (t_3[x1][0:-1] - t_3[x3])
 t_ph2 = (t_3[x2] - t_3[x4])
 t_ph = (t_ph1 + t_ph2)/2
 
+tp1 = t_3[x1[0]] -  t_3[x1[1]] + t_3[x1[1]] - t_3[x1[2]] + t_3[x1[2]] - t_3[x1[3]]
+tp2 = t_3[x3[0]] -  t_3[x1[1]] + t_3[x3[1]] - t_3[x3[2]] + t_3[x3[2]] - t_3[x3[3]]
+
+print(f'Die doppelte Periode beträgt T = {tp1, tp2}')
+
 print(f'Die Phasendifferenz beträgt t = {t_ph}')
 print(f'Die durschnittliche Phasendifferenz beträgt t = {ds(t_ph)}')
 
 #Berechnung der Wärmeleitfähigkeit
+k = kappa(8000, 500, 0.031, t_ph, A77, A88)
+print(f'Die Anzahl an ermittelten Perioden ist {len(A77)} Wärmeleitfähigkeit beträgt k = {k, A77, A88, kappa(8000, 500, 0.031, ds(t_ph), A7, A8) } (Edelstahl) ' )
+print(f'Die mittlere Wärmeleitfähigkeit beträgt k = {ds(k)} +- {dsf(k)} (Edelstahl) ' )
 
-print(f'Die Anzahl an ermittelten Perioden ist {len(A77)} Wärmeleitfähigkeit beträgt k = {kappa(8000, 500, 0.031, ds(t_ph), A7, A8) } (Edelstahl) ' )
