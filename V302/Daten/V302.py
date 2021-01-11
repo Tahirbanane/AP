@@ -23,34 +23,61 @@ def get_minmax(values):
 
 
 #Aufgabe b
+print (f'\n -----------------------------------Aufgabe b-----------------------------------')
 
 C2, R2, R3, R4 = np.genfromtxt('Daten/b.txt', unpack = True)
 
 C2 *= 10**(-9)
 
-print(f'Rx = {R2*R3/R4} +- 3% Fehler')
-print(f'Cx = {C2*R3/R4}')
+def fR(R2,R3,R4):
+    return np.sqrt( (R3/R4 * (0.03*R2))**2 + (R2*0.005*R3/R4)**2)
 
+def fC(C2,R3,R4):
+    return C2 * 0.005 * R4/R3
+
+print(f'Rx = {R2*R3/R4} +- {fR(R2,R3,R4)} ') #Fehler wurde korrigiert R4/R3 statt R3/R4
+print(f'Cx = {C2*R4/R3} +- {fC(C2,R3,R4)} ')
+
+print(f'\n dRx = {ds((R2*R3/R4)[0:3])} +- {ds(fR(R2,R3,R4)[0:3])}') #Fehler wurde korrigiert R4/R3 statt R3/R4
+print(f'dCx = {ds((C2*R4/R3)[0:3])} +- {ds(fC(C2,R3,R4)[0:3])}')
+
+print(f'\n dRx = {ds((R2*R3/R4)[3:])} +- {ds(fR(R2,R3,R4)[3:])}') #Fehler wurde korrigiert R4/R3 statt R3/R4
+print(f'dCx = {ds((C2*R4/R3)[3:])} +- {ds(fC(C2,R3,R4)[3:])}')
 #Aufgbabe c
+print (f'\n -----------------------------------Aufgabe c-----------------------------------')
 
 L2, R2, R3, R4 = np.genfromtxt('Daten/c.txt', unpack = True)
-
 L2 *= 10**(-3)
 
-print(f'Rx = {R2*R3/R4}')
-print(f'Lx = {L2*R3/R4}')
+def fL(L2,R3,R4):
+    return L2 * 0.005 * R3/R4
+
+print(f'Rx = {R2*R3/R4} +- {fR(R2,R3,R4)}')
+print(f'Lx = {L2*R3/R4} +- {fL(L2,R3,R4)}')
+
+
+print(f'dRx = {ds((R2*R3/R4)[0:3])} +- {ds(fR(R2,R3,R4)[0:3])}')
+print(f'dLx = {ds((L2*R3/R4)[0:3])} +- {ds(fL(L2,R3,R4)[0:3])}Wert 10')
+
+print(f'\n dRx = {ds((R2*R3/R4)[3:])} +- {ds(fR(R2,R3,R4)[3:])}')
+print(f'dLx = {ds((L2*R3/R4)[3:])} +- {ds(fL(L2,R3,R4)[3:])}Wert 18')
 
 #Aufgabe d
+print (f'\n -----------------------------------Aufgabe d-----------------------------------')
 
 R2, R3, R4 = np.genfromtxt('Daten/d.txt', unpack = True)
 
 C4 = 399 * 10**(-9)
 
-print(f'Rx = {R2*R3/R4}')
+def fR(R2,R3,R4):
+    return np.sqrt((0.03 * R3/R4)**2 + (R3/((0.003*R4)**2))**2)*R2
+
+print(f'Rx = {R2*R3/R4} +- {fR(R2,R3,R4)}')
 print(f'Rx Fehler = {R2*(0.03*R3)/R4 + R2*R3*(0.03*R4)/(R4**2)}')
-print(f'Lx = {R2*R3*C4} +- 3% Fehler')
+print(f'Lx = {R2*R3*C4} +- {R2*R3*C4*0.03}')
 
 #Aufgabe e
+print (f'\n -----------------------------------Aufgabe e-----------------------------------')
 
 # R = 1000 Ohm
 # w = 2pi f
@@ -66,14 +93,16 @@ C *= 10**(-9)
 
 w0 = 1/(R*C)
 
-Q = np.sqrt(1/9*((w/w0)**2-1)**2/((1-(w/w0)**2)**2+9*(w/w0)**2))
+
 
 plt.figure()
 plt.ylabel(r'$U_\text{Br}/U_s$')
 plt.xlabel(r'$\omega/\omega_0$')
 plt.xscale('log')
-plt.plot(w/w0, UBr/Us,'b.' ,label = r'$gemessen$')
-plt.plot(w/w0, Q,'g--' ,label = r'$errechnet$')
+plt.plot(w/w0, UBr/Us,'b.' ,label = 'gemessen')
+x = np.linspace(0.03,100,1000)
+Q = np.sqrt(1/9*((x)**2-1)**2/((1-(x)**2)**2+9*(x)**2))
+plt.plot(x, Q,'g--' ,label = 'errechnet')
 plt.legend()
 plt.tight_layout()
 plt.savefig('Daten/grafic.pdf')
