@@ -13,5 +13,4 @@
 \contentsline {subsection}{\numberline {4.3}Phasenverschiebung}{13}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Integrator-Funktion des RC-Kreises}{16}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Diskussion}{16}{section.5}%
-\contentsline {section}{\nonumberline Literatur}{17}{section*.17}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
+\contentsline {section}{\nonumberline Literatur}{17}{section*.16}%

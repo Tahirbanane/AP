@@ -179,16 +179,15 @@
       \verb http://www.numpy.org/
       \endverb
     \endentry
-    \entry{D206}{manual}{}
+    \entry{V353}{manual}{}
       \list{organization}{1}{%
         {Fakultät Phyik, TU Dortmund}%
       }
       \field{sortinit}{V}
       \field{sortinithash}{02432525618c08e2b03cac47c19764af}
       \field{labeltitlesource}{title}
-      \field{title}{Versuchsanleitung zu Versuch D206 {Die Wärmepumpe}}
+      \field{title}{Versuchsanleitung zu Versuch V353 {Relaxationsverhalten eines RC-Kreises}}
       \field{year}{2020}
-      \true{nocite}
     \endentry
   \enddatalist
 \endrefsection
