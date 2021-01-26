@@ -36,6 +36,7 @@ print(f'a = {params[0]} +- {errors[0]}')
 print(f'b = {params[1]} +- {errors[1]}')
 print(f'Steigung in Prozent pro 100V: {((params[0] * 500 + params[1]) - (params[0] * 400 + params[1])) / 100}')
 
+
 print (f'\n -----------------------------------Aufgabe b-----------------------------------')
 
 print('ist die Erholungszeit')
