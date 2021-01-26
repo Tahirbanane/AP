@@ -12,7 +12,7 @@ from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
 
 print (f' -----------------------------------Aufgabe a-----------------------------------')
-U, N = np.genfromtxt('Kennlinie.dat', unpack = True)
+U, N = np.genfromtxt('Daten/Kennlinie.dat', unpack = True)
 
 dN = np.sqrt(N) #Weil Poissonveteilt
 
@@ -57,7 +57,7 @@ print(f'Totzeit T = {T}')
 
 print (f'\n -----------------------------------Aufgabe d-----------------------------------')
 
-U, N, I0 = np.genfromtxt('Zaehlrohrstrom.dat', unpack = True)
+U, N, I0 = np.genfromtxt('Daten/Zaehlrohrstrom.dat', unpack = True)
 I = unp.uarray(I0, 0.05)
 Z = I / (const.epsilon_0 * N)
 

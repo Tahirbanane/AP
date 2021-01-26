@@ -2,7 +2,7 @@ all: build/main.pdf
 
 # hier Python-Skripte:
 build/grafic.pdf: grafic.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): 
+	TEXINPUTS=$$(pwd): python Daten/V703.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/main.pdf: build/grafic.pdf
