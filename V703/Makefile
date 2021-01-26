@@ -1,6 +1,13 @@
 all: build/main.pdf
 
-build/main.pdf: main.tex lit.bib | build
+# hier Python-Skripte:
+build/grafic.pdf: grafic.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): 
+
+# hier weitere Abhängigkeiten für build/main.pdf deklarieren:
+build/main.pdf: build/grafic.pdf
+
+build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
@@ -16,5 +23,7 @@ build:
 
 clean:
 	rm -rf build
+
+FORCE:
 
 .PHONY: all clean
