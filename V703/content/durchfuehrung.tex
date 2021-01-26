@@ -1,36 +1,43 @@
-\section{Prinzipieller Aufbau einer Wärmepumpe}
-    	Die Wärmepumpe benutzt als Transportmedium ein reales Gas,welches durch Phasenumwandlung in der Lage ist Wärme zu transportieren. 
-        Um dies besonders effizient tun zu können ist es sinnvoll ein Gas mit einer möglichst hoher Kondensationswärme zu verwenden. 
-        Der schematische Aufbau einer Wärmepumpe ist in \autoref{fig:prinzW} zu sehen.
-        \begin{figure}
-            \centering
-               \includegraphics[scale=0.75]{aufbau_1.pdf}
-               \caption{Prinzipieller Aufbau einer Wärmepumpe ($p_\text{b}$ > $p_\text{a}$; $T_1$ > $T_2$)}
-               \label{fig:prinzW}
-        \end{figure}
-        Der Kompressor K erzeugt eine annähernd adiabatische Kompression, also eine Kompression ohne Wärmeverluste an die Umgebung. 
-        Zusätzlich wird durch diese Kompression ein Mediumskreislauf im System ingang gebracht. Durch das Drosselventil D und dem hohen Strömungswiderstand baut sich ein Druckunterschied
-        zwischen dem Eingang des Ventils und dessen Ausgang auf ($p_\text{b}-p_\text{a}$).
+\section{Durchführung}
+Das Experiment wird nach Abbildung (\ref{fig:aufbau}) mit einer $\ce{^{204}Tl}$ Quelle aufgebaut.
 
-        Die Apparatur ist so konzipiert, dass das Gas Reservoir 2 und 1 durchströmt und jeweils sein Zustand in einem der beiden ändert. Dies bedeutet, dass das Gas sich im Reservoir 2 
-        vergasförmigt und in Reservoir 1 durch den erhöhten Druck ($p_\text{b}$) wieder verflüssigt und so seine, durch die Vergasung, aufgenommene Wärme wieder abgibt. Die Messgröße der 
-        Verdampfungswärme ist L pro Gramm Substanz.  Somit ist das Reservoir 1 das wärmere und Reservoir 2 das kältere.
 
-        Damit die Apparatur störungsfrei arbeiten kann ist es notwendig weitere Armaturen ins System zu integrieren. Diese haben jedoch keinen direkten Einfluss auf die prinzipielle Wirkungsweise. 
-        So benutzt man einen sogennanten "`Reiniger"' R, welches das verflüssigte Transportmedium von Gasblasen reinigt, sodass eine blasenfreie Flüssigkeitszufuhr zum Drosselventil D gewährleistet werden kann.
-        Zudem wird eine "`Steuerungsvorrichtung"' S für das Drosselventil benutzt, sodass die Durchlässigkeit der Drosselventils über die Temperaturdifferenz zwischen Eingang und Ausgang ($T_2 - T_1$) 
-        des Reservoirs 2 gesteuert werden kann.
 
-    %4
-    \newpage
-    \section{Durchführung}
-    Der Versuchsbau ist folgendermaßen:
-    \begin{figure}
-               \centering
-               \includegraphics[width=\textwidth]{aufbau_2.pdf}
-               \caption{Schematische Darstellung der kompletten Messapparatur}
-               \label{fig:scheW}
-    \end{figure}
 
-    Sobald der Kompressor eingeschaltet wird, werden die Temperaturen T1 und T2, die Drücke p1 und p2 und die Kompressorleistung N an den Anzeigegeräten abgelesen. Damit die Zeitabstände
-    beim Ablesen möglichst gleich sind, werden die Größen immer in derselben Reihenfolge notiert. Um die Drücke p1 und p2 zu erhalten, muss noch 1 bar auf die gemessenen Drücke p*1 und p*2 addiert werden.
+\subsection{Aufgabe a)}
+Die $\beta$-Quelle wird vor dem Eintrittsfenster des Zählrohres platziert.
+Dabei wird die Zählrate von $100\frac{\text{Imp}}{\text{s}}$ bei mittlerer Spannung nicht überschritten, um eine Totzeit-Korrektur zu vermeiden.
+Nun wird die Zählrate für Spannungen zwischen $300\si{\volt}$ und $700\si{\volt}$ im Abstand von $\Delta \text{U} =10 \si{\volt}$ für jeweils $60\si{\second}$ gemessen und notiert.
+Die Werte wurden in Tabelle (??) zusammengetragen.
+
+
+\subsection{Aufgabe c)}
+Die Totzeit wird nun auf 2 verschiedene Arten bestimmt.
+\begin{enumerate}
+\item \textbf{Oszilloskop}
+
+Die Quelle wird an das Zählrohr gestellt, damit eine hohe Strahlenintensität in das Zählrohr eintritt.
+Nun kann auf dem Oszilloskop eine Kurve nach Abbildung (\ref{fig:totzeit}) beobachtet werden, aus der die Totzeit abgelesen wird.
+
+\item \textbf{Zwei-Quellen-Methode}
+
+Die genauere Methode ist die Zwei-Quellen-Methode.
+Hierzu wird die $\ce{^{204}Tl}$ Quelle näher an das Zählrohr gestellt, um eine Totzeit-Korrektur zu erhalten ($\text{N}_1$).
+Danach wird eine zweite Quelle im gleichen Abstand auf das Zählrohr gerichtet ($\text{N}_{1+2}$).
+Anschließend wird die $\ce{^{204}Tl}$ Quelle entfernt ($\text{N}_2$).
+Die Messzeit beträgt bei allen drei Messungen $\text{t}=120 \si{\second}$, um die Genauigkeit zu erhöhen.
+Dabei wurden folgende Zählraten gemessen:
+
+\begin{align*}
+\text{N}_1 &= 96041 \, \frac{\text{Imp}}{120\si{\second}} \\
+\text{N}_{1+2} &= 158479 \, \frac{\text{Imp}}{120\si{\second}} \\
+\text{N}_2 &= 76518 \, \frac{\text{Imp}}{120\si{\second}}
+\end{align*}
+
+\end{enumerate}
+
+\subsection{Aufgabe d)}
+Der Zählrohrstrom kann parallel zur Aufnahme der Messwerte in a) notiert werden.
+Alle $50 \si{\volt}$ wird am Mikro-Amperemeter der Zählrohrstrom abgelesen.
+Die Werte sind in Tabelle (??) eingetragen.
+Es gilt $\Delta \text{t}=60\si{\second}$.
