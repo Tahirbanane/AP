@@ -1,125 +1,181 @@
 \section{Zielsetzung}
-    Mit dem Versuch "`Wärmepumpe"' soll die Funktionsweise einer Wärmepumpe verstanden und zudem soll eine Aussage über die Güteziffer und den Masssendurchsatz,
-    sowie den Wirkungsgrad des Kompressors getroffen werden.
+In diesem Versuch wird der radioaktive Zerfall von aktivierten Atomkernen untersucht.
+Hierzu wird die Untergrundrate, sowie die Halbwertszeit von Vanadium und Rhodium bestimmt. 
 
-    \section{Theoretische Grundlage}
-    Beobachtungen und der zweite Hauptsatz der Thermodynamik zeigen, dass der Wärmefluss zwischen zwei gekoppelten Medien (z.B. durch ein Transportmedium), unterschiedlicher Temperatur, immer vom wärmeren zum kälterem zeigt.
+\section{Theoretische Grundlagen}
+Um instabile Kerne zu erzeugen, werden stabile Kerne mit Neutronen beschossen.
 
-    Es ist jedoch möglich diesen Wärmefluss umzudrehen. Dafür muss jedoch zusätzliche Energie aufgebracht werden zum Beispiel in Form von mechanischer. Eine Vorrichtung die in der Lage ist dies zu tun ist 
-    eine sogenannte Wärmepumpe. Dazu nutzt es eines Kompressors und ein Transportmedium, sowie ein Ventil. 
+\subsection{Wechselwirkung von Neutronen mit Kernen}
 
-        %2.1
-        \subsection{Bestimmung der realen Güteziffer}
-    	Das Verhältnis der transportierenden Wärmemenge und der dafür notwendigen Arbeit($A$) beschreibt die Größe der Güteziffer($\upsilon$) (unter idalisierten Bedingungen).
-        Diese kann aus dem ersten Hauptsatz der Thermodynamik hergeleitet werden:
+\noindent
+Eine allgemeine Reaktion bei der ein Neutron in einen Kern A eindringt, läuft wie folgt ab:
 
-        Der erste Hauptsatz der Thermodynamik besagt, dass Energien ineinander umwandelbar sind, aber nicht gebildet, bzw. vernichtet werden können. 
-        Dies bedeutet im Kontext der Wärmepumpe, dass
+\begin{equation*}
+\ce{^{\text{m}}_{\text{z}}A + ^1_0n -> ^{\text{m}+1}_{\text{z}}A\text{*} -> ^{\text{m}+1}_{\text{z}}A + }\gamma
+\end{equation*}
 
-        \begin{equation}
-            Q_1 = Q_2 + A
-            \label{eqn:Th1}
-        \end{equation}
+\noindent
+Dabei entsteht durch Absorption des Neutrons ein neuer sogenannter Compoundkern oder Zwischenkern A*, 
+dessen Energie um die Kinetische Energie und die Bindungsenergie des Neutrons größer ist als die des Kerns A.
+Diese Energie verteilt sich sofort auf viele Nukleonen des Kerns A*.
+Bei geringer kinetischer Energie des Neutrons kann weder das aufgenommene Neutron, noch ein anderes Nukleon abgestoßen werden, 
+sodass der angeregte Zwischenkern A* durch Emission eines $\gamma$-Quants wieder in seinen Grundzustand übergeht.
 
-        gilt, wobei $Q_1$ die Wärme, welche von dem Transportmedium abgegeben wird und $Q_2$ die Wärme, welche an das Transportmedium abgegeben wird, darstellt. Daraus ergibt sich für die Güteziffer:
-        \begin{equation}
-            \upsilon = \frac{Q_\text{transp}}{A} \stackrel{(\ref{eqn:irev})}{\implies} \upsilon_\text{id} = \frac{T_1}{T_1 - T_2}.
-            \label{eqn:Gueteziffer}
-        \end{equation}
+\noindent
+Der dabei entstandene Kern $\ce{^{\text{m}+1}_{\text{z}}A}$ ist meist instabil, 
+jedoch langlebiger als der Zwischenkern A*.
+Die Zerfallsreihe von $\ce{^{\text{m}+1}_{\text{z}}A}$ ist gegeben durch:
 
-        Aus dem zweiten Hauptsatz der Thermodynamik und der Annahme, dass während der Wärmeübertragung kein Wärmeverlust der beiden Resoervoire stattfindet
-         und die Wärmeübertragung reversibel verläuft, ergibt sich idialisiert:
+\begin{equation*}
+\ce{^{\text{m}+1}_{\text{z}}A -> ^{\text{m}+1}_{\text{z}+1}C +} \beta^{-} \ce{+ \text{E}_{\text{kin}} + \bar{\nu}_{e}}.
+\end{equation*}
 
-        \begin{equation}
-            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} = 0.
-            \label{eqn:irev}
-        \end{equation}
-        
-        Da jedoch eine Wärmepumpe in der Realität nicht in der Lage ist den Prozess der Wärmeübertragung vollständig reversibel durchzuführen und dieser Prozess dardurch irreversibel wird, gilt:
+\noindent
+Die Masse des Kerns $\ce{^{\text{m}+1}_{\text{z}}A}$ ist größer als die Summe der Massen in die der Kern zerfällt.
+Die überschüssige Masse wird gemäß
 
-        \begin{equation}
-            \frac{Q_1}{T_1} - \frac{Q_2}{T_2} > 0.
-            \label{eqn:rev}
-        \end{equation}
+\begin{equation*}
+\Delta\text{E} = \Delta\text{mc}^2
+\end{equation*}
 
-        So ergibt sich für eine reale Wärmepumpe mit (\ref{eqn:Th1}) und (\ref{eqn:rev}):
+\noindent
+in kinetische Energie von Elektron und Antineutrino umgewandelt.
 
-        \begin{equation}
-            \upsilon_\text{real} < \frac{T_1}{T_1 - T_2}.
-            \label{eqn:Gueteziffer_real}
-        \end{equation}
-
-        Aus dieser Gleichung (\ref{eqn:Gueteziffer_real}) folgt, dass die Wärmepumpe umso weniger Arbeit braucht, desto geringer die Differenz der beiden Temperaturen ist.
-
-        Des weiteren lässt sich die pro Zeiteinheit gewonnene Wärmemenge $\frac{\Delta Q_1}{\Delta t}$ errechnen, 
-        indem aus einer Messreihe $T_1$ als Funktion der Zeit t die Größe $\frac{\Delta T_1}{\Delta t}$ für ein geeignet gewähltes Zeitintervall $\Delta t$ ermittelt wird.
-        Daraus ergibt sich dann 
-
-        \begin{equation}
-        \frac{\Delta Q_1}{\Delta t} = (m_1 c_\text{w} + m_\text{k} c_\text{k}) \frac{\Delta T_1}{\Delta t},
-        \end{equation}
-
-        wobei $m_1 c_\text{w}$ die Wärmekapazität des Wassers im Reservoir 1 und $m_\text{k} c_\text{k}$ die Wärmekapazität der Kupferschlange und des Eimers bedeuten.
-        Für die Güteziffer $\upsilon$ ergibt sich dann
-
-        \begin{equation}
-        \upsilon = \frac{\Delta Q_1}{\Delta t N}
-        \end{equation}
-
-        mit N als die vom Wattmeter angezeigte und über das Zeitintervall $\Delta t$ gemittelte Kompressorleistung.
-
-
-        %2.2
-        \subsection{Bestimmung des Massendurchsatzes}
-
-        Der Massendurchsatz berechnet sich nach [D206 verlinken, S. 5] über den Differenzquotienten über:
-        \begin{equation}
-            \frac{\Delta Q_2}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t}
-            \label{eqn:mass1}
-        \end{equation}
-
-        und 
-
-        \begin{equation}
-            \frac{\Delta Q_2}{\Delta t} = L \frac{\Delta m}{\Delta t}
-            \label{eqn:mass2}
-        \end{equation}
-
-        mit (\ref{eqn:mass1}) und (\ref{eqn:mass2}) folgt:
-
-        \begin{equation}
-            L \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{\Delta T_2}{\Delta t} \iff \frac{\Delta m}{\Delta t} = \left( m_2  c_\text{w} + m_\text{k} c\text{k}\right) \frac{1}{L} \frac{\Delta T_2}{\Delta t},
-        \end{equation}
-        
-        falls die Verdampfungswärme $L$ bekannt ist.
-
-
-        %2.3
-        \subsection{Bestimmung der mechanischen Kompressorleistung $N_\text{mech}$}
-
-        Für die Arbeit $A_\text{m}$ des Kompressors, wenn er das Gasvolumen $V_\text{a}$ auf den Wert $V_\text{b}$ verringert, gilt:
-
-        \begin{equation}
-            A_\text{m} = - \int_{V_\text{a}}^{V_\text{b}} p \, \symup{d}V.
-        \end{equation}
-
-Näherungsweise wird nun angenommen, dass die Kompression adiabatisch erfolgt.
-Für den Zusammenhang zwischen Druck und Volumen gilt die Poissonsche Gleichung
+\subsection{Wirkungsquerschnitt}
+Wenn Neutronen auf stabile Atomkerne geschossen werden, gibt der Wirkungsquerschnitt die Wahrscheinlichkeit für einen Einfang an.
+Dieser ist definiert durch
 
 \begin{equation}
-p_\text{a}V^\kappa_\text{a} = p_\text{b}V^\kappa_\text{b} = pV^\kappa.
-\end{equation}
-Damit erhält man für $A_\text{m}$
-\begin{equation}
-A_\text{m} = - p_\text{a}V^\kappa_\text{a}\int_{V_\text{a}}^{V_\text{b}} V^{-\kappa} \, \symup{d}V = \frac{1}{\kappa-1}p_\text{a}V^\kappa_\text{a}\Bigl(V^{-\kappa+1}_\text{b}-V^{-\kappa+1}_\text{a}\Bigr) = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) V_\text{a}
+\sigma = \frac{\text{u}}{\text{nKd}},
 \end{equation}
 
-und für die mechanische Kompressorleistung $N_\text{mech}$
+\noindent
+wenn auf eine 1 $\si{\centi\meter\squared}$ dünne Folie der Dicke d und 
+mit K $\frac{\text{Atome}}{\si{\centi\cubic\meter}}$ die Anzahl n Neutronen pro Sekunde treffen,
+wobei u Einfänge auftreten.
+
+\noindent
+Da der Wirkungsquerschnitt sehr stark von der kinetischen Energie der Neutronen abhängt, 
+wird zwischen schnellen und langsamen Neutronen unterschieden.
+Hierbei hilft die De-Broiglie-Wellenlänge $\lambda$ 
+
 \begin{equation}
-N_\text{mech} = \frac{\Delta A_\text{m}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{\Delta V_\text{a}}{\Delta t} = \frac{1}{\kappa-1}\biggl(p_\text{b}\sqrt[\kappa]{\frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\biggr) \frac{1}{\rho} \frac{\Delta m}{\Delta t}.
+\lambda = \frac{\text{h}}{\text{m}_\text{n} \text{v}}
 \end{equation}
 
-$\rho$ ist dabei die Dichte des Transportmediums im gasförmigen Zustand beim Druck $p_\text{a}$.
-Das hier benutzte Transportgas ist Dichlordiflourmethan ($\ce{Cl2F2C}$) mit $\rho_0 = 5,51\frac{g}{l}$. 
-Mit Hilfe der idealen Gasgleichung kann nun $\rho$ für Normalbedingungen (p = 1 Bar, T = $\SI{0}{\celsius}$) berrechnet werden.
-Außerdem gilt $\kappa=1,14$.
+\noindent
+bei der Unterscheidung.
+Hier kommt es darauf an, 
+ob $\lambda$ aufgrund der Geschwindigkeit größer oder kleiner gegen den Kernradius R $\approx 10^{-12} \si{\centi\meter}$ ist.
+
+\begin{enumerate}
+
+\item $\text{R}>\lambda$
+
+Für schnelle Neutronen ist der Wirkungsquerschnitt gering.
+
+\item $\text{R} \leq \lambda$
+
+Langsame Neutronen halten sich länger in der Einwirkungssphäre des Kerns auf.
+Daher ist die Wahrscheinlichkeit des Einfanges und somit der Wirkungsquerschnitt größer.
+
+\end{enumerate}
+
+\noindent
+Es stellt sich also heraus, dass der Wirkungsquerschnitt antiproportional zur Neutronengeschwindigkeit ist und langsame, 
+niederenergetische Neutronen besser zur Aktivierung von Kernen geeignet sind.
+
+\subsection{Erzeugung niederenergetischer Neutronen}
+
+\noindent
+Niederenergetische Neutronen müssen durch geeignete Kernreaktionen erzeugt werden, da sie als freie Teilchen instabil sind.
+Dazu werden sie wie folgt durch Beschuss von $\ce{^9Be}$-Kernen mit $\alpha$-Teilchen freigesetzt:
+
+\begin{equation*}
+\ce{^9_4Be +} \alpha \ce{-> ^{12}_6C + ^1_0n}.
+\end{equation*}
+
+\noindent
+Die dabei freigesetzten Neutronen mit einem Energiespektrum bis 13,7 $\si{\mega\electronvolt}$ diffundieren dann durch dicke Materieschichten und werden so abgebremst.
+Da dies nach dem Gesetz (\ref{eqn:eue}) der maximalen Energie des elastischen Stoßes
+
+\begin{equation}
+\text{E}_\text{ü} = \text{E}_0 \frac{4\text{Mn}}{(\text{M} + \text{n})^2}
+\label{eqn:eue}
+\end{equation}
+
+\noindent
+am besten mit ähnlichen Massen funktioniert, bietet es sich an,
+Wasserstoff zu verwenden.
+
+\noindent 
+Die verwendete Neutronenquelle ist in Abbildung (\ref{fig:nq}) dargestellt.
+
+\noindent
+Durch Stöße mit den Protonen des Paraffins wird die Energie der Protonen auf 0,025 $\si{\electronvolt}$ verringert.
+Diese Neutronen haben eine Geschwindigkeit von 2,2 $\si[per-mode=fraction]{\kilo\meter\per\second}$ und werden als thermische Neutronen bezeichnet.
+
+\begin{figure}
+            \centering
+               \includegraphics[height=5cm]{neutronenquelle.pdf}
+               \caption{Querschnitt durch die hier verwendete Neutronenquelle (Quelle: \cite{V702}).}
+               \label{fig:nq}
+\end{figure}
+
+\newpage
+\subsection{Zerfall instabiler Isotope}
+
+\noindent
+Um den Zerfall instabiler Isotope zu untersuchen, werden zylindrische Proben, die diese Nuklide enthalten,
+in die Aktivierungsschächte der Neutronenquelle aus Abbildung (\ref{fig:nq}) gebracht.
+Der Zerfall der Isotope, auf die sich in diesem Versuch bezogen wird, sind gegeben durch:
+
+\begin{equation}
+\ce{_{23}^51V + n -> _{23}^52V -> _{24}^{52}Cr + }\beta^- \ce{+ \bar{\symup{\nu}}_e}
+\end{equation}
+
+\begin{equation}
+\ce{^{103}_{45}Rh + n}&
+  \begin{cases}
+  \overset{10\%}{\ce{->}} \ce{^{104i}_{45}Rh
+  -> ^{104}_{45}Rh} + \gamma \ce{-> ^{104}_{46}Pd + \beta^{-} + \bar{\nu}_e} \\
+  \overset{90\%}{\ce{->}} \ce{^{104}_{45}Rh -> ^{104}_{46}Pd + \beta^{-} + \bar{\nu}_e}
+  \end{cases}.
+  \label{eqn:rh}
+\end{equation}
+
+\noindent
+Wie in Gleichung (\ref{eqn:rh}) beschrieben, laufen bei der Aktivierung von Rhodium zwei Zerfälle parallel mit unterschiedlichen Halbwertszeiten ab.
+
+\noindent
+Der radioaktive Zerfall kann allgemein durch exponentiellen Zerfall beschrieben werden.
+Die Anzahl der zu einem Zeitpunkt t noch nicht Zerfallenen Kerne lässt sich ausdrücken durch
+
+\begin{equation}
+\text{N}(\text{t}) = \text{N}_0 e^{-\lambda \text{t}},
+\label{eqn:n}
+\end{equation}
+
+\noindent
+wobei $\text{N}_0$ die Anzahl der Kerne zum Zeitpunkt t=0 und $\lambda$ die Zerfallskonstante ist.
+Die Halbwertszeit lässt sich durch einsetzen von N(T)=$\frac{1}{2} \text{N}_0$ in Gleichung (\ref{eqn:n}) bestimmen:
+
+\begin{equation}
+\text{T} = \frac{\text{ln}(2)}{\lambda}.
+\label{eqn:T}
+\end{equation}
+
+\noindent
+Da es nicht möglich ist, N(t) zuverlässig zu ermitteln, wird die Halbwertszeit durch einen anderen Ansatz ermittelt.
+Hierzu wird eine Anzahl $\text{N}_{\Delta\text{t}}(\text{t})$ der in einem Intervall $\Delta\text{t}$ zerfallenen Kerne wie folgt definiert:
+
+\begin{equation}
+\text{N}_{\Delta\text{t}}(\text{t}) = \text{N}(\text{t}) - \text{N}(\text{t} + \Delta \text{t})
+\label{eqn:nd}
+\end{equation}
+
+\noindent
+Wird Gleichung (\ref{eqn:n}) in (\ref{eqn:nd}) eingesetzt, 
+kann durch lineare Ausgleichsrechnung mit den Wertepaaren $\{ \text{ln}(\text{N}_{\Delta \text{t}}(\text{t}_\text{i})),\text{t}_\text{i}\}$
+die Zerfallskonstante genauer ermittelt werden.
+Dabei sollte das Zeitintervall $\Delta \text{t}$ passend gewählt und eventuell durch einen Vorversuch ermittelt werden.
