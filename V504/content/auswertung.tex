@@ -12,7 +12,7 @@ $\SI{0.1}{\ampere}$ gewählt, sodass $I_{\text{H,}5}$ = $\SI{2.5}{\ampere}$ ist.
     \caption{Messwerte $I_1$ bis $I_5$ gegen $U$ aufgetragen.}
 \end{figure}
 
-Es ist zu erkennen, dass die Ströme eine Sättigung ansteuern. Diese kann man bei $I_{1}$ bis $I_{3}$ auf ungefähr:
+Es ist zu erkennen, dass die Ströme eine Sättigung ansteuern. Diese kann lässt sich bei $I_{1}$ bis $I_{3}$ auf ungefähr:
 
 \begin{align*}
     I_\text{S,1} &= \SI{0.27 }{\milli\ampere} \\
@@ -20,10 +20,10 @@ Es ist zu erkennen, dass die Ströme eine Sättigung ansteuern. Diese kann man b
     I_\text{S,3} &= \SI{1.2}{\milli\ampere}
   \end{align*}
 
-  abschätzen. Bei dem Strom $I_{4}$ kann man erahnen das dieser ungefähr auf einen Wert von ungefähr $I_\text{S,4}$ = $\SI{2.3}{\milli\ampere}$ zusteuert 
+  abschätzen. Bei dem Strom $I_{4}$ kann erahnt werden, dass dieser ungefähr auf einen Wert von ungefähr $I_\text{S,4}$ = $\SI{2.3}{\milli\ampere}$ zusteuert 
   und bei dem Strom $I_{5}$ lässt sich dieser auf sehr grob auf $I_\text{S,5} = \SI{3.5}{\milli\ampere}$ abschätzen. Diese Abschätzung wird getroffen, da mit all diesen Werten noch später gerechnet wird.
 
-  begin{table}
+  \begin{table}
   \footnotesize
   \centering
   \caption{Messwerte $I_1$ bis $I_5$}
@@ -73,18 +73,18 @@ Grafik eingetragen und es wird ein eine Funktion der Form:
     f = c \cdot V^d    
 \end{equation*}
 
-durchgelegt. $c$ und $d$ sind dabei Konstanten. Diese Form ergibt sich durch die Formel (\ref{??}). Wenn man den Gültigkeitsbereich des Langmuir-Schottkyschen Raumladungsgesetzes
-auf ungefähr $150 \si{\volt} $ abschätzt, ergeben sich aus dem Plot die Werte
+durchgelegt. $c$ und $d$ sind dabei Konstanten. Diese Form ergibt sich durch die Formel (\ref{??}). Wenn der Gültigkeitsbereich des Langmuir-Schottkyschen Raumladungsgesetzes
+auf ungefähr $150 \si{\volt} $ abgeschätzt wird, ergeben sich aus dem Plot die Werte
 \begin{align*}
     c &= 0.001059 \pm 0.000100 \\
     d &= 1.458125 \pm 0.019709 \; .
 \end{align*}
 
-Daraus folgt das der Exponent der Strom-Spannungs-Beziehung $d &= 1.458125 \pm 0.019709$ beträgt.
+Daraus folgt das der Exponent der Strom-Spannungs-Beziehung $d = 1.458125 \pm 0.019709$ beträgt.
 
 \subsection{Untersuchung des Anlaufstromgebiets}
 Nun wird, wie im Kapitel davor, für maximal mögliche Heizleistung das Anlaufstromgebiets untersucht. Dazu wird die Polarisation der Ansaugspannung gedreht und im Intervall von
-$0 \si{\volt} $ bis $1 \si{\volt} $ gemessen. Die Messwerte befinden sich in der Tabelle (\ref{}).
+$0 \si{\volt} $ bis $1 \si{\volt} $ gemessen. Die Messwerte befinden sich in der Tabelle (\ref{tab:mess2}).
 
 Jedoch müssen die gemessenen Werte angepasst werden, da dass Messinstrument, das Nanoamperemeter, einen Widerstand von $R = \SI{1}{\mega\ohm}$
 eingebaut hat und durch diesen es zu einem starken Spannungsabfall kommt. Dies kann durch den allgemeinen Zusammenhang $ U = R \cdot I$ kompensiert werden, sodass jeder gemesse Wert 
@@ -131,8 +131,7 @@ wobei $U_\text{k}$ den korrigerten Term darstellt.
 Die korrigerten Werte werden in der Abbildung (\ref{fig:3}) halblogaritmisch gegeneinander aufgetragen. Zusätzlich wird auch hier eine Ausgleichsfunktion, jedoch in diesem Fall in der
 Form einer Gerade 
 \begin{equation*}
-    \text{ln} \left(I} \right) 
-    = a \cdot U + b
+    \text{ln} \left(I \right) = a \cdot U + b
 \end{equation*}
 durchgelegt. Aus der Rechnung folgt das die Parameter den Wert
 \begin{align*}
@@ -154,14 +153,14 @@ und die Temperatur lässt sich durch umstellen
 errechnen zu $ T = 1873.0265 \si{\kelvin}$.
 
 \subsection{Kathodentemperatur bestimmen durch Heizleistungen}
-Die Kathodentemperatur lässt sich ebenfalls durch die Leistungsbilanz des Heizstrom-fadens errechnen. Dazu nutzt man den Zusammenhang
+Die Kathodentemperatur lässt sich ebenfalls durch die Leistungsbilanz des Heizstrom-fadens errechnen. Dazu wird der Zusammenhang
 
 \begin{equation}
     \label{eqn:zu}
     \text{N}_\text{zu} = \text{N}_\text{Str} + \text{N}_\text{WL} \,
 \end{equation}
 
-wobei $\text{N}_\text{zu}$ die zugeführte Leistung ist und $\text{N}_\text{Str}$ und $\text{N}_\text{WL}$ die jeweils abgestrahlte und durch Wärmeleitung an die Apperatur abgegebene Leistung
+genutzt, wobei $\text{N}_\text{zu}$ die zugeführte Leistung ist und $\text{N}_\text{Str}$ und $\text{N}_\text{WL}$ die jeweils abgestrahlte und durch Wärmeleitung an die Apperatur abgegebene Leistung
 darstellt.
 
 Mithilfe des Stefan-Boltz-mannschen Gesetzes
@@ -179,7 +178,7 @@ und der Abschätzung von $\text{N}_\text{WL} = 0.95 \si{\watt}$ und $\text{N}_\t
 Dabei ist die Stefan-Boltzmannsche Strahlungskonstante $\sigma = \num{5.7e-12}\frac{\text{W}}{\text{cm}^2\text{K}^4}$, die emmitierende Kathodenfläche
 $\SI{0.35}{\centi\meter\squared}$ und der Oberflächenemisionsgrad $\eta = \num{0.28}$ gegeben.
 
-Zusätzlich kann man die Austrittsarbeit mithilfe der Formel (\ref{eqn:??}) durch umstellen zu $ e \phi$ berechnen als
+Zusätzlich wird die Austrittsarbeit mithilfe der Formel (\ref{eqn:??}) durch umstellen zu $ e \phi$ berechnen als
 
 \begin{equation}
     e \phi = -k T \: \text{ln} \left( \frac{I_\text{S} h^3}{f 4 \pi e m k^2 T^2} \right) \, .
@@ -211,5 +210,5 @@ Daraus Folgen die folgenden Werte in der Tabelle (\ref{tab:mess3}).
  Gemittelt beträgt die Austrittsarbeit
   
   \begin{equation*}
-      \overline{e\phi} = \SI{5.93+/-0.08}{\eV} \; .
+      \overline{e\phi} = \SI{5.93 +- 0.08}{\eV} \; .
   \end{equation*}
