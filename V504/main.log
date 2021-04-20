@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  20 APR 2021 02:02
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  20 APR 2021 21:29
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1607,7 +1607,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 [2
 
 ] (./content/theorie.tex
-<pottopf.pdf, id=43, 586.01147pt x 270.60005pt>
+<pottopf.pdf, id=47, 586.01147pt x 270.60005pt>
 File: pottopf.pdf Graphic file (type pdf)
 <use pottopf.pdf>
 Package luatex.def Info: pottopf.pdf  used on input line 17.
@@ -1620,7 +1620,7 @@ LaTeX Warning: Citation 'V504' on page 3 undefined on input line 18.
 LaTeX Warning: Citation 'V504' on page 3 undefined on input line 18.
 
 [3<./pottopf.pdf>]
-<diode.pdf, id=64, 591.20596pt x 357.6285pt>
+<diode.pdf, id=68, 591.20596pt x 357.6285pt>
 File: diode.pdf Graphic file (type pdf)
 <use diode.pdf>
 Package luatex.def Info: diode.pdf  used on input line 56.
@@ -1632,7 +1632,7 @@ LaTeX Warning: Citation 'V504' on page 4 undefined on input line 57.
 
 LaTeX Warning: Citation 'V504' on page 4 undefined on input line 57.
 
-<kenn.pdf, id=66, 576.57411pt x 396.74243pt>
+<kenn.pdf, id=70, 576.57411pt x 396.74243pt>
 File: kenn.pdf Graphic file (type pdf)
 <use kenn.pdf>
 Package luatex.def Info: kenn.pdf  used on input line 69.
@@ -1644,7 +1644,7 @@ LaTeX Warning: Citation 'V504' on page 4 undefined on input line 70.
 LaTeX Warning: Citation 'V504' on page 4 undefined on input line 70.
 
 [4<./diode.pdf><./kenn.pdf>] [5]
-<anlauf.pdf, id=106, 590.31087pt x 317.81625pt>
+<anlauf.pdf, id=110, 590.31087pt x 317.81625pt>
 File: anlauf.pdf Graphic file (type pdf)
 <use anlauf.pdf>
 Package luatex.def Info: anlauf.pdf  used on input line 167.
@@ -1657,24 +1657,19 @@ LaTeX Warning: Citation 'V504' on page 6 undefined on input line 168.
 LaTeX Warning: Citation 'V504' on page 6 undefined on input line 168.
 
 ) (./content/durchfuehrung.tex [6<./anlauf.pdf>]
-
-LaTeX Warning: Reference `fig:aufbau1' on page 7 undefined on input line 4.
-
-<aufbau1.pdf, id=124, 845.04689pt x 597.50789pt>
+<aufbau1.pdf, id=129, 845.04689pt x 597.50789pt>
 File: aufbau1.pdf Graphic file (type pdf)
 <use aufbau1.pdf>
 Package luatex.def Info: aufbau1.pdf  used on input line 9.
 (luatex.def)             Requested size: 201.2036pt x 142.26378pt.
 
-LaTeX Warning: Citation 'V504' on page 7 undefined on input line 10.
-
 
 LaTeX Warning: Citation 'V504' on page 7 undefined on input line 10.
 
 
-LaTeX Warning: Reference `fig:aufbau2' on page 7 undefined on input line 22.
+LaTeX Warning: Citation 'V504' on page 7 undefined on input line 10.
 
-<aufbau2.pdf, id=125, 845.04689pt x 597.50789pt>
+<aufbau2.pdf, id=131, 845.04689pt x 597.50789pt>
 File: aufbau2.pdf Graphic file (type pdf)
 <use aufbau2.pdf>
 Package luatex.def Info: aufbau2.pdf  used on input line 27.
@@ -1696,24 +1691,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
+Package rerunfilecheck Info: File `main.aux' has not changed.
+(rerunfilecheck)             Checksum: F3114367BD51490E9A9BC73EA2410AC3;9639.
+Package rerunfilecheck Info: File `main.toc' has not changed.
+(rerunfilecheck)             Checksum: B386ED010A0095BD596A3CE2FBB356A5;1112.
 
-
-Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 7F370846F27DD7E3345691600C3D6826;8040
-(rerunfilecheck)             After:  F3114367BD51490E9A9BC73EA2410AC3;9639.
-
-Package rerunfilecheck Warning: File `main.toc' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `main.toc':
-(rerunfilecheck)             Before: 1E4FCBC3E4FD7C6D729D88E49ABA56B4;950
-(rerunfilecheck)             After:  B386ED010A0095BD596A3CE2FBB356A5;1112.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1731,10 +1715,10 @@ Here is how much of LuaTeX's memory you used:
  802 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 56 attribute, 80 glue_spec
 , 30 attribute_list, 1 write nodes
-   avail lists: 1:1,2:1075,3:153,4:28,5:174,6:22,7:2102,8:107,9:328,10:14,11:231
+   avail lists: 1:1,2:1075,3:153,4:28,5:174,6:25,7:2102,8:107,9:328,10:14,11:231
 
  51779 multiletter control sequences out of 65536+600000
- 106 fonts using 36821227 bytes
+ 106 fonts using 36821387 bytes
  59i,7n,114p,10117b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
 th.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmo
@@ -1746,10 +1730,10 @@ h/latinmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public
 lic/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/
 public/lm/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
 ublic/lm/lmroman12-bold.otf>
-Output written on main.pdf (9 pages, 548073 bytes).
+Output written on main.pdf (9 pages, 549106 bytes).
 
-PDF statistics: 254 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
+PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  40 named destinations out of 1000 (max. 131072)
  97 words of extra memory for PDF output out of 10000 (max. 100000000)
 
