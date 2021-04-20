@@ -1,0 +1,9 @@
+#   
+#   Leistung des Netzteils
+#
+#   Strom      Spannung
+    2.1         4.0
+    2.2         4.1
+    2.3         4.8
+    2.4         5.0 
+    2.5         5.5
