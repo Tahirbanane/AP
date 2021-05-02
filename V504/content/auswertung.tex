@@ -1,7 +1,7 @@
 \newpage
 \section{Auswertung}
 \subsection{Kennlinienschar}
-Zunächst wird durch die Heizströme $I_{\text{H,}1}$ bis $I_{\text{H,}5}$ der Heizleistung an der Hochvakuumdiode die Ströme $I_1$ bis $I_5$ in Abhängigkeit von der Spannung $U$ gemessen und 
+Zunächst wird durch die Heizströme $I_{\text{H,}1}$ bis $I_{\text{H,}5}$ der Heizleistung an der Hochvakuumdiode die Ströme $I_1$ bis $I_5$ in Abhängigkeit von der Spannung $U$ abgeschätzt und 
 in einer Grafik aufgetragen. Die dazu gehörigen Messwerte werden in der Tabelle \ref{tab:mess1} festgehalten. $I_{\text{H,}1}$ ist $\SI{2.1}{\ampere}$. Die weiteren $I_{\text{H,}x}$ Werte sind im Abstand von 
 $\SI{0.1}{\ampere}$ gewählt, sodass $I_{\text{H,}5}$ = $\SI{2.5}{\ampere}$ ist.
 
@@ -20,7 +20,7 @@ Es ist zu erkennen, dass die Ströme eine Sättigung ansteuern. Diese kann läss
     I_\text{S,3} &= \SI{1.2}{\milli\ampere}
   \end{align*}
 
-  abschätzen. Bei dem Strom $I_{4}$ kann erahnt werden, dass dieser ungefähr auf einen Wert von ungefähr $I_\text{S,4}$ = $\SI{2.3}{\milli\ampere}$ zusteuert 
+  abschätzen. Bei dem Strom $I_{4}$ kann erahnt werden, dass dieser ungefähr auf einen Wert von $I_\text{S,4}$ = $\SI{2.3}{\milli\ampere}$ zusteuert 
   und bei dem Strom $I_{5}$ lässt sich dieser auf sehr grob auf $I_\text{S,5} = \SI{3.5}{\milli\ampere}$ abschätzen. Diese Abschätzung wird getroffen, da mit all diesen Werten noch später gerechnet wird.
 
   \begin{table}
@@ -76,8 +76,8 @@ Grafik eingetragen und es wird ein eine Funktion der Form:
 durchgelegt. $c$ und $d$ sind dabei Konstanten. Diese Form ergibt sich durch die Formel (\ref{eqn:anlauf}). Wenn der Gültigkeitsbereich des Langmuir-Schottkyschen Raumladungsgesetzes
 auf ungefähr $150 \si{\volt} $ abgeschätzt wird, ergeben sich aus dem Plot die Werte
 \begin{align*}
-    c &= 0.001059 \pm 0.000100 \\
-    d &= 1.458125 \pm 0.019709 \; .
+    c &= 0.0010 \pm 0.0001 \\
+    d &= 1.458 \pm 0.0197 \; .
 \end{align*}
 
 Daraus folgt das der Exponent der Strom-Spannungs-Beziehung $d = 1.458125 \pm 0.019709$ beträgt.
@@ -88,7 +88,7 @@ $0 \si{\volt} $ bis $1 \si{\volt} $ gemessen. Die Messwerte befinden sich in der
 
 Jedoch müssen die gemessenen Werte angepasst werden, da dass Messinstrument, das Nanoamperemeter, einen Widerstand von $R = \SI{1}{\mega\ohm}$
 eingebaut hat und durch diesen es zu einem starken Spannungsabfall kommt. Dies kann durch den allgemeinen Zusammenhang $ U = R \cdot I$ kompensiert werden, sodass jeder gemesse Wert 
-mit dem Ausgleichsterm verrechnet wird. Mit anderen Worten:
+mit dem Ausgleichstrom verrechnet wird. Mit anderen Worten:
 
 \begin{equation*}
     U_\text{k} = U + I \cdot R \, ,  
@@ -100,21 +100,21 @@ wobei $U_\text{k}$ den korrigerten Term darstellt.
   \caption{Messwerte des Diodenstroms im Anlaufstromgebiet}
   \label{tab:mess2}
   \sisetup{table-format=2.1}
-  \begin{tabular}{c c}
+  \begin{tabular}{c c c}
   \toprule
-  $ U \,/\, \si{\volt} $ & $I_5 \,/\, \si{\nano\ampere}$\\
+  $ U \,/\, \si{\volt} $ & $ U_{\text{k}} \,/\, \si{\volt} $ & $I_5 \,/\, \si{\nano\ampere}$\\
   \midrule 
-  0    &  4.80 \\
-  0.1  &  2.20 \\
-  0.2  &  1.05 \\
-  0.3  &  0.80 \\
-  0.4  &  0.47 \\
-  0.5  &  0.24 \\
-  0.6  &  0.10 \\
-  0.7  &  0.06 \\
-  0.8  &  0.01 \\
-  0.9  &  0.008 \\
-  0.97 &  0.02 \\
+  0    & 0.0048 &  4.80 \\
+  0.1  & 0.1022 &  2.20 \\
+  0.2  & 0.20105 &  1.05 \\
+  0.3  & 0.3008 &  0.80 \\
+  0.4  & 0.40047 &  0.47 \\
+  0.5  & 0.50024 &  0.24 \\
+  0.6  & 0.6001 &  0.10 \\
+  0.7  & 0.70006 &  0.06 \\
+  0.8  & 0.80001 &  0.01 \\
+  0.9  & 0.900008 &  0.008 \\
+  0.97 & 0.97002 &  0.02 \\
   \bottomrule
   \end{tabular}
 \end{table}

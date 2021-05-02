@@ -85,7 +85,7 @@ U, I = np.genfromtxt('Daten/gegenfeld.txt', unpack=True)
 
 #Anpassung des Stroms wegen dem 1MOhm Widerstand
 Uk = U + I / 10**(3) # U = RI und I ist in nano Ampere
-
+print(Uk)
 #def g(V, x, T):
 #   return x * np.exp(-1 * V * const.epsilon_0/(T * const.k))
 #
