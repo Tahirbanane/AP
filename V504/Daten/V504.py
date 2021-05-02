@@ -99,7 +99,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 plt.figure()
 plt.plot(Uk, params[0]* Uk + params[1], label ='errechnet')
-plt.plot(Uk, np.log(I), '--', label ='gemessen')
+plt.plot(Uk, np.log(I), '.', label ='gemessen')
 
 plt.xlabel(r'$U \: / \: V$')
 plt.ylabel(r'$log(I) \: / \: nA$')
@@ -140,7 +140,7 @@ h = 6.626 * 1e-34
 m = 9.109 * 1e-31
 q = 1.602 * 1e-19
 
-e0 = -1 * k * T * np.log(Is * h**3 / (f * 4 * np.pi * m * q * k**2 * T**2))
+e0 = -1 * k * T * np.log(Is * h**3 / (f * 10**(-4) * 4 * np.pi * m * q * k**2 * T**2))
 
 print(e0)
 print('in J')

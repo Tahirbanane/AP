@@ -2,7 +2,7 @@
 \section{Auswertung}
 \subsection{Kennlinienschar}
 Zunächst wird durch die Heizströme $I_{\text{H,}1}$ bis $I_{\text{H,}5}$ der Heizleistung an der Hochvakuumdiode die Ströme $I_1$ bis $I_5$ in Abhängigkeit von der Spannung $U$ gemessen und 
-in einer Grafik aufgetragen. Die dazu gehörigen Messwerte werden in der Tabelle \ref{tab:kennl} festgehalten. $I_{\text{H,}1}$ ist $\SI{2.1}{\ampere}$. Die weiteren $I_{\text{H,}x}$ Werte sind im Abstand von 
+in einer Grafik aufgetragen. Die dazu gehörigen Messwerte werden in der Tabelle \ref{tab:mess1} festgehalten. $I_{\text{H,}1}$ ist $\SI{2.1}{\ampere}$. Die weiteren $I_{\text{H,}x}$ Werte sind im Abstand von 
 $\SI{0.1}{\ampere}$ gewählt, sodass $I_{\text{H,}5}$ = $\SI{2.5}{\ampere}$ ist.
 
 \begin{figure}
@@ -73,7 +73,7 @@ Grafik eingetragen und es wird ein eine Funktion der Form:
     f = c \cdot V^d    
 \end{equation*}
 
-durchgelegt. $c$ und $d$ sind dabei Konstanten. Diese Form ergibt sich durch die Formel (\ref{??}). Wenn der Gültigkeitsbereich des Langmuir-Schottkyschen Raumladungsgesetzes
+durchgelegt. $c$ und $d$ sind dabei Konstanten. Diese Form ergibt sich durch die Formel (\ref{eqn:anlauf}). Wenn der Gültigkeitsbereich des Langmuir-Schottkyschen Raumladungsgesetzes
 auf ungefähr $150 \si{\volt} $ abgeschätzt wird, ergeben sich aus dem Plot die Werte
 \begin{align*}
     c &= 0.001059 \pm 0.000100 \\
@@ -138,7 +138,7 @@ durchgelegt. Aus der Rechnung folgt das die Parameter den Wert
     a &= -6.5 \pm 0.5\\
     b &= 1.58 \pm 0.28
 \end{align*}
-haben. Mithilfe der Gleichung \eqref{eqn:exponent} ergibt sich
+haben. Mithilfe der Gleichung \eqref{eqn:anlauf} ergibt sich
 
 \begin{equation*}
       a = - \frac{e}{kT} 
@@ -178,7 +178,7 @@ und der Abschätzung von $\text{N}_\text{WL} = 0.95 \si{\watt}$ und $\text{N}_\t
 Dabei ist die Stefan-Boltzmannsche Strahlungskonstante $\sigma = \num{5.7e-12}\frac{\text{W}}{\text{cm}^2\text{K}^4}$, die emmitierende Kathodenfläche
 $\SI{0.35}{\centi\meter\squared}$ und der Oberflächenemisionsgrad $\eta = \num{0.28}$ gegeben.
 
-Zusätzlich wird die Austrittsarbeit mithilfe der Formel (\ref{eqn:??}) durch umstellen zu $ e \phi$ berechnen als
+Zusätzlich wird die Austrittsarbeit mithilfe der Formel (\ref{eqn:rg}) durch umstellen zu $ e \phi$ berechnen als
 
 \begin{equation}
     e \phi = -k T \: \text{ln} \left( \frac{I_\text{S} h^3}{f 4 \pi e m k^2 T^2} \right) \, .
@@ -198,11 +198,11 @@ Daraus Folgen die folgenden Werte in der Tabelle (\ref{tab:mess3}).
     $I_\text{H} \,/\, \si{\ampere} $ & $U_\text{H} \,/\, \si{\volt}$ & $T \,/\, \si{\kelvin}$
     & $I_\text{S} \,/\, \si{\milli\ampere} $ & $e\phi \,/\, \si{\eV} $\\
     \midrule 
-      2,1 & 4,0 & 1954.31 & 0,27& 5.75 \\
-      2,2 & 4,1 & 1993.76 & 0,6 & 5.75 \\
-      2,3 & 4,8 & 2108.27 & 1,2 & 5.97 \\
-      2,4 & 5,0 & 2156.73 & 2,3 & 6.01 \\
-      2,5 & 5,5 & 2237.47 & 3,5 & 6.17  \\
+      2,1 & 4,0 & 1954.31 & 0,27& 4.28 \\
+      2,2 & 4,1 & 1993.76 & 0,6 & 4.25 \\
+      2,3 & 4,8 & 2108.27 & 1,2 & 4.39 \\
+      2,4 & 5,0 & 2156.73 & 2,3 & 4.38 \\
+      2,5 & 5,5 & 2237.47 & 3,5 & 4.49  \\
     \bottomrule
     \end{tabular}
     \end{table}
@@ -210,5 +210,5 @@ Daraus Folgen die folgenden Werte in der Tabelle (\ref{tab:mess3}).
  Gemittelt beträgt die Austrittsarbeit
   
   \begin{equation*}
-      \overline{e\phi} = \SI{5.93 +- 0.08}{\eV} \; .
+      \overline{e\phi} = \SI{4.36 +- 0.04}{\eV} \; .
   \end{equation*}
