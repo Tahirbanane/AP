@@ -30,7 +30,9 @@ ist nach der Quantentheorie durch die Fermi-Diracsche Verteilungs-Funktion
 
 \noindent
 gegeben.
-Da die Fermische Grenzenergie $\zeta >> \text{kT}$ für alle Metalle bei Zimmertemperatur ist 
+Da die Fermische Grenzenergie $\zeta$, 
+die Maximalenergie der Elektronen bei T=0 in Abhängigkeit von der Zahl n der Elektronen pro Volumeneinheit im Metall, 
+für alle Metalle bei Zimmertemperatur $\zeta >> \text{kT}$ ist 
 und beim Schmelzpunkt des Wolframs noch so groß gegenüber kT ist, 
 kann die Näherung
 
@@ -58,8 +60,6 @@ Der Aufbau einer solchen Hochvakuumdiode ist in Abbildung (\ref{fig:diode}) darg
        \label{fig:diode}
 \end{figure}
 
-\subsubsection{Kennlinie}
-
 \noindent
 Der Zusammenhang zwischen dem Anodenstrom $\text{I}_\text{A}$ und der Saugspannung U wird als Kennlinie bezeichnet.
 Ihr Verlauf wird in Abbildung (\ref{fig:kenn}) dargestellt.
@@ -81,44 +81,12 @@ welche in den folgenden Kapiteln näher untersucht werden.
 \noindent
 Die Zahl der Elektronen, die in Abhängigkeit von der Temperatur T pro Zeit- und Flächeneinheit aus einer Metalloberfläche austreten, 
 wird als Sättigungsstromdichte $\text{j}_\text{S}(\text{T})$ bezeichnet.
-Die Zahl der Elektonen aus dem Volumenelement des Impulsraumes die pro Zeit- und Flächeneinheit von innen 
-mit der Geschwindigkeit $\text{v}_\text{z}$ auf die Oberfläche treffen beträgt
-
-\begin{equation}
-\text{d}\alpha = \text{v}_\text{z} \text{n}(\text{E}) \, \text{dp}_\text{x} \, \text{dp}_\text{y} \, \text{dp}_\text{z}.
-\label{eqn:da}
-\end{equation}
-
-\noindent
-Dabei ist $\text{n}(\text{E})$ die Zahl der Elektronen pro Volumeneinheit ihres Phasenraums, die sich zu
-
-\begin{equation}
-\text{n}(\text{E}) = \frac{2}{\text{h}^3} \text{f}(\text{E})
-\label{eqn:ne}
-\end{equation}
-
-\noindent
-mit der Fermi-Dirac-Verteilung aus (\ref{eqn:fermi2}) ergibt.
-
-\noindent
-Mit
-
-\begin{equation}
-\text{E} = \frac{1}{2\text{m}_0}(\text{p}_\text{x}^2 \, \text{p}_\text{y}^2 \,\text{p}_\text{z}^2) = \frac{\text{m}_0}{2} (\text{v}_\text{x}^2 \, \text{v}_\text{y}^2 \, \text{v}_\text{z}^2)
-\end{equation}
-
-\noindent
-und (\ref{eqn:ne}) lässt sich (\ref{eqn:da}) umformen zu 
-
-\begin{equation}
-    \text{d}\alpha = \frac{2}{\text{h}^3} \text{exp} \biggl( \frac{\zeta-\text{E}}{\text{kT}} \biggr) \, \text{dp}_\text{x} \, \text{dp}_\text{y} \,\text{dE}.
-\end{equation}
-
-\noindent
-Von diesen Elektronen können diejenigen aus der Metalloberfläche austreten, die eine so große Geschwindigkeitskomponente in Z-Richtung haben, sodass
+Diese lässt sich aus der Bedingung (\ref{eqn:bed}) herleiten, die besagt, dass nur Elektronen aus der Metalloberfläche austreten können, 
+die eine so große Geschwindigkeitskomponente in Z-Richtung haben, sodass
 
 \begin{equation}
 \frac{\text{p}_\text{z}^2}{2\text{m}_0} > \zeta + \text{e}_0 \phi
+\label{eqn:bed}
 \end{equation}
 
 \noindent
