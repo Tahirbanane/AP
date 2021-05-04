@@ -1,1 +1,84 @@
 \section{Zielsetzung}
+Ziel des Versuches ist es das Emissionssprektrum einer Kupfer-Röntgenröhre und verschiedenen Absorptionsspektren zu untersuchen.
+
+\section{Theorie}
+Rötngenstrahlung ist elektromagnetische Strahlung im Bereich von 10eV bis 200keV. Um diese zu erzeugen wird in einer Röhre, in welcher ein Vakuum vorherrscht, durch einen Draht mithilfe des Glühelektrischen Effektes freie Elektronen erzeugt und 
+auf eine Anode hin beschleunigt. Beim Einschlag entsteht Röntgenstrahlung, die durch die charakteristischen Röntgenstrahlung des Anodenmaterials und dem kontinuierlichen Bremsspektrum, 
+welches beim Abbremsen des Elektrons im Coulombfeld des Atomkerns entsteht. 
+Dabei setzt sich die Bremsstrahlung nicht nur aus der kinetische Energie des Elektrons zusammen, sondern auch teilweise der Eigenenergie von diesem. Diese wird dann, durch das Einfangen an der Anode in Form 
+eines Photons, abgegeben. So lässt sich die resultierende minimale Wellenlänge, bzw. die maximal frei werdende Energie, beschreiben als
+\begin{equation}
+    \lambda_\text{min} = \frac{h c}{e_0 U} \, ,
+    \label{eqn:minWelle}
+\end{equation}
+\noindent
+mit $h$ als das Plancksche Wirkungsquantum, $c$ der Lichtgeschwindigkeit und $U$ die anliegende Spannung zwischen Anode und dem Draht (auch Kathode genannt). Weil aber die 
+kinetische Energie des Elektronen nicht immer vollständig in Röntgenstrahlung umgewandelt wird, handelt es sich bei der Bremsstrahlung um ein kontinuierliches Spektrum. Dieses ist jedoch, 
+wie aus \autoref{eqn:minWelle} klar wird, durch die anliegende Spannung $U$ begrenzt.
+
+\noindent
+Da, wie bereits erwähnt nicht nur die Rötngenstrahlung nicht nur aus dem kontinuierlichen Bremsspektrum, sondern auch aus dem charakteristischen Röntgenstrahlung des Anodenmaterials 
+zusammensetzt. Diese wird bei der Ionisierung des Atoms durch das Elektron erzeugt. Da durch die Ionisierung des Atoms eine Lücke in einer energetisch günstigeren Lage entsteht, rückt ein
+Elektron aus einem erhöhten Energiezustand, unter der Emission eines Photons, nach. Da die einzelnen Energiewerte die das Elektron annehmen kann diskret sind ist die charakteristischen Röntgenstrahlung
+auch eine aus diskreten Frequenzen, welche sich beschreiben lassen können als 
+\begin{equation}
+    h f = E_\text{m} - E_\text{n} \, ,
+\end{equation}
+wo $E$ den Energiezustand bezeichnet und das Indeze, der wievielte Energiezustand ist.  Konvention ist es auch die im Rötgenspektrum entstehenden Linien durch eine Kombination aus griechischen
+und lateinischen Buchstaben zu beschreiben. Der lateinische Buchstabe bezeichnet den Energiezustand auf dem der Übang endet und der griechische von wo der Übergang begonnen hat. Ein Beispiel
+für so eine Bezeichnung einer Linie wäre die $K_\alpha$ Linie.
+Die Bindungsenergie eines Elektrons kann dabei allgemeine durch die Formel 
+\begin{equation}
+    E_n = -R_{\infty} z_\text{eff}² \frac{1}{n²}
+    \label{eqn:std}
+\end{equation}
+\noindent
+angegeben werden. Hierbei ist $R_\infty = = 13.6 \si{\eV}$ die Rydbergenergie und $z_\text{eff} = z \, - \, \sigma$ die effektive Kernladung mit der für das jeweilige Elektron im Atom charakteristischen 
+Abschirmkonstante $\sigma$. Diese ist empirisch bestimmbar.
+
+\noindent
+Da die äußeren Elektronen nicht alle dieselbe Bindungsenergie, aufgrund unterschiedlicher Bahndrehimpulse und Elektronenspins besitzen, kann jede charakteristische Linie in eine Reihe
+von eng beieinander liegenden Linien aufgelöst werden. Dies wird die Feinstruktur genannt. 
+
+\noindent
+Diese kann über die Sommerfeldschen Feinstrukturformel 
+\begin{equation}
+    E_{\text{n}, \text{j}} = -R_{\infty} \left[(z-\sigma_{\text{n}, \text{l}})²\frac{1}{n²}+\alpha²(z-s_{\text{n}, \text{l}})⁴\frac{1}{n³}\left(\frac{1}{j+\frac{1}{2}}-\frac{3}{4n}\right)\right]
+   \end{equation}
+berechnen werden, mit $j$ der Gesamtdrehimpuls des Elektrons und $\alpha$ die Sommerfeldsche Feinstrukturkonstante.
+
+\noindent
+Werden Röntgenstrahlen unter einem $\SI{1}{\mega\electronvolt}$ treten hauptsächlich Effekte aus die auf welche aus dem Comptoneffekt und dem Photoeffekt resultieren. Die Fähigkeit eines 
+Materials Rötgenstrahlung zu absorbieren wird durch den Absorptionskoeffizienten beschrieben. Dieser nimmt nimmt mit sinkender Wellenlänge ab und steigt plötzlich an, wenn die 
+Energie der Strahlung gerade größer ist als die Bindungsenergie eines Elektrons in dem nächsten Energiezustand. Diese Fälle können durch Absorbtionskanten der Form
+\begin{equation}
+    \lambda_\text{abs} = \frac{h c}{E_\text{n}} - E_\infty
+\end{equation}
+beschrieben werden. Dabei ist $E_\text{n} \, - \, E_\infty$ die Bindungsenergie des Elektrons. Für Elektronen aus dem K-Energiezustand, also $n=1$, lässt sich die Abschirmkonstante 
+$\sigma_\text{K}$ mit der Sommerfeldschem Feinstrukturformel berchnen als
+\begin{equation}
+    \sigma_\text{K} = Z - \left(\frac{E_\alpha}{R_\infty} - \frac{\alpha^2 \text{Z}^4}{4}\right)^{0.5} \, .
+    \label{eqn:sigmaK}
+\end{equation}
+\noindent
+Um im Versuch auch die Abschirmkonstante $\sigma_\text{L}$ an der L-Kante zu berechnen, wird um die Berechnung zu vereinfachen die Energiedifferenz zwischen zwei $L$-Kanten bestimmt als
+$\delta E_\text{L}$. Da jedoch im Versuch die $L_I$ und $L_{II}$ nicht bestimmt werden können lässt sich die Abschirmkonstante $\sigma_\text{L}$ berechnen als 
+\begin{equation}
+    \sigma_L = Z - \left(\frac{4}{\alpha} \sqrt{ \frac{\increment E_\text{L}}{R_\infty}} - \frac{5 \increment E_\text{L}}{R_\infty}\right)^{0.5} \left(1 + \frac{19}{32} \alpha² \frac{\increment E_\text{L}}{R_\infty}\right)^{0.5} \, .
+\label{eqn:Ligma}
+\end{equation}
+\noindent
+Dabei ist $Z$ die Ordnungszahl und $\increment E_\text{L} = E_{\text{L, II}} - E_{\text{L, III}}$ die Energiedifferenz zwischen den beiden $L$-Kanten.
+
+\noindent
+Die Energie der Röntgenstrahlen kann aber auch experimentell durch die Bragg'sche Reflexion untersucht werden. Dabei fällt die Röntgenstrahlen in einen Kristall mit der Gitterkonstante $d$ und wird an jedem einzelnen
+Atom gebeugt. Dardurch kommt es zu Interferenz der Strahlen und man erhält nur um Winkel $\Theta$, auch Glanzwinkel genannt, konstruktive Interferenz. Durch diese Überlegung kann die Bragg'schen Bedingung 
+\begin{equation}
+  n \lambda = 2 d \sin{\theta}
+\label{eqn:bragg}
+\end{equation}
+\noindent
+geschlussfolgert werden. Dabei beschreibt $n$ die Ordnung des Maximums.
+
+
+
