@@ -246,7 +246,8 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("mose.pdf")
 plt.close()
+rconst=(params[0]**2)*e/(h*c)
 
 print(f"Ausgleichsgerade g={params[0]}x {params[1]}")
 ry_m=(params[0]**2)/h
-print(f"berechnete rydberg = {params[0]**2}")
+print(f"berechnete rydberg energie = {params[0]**2} rydberg const {rconst}")
