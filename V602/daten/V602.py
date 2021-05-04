@@ -250,4 +250,8 @@ rconst=(params[0]**2)*e/(h*c)
 
 print(f"Ausgleichsgerade g={params[0]}x {params[1]}")
 ry_m=(params[0]**2)/h
-print(f"berechnete rydberg energie = {params[0]**2} rydberg const {rconst}")
+rconstabs=10973731.56816-((params[0]**2)*e/(h*c))
+rconstrel=(10973731.56816-(params[0]**2)*e/(h*c))/10973731.56816
+
+
+print(f"berechnete rydberg energie = {params[0]**2} rydberg const {rconst} ryconst abs{rconstabs} ryconst rel {rconstrel}")
