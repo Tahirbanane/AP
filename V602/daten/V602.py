@@ -141,8 +141,14 @@ plt.close()
 theta_zn=18.7
 N_K_zn = N_zn[5]+(N_zn[10]-N_zn[5])/2
 E_K_zn=(h*c)/(e*2*d_LiF*np.sin(18.7*np.pi/180))
+E_K_zn_abs=9650-E_K_zn
+E_K_zn_rel=E_K_zn_abs/9.65
 sigma_K_zn=30-np.sqrt((E_K_zn/ry)-(alpha**2 * 30**4 /4))
-print(f"E_K_zn = {E_K_zn} theta_zn = {theta_zn} sigma_K_zn = {sigma_K_zn}")
+sigma_K_zn_abs=sigma_K_zn-3.56
+sigma_K_zn_rel=sigma_K_zn_abs/3.56
+theta_zn_abs=18.7-18.60042993
+theta_zn_rel=theta_zn_abs/18.60042993
+print(f"E_K_zn = {E_K_zn} theta_zn = {theta_zn} sigma_K_zn = {sigma_K_zn} sigma abs {sigma_K_zn_abs} sigma rel {sigma_K_zn_rel} theta abs {theta_zn_abs} theta rel {theta_zn_rel} E abs {E_K_zn_abs} E rel = {E_K_zn_rel}")
 
 #brom
 theta_br,N_br=np.genfromtxt('brom.txt', unpack = True)

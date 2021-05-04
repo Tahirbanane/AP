@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  4 MAY 2021 20:43
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  4 MAY 2021 22:15
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1606,9 +1606,18 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 
 [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex [3])
-(./content/auswertung.tex [4]
-<daten/Bragg.pdf, id=46, 462.528pt x 346.896pt>
+] (./content/theorie.tex [3]) (./content/durchfuehrung.tex [4]
+<content/mess.JPG, id=70, 557.83406pt x 325.215pt>
+File: content/mess.JPG Graphic file (type jpg)
+<use content/mess.JPG>
+Package luatex.def Info: content/mess.JPG  used on input line 8.
+(luatex.def)             Requested size: 244.02626pt x 142.26378pt.
+ [5<./content/mess.JPG>]
+
+LaTeX Warning: Citation '??' on page 6 undefined on input line 34.
+
+) (./content/auswertung.tex [6]
+<daten/Bragg.pdf, id=88, 462.528pt x 346.896pt>
 File: daten/Bragg.pdf Graphic file (type pdf)
 <use daten/Bragg.pdf>
 Package luatex.def Info: daten/Bragg.pdf  used on input line 7.
@@ -1617,69 +1626,64 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 5.00053pt on input line 8.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 8.
- [5<./daten/Bragg.pdf>]
-<daten/emissionsspektrum.pdf, id=101, 462.528pt x 346.896pt>
+ [7<./daten/Bragg.pdf>]
+<daten/emissionsspektrum.pdf, id=139, 462.528pt x 346.896pt>
 File: daten/emissionsspektrum.pdf Graphic file (type pdf)
 <use daten/emissionsspektrum.pdf>
 Package luatex.def Info: daten/emissionsspektrum.pdf  used on input line 42.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/emissionsspektrum2.pdf, id=103, 462.528pt x 346.896pt>
+<daten/emissionsspektrum2.pdf, id=141, 462.528pt x 346.896pt>
 File: daten/emissionsspektrum2.pdf Graphic file (type pdf)
 <use daten/emissionsspektrum2.pdf>
 Package luatex.def Info: daten/emissionsspektrum2.pdf  used on input line 52.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
- [6<./daten/emissionsspektrum.pdf>]
-<daten/zink.pdf, id=153, 462.528pt x 346.896pt>
+ [8<./daten/emissionsspektrum.pdf>]
+<daten/zink.pdf, id=192, 462.528pt x 346.896pt>
 File: daten/zink.pdf Graphic file (type pdf)
 <use daten/zink.pdf>
-Package luatex.def Info: daten/zink.pdf  used on input line 108.
+Package luatex.def Info: daten/zink.pdf  used on input line 109.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/gallium.pdf, id=154, 462.528pt x 346.896pt>
+<daten/gallium.pdf, id=193, 462.528pt x 346.896pt>
 File: daten/gallium.pdf Graphic file (type pdf)
 <use daten/gallium.pdf>
-Package luatex.def Info: daten/gallium.pdf  used on input line 115.
+Package luatex.def Info: daten/gallium.pdf  used on input line 116.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/brom.pdf, id=155, 462.528pt x 346.896pt>
+<daten/brom.pdf, id=194, 462.528pt x 346.896pt>
 File: daten/brom.pdf Graphic file (type pdf)
 <use daten/brom.pdf>
-Package luatex.def Info: daten/brom.pdf  used on input line 122.
+Package luatex.def Info: daten/brom.pdf  used on input line 123.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/rubidium.pdf, id=156, 462.528pt x 346.896pt>
+<daten/rubidium.pdf, id=195, 462.528pt x 346.896pt>
 File: daten/rubidium.pdf Graphic file (type pdf)
 <use daten/rubidium.pdf>
-Package luatex.def Info: daten/rubidium.pdf  used on input line 129.
+Package luatex.def Info: daten/rubidium.pdf  used on input line 130.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/strontium.pdf, id=157, 462.528pt x 346.896pt>
+<daten/strontium.pdf, id=196, 462.528pt x 346.896pt>
 File: daten/strontium.pdf Graphic file (type pdf)
 <use daten/strontium.pdf>
-Package luatex.def Info: daten/strontium.pdf  used on input line 136.
+Package luatex.def Info: daten/strontium.pdf  used on input line 137.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
-<daten/mose.pdf, id=159, 462.528pt x 346.896pt>
+ [9<./daten/emissionsspektrum2.pdf>] [10<./daten/zink.pdf><./daten/gallium.pdf>] [11<./daten/brom.pdf><./daten/rubidium.pdf>]
+<daten/mose.pdf, id=421, 462.528pt x 346.896pt>
 File: daten/mose.pdf Graphic file (type pdf)
 <use daten/mose.pdf>
-Package luatex.def Info: daten/mose.pdf  used on input line 171.
+Package luatex.def Info: daten/mose.pdf  used on input line 179.
 (luatex.def)             Requested size: 341.44667pt x 256.0748pt.
- [7<./daten/emissionsspektrum2.pdf>] [8<./daten/zink.pdf><./daten/gallium.pdf>]
- [9<./daten/brom.pdf><./daten/rubidium.pdf>] [10<./daten/strontium.pdf>]) (./co
-ntent/diskussion.tex [11<./daten/mose.pdf>])
+ [12<./daten/strontium.pdf>]) (./content/diskussion.tex [13<./daten/mose.pdf>])
 
 LaTeX Warning: Empty bibliography on input line 23.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
-[12]
+[14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
-
-
-Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `main.aux':
-(rerunfilecheck)             Before: 04D148B2837455C09F0D6B7A3F19B400;7699
-(rerunfilecheck)             After:  8D4461D49006DD73500FEC04CE85DE44;7700.
+Package rerunfilecheck Info: File `main.aux' has not changed.
+(rerunfilecheck)             Checksum: 291BF98FFCC35971AF6B3FCB6C907AB1;11187.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: F495B02EA4C56B6812F030FC5F6A82EE;745.
+(rerunfilecheck)             Checksum: F5F6495EDFC934786695D84776D85A6A;1170.
+
 
 LaTeX Warning: There were undefined references.
 
@@ -1694,29 +1698,30 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35224 strings out of 480992
+ 35449 strings out of 480992
  100000,1977958 words of node,token memory allocated
- 664 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 19 attribute, 79 glue_spec
-, 11 attribute_list, 1 write nodes
-   avail lists: 1:1,2:1170,3:174,4:17,5:142,6:35,7:1856,8:32,9:389,10:7,11:147
- 51711 multiletter control sequences out of 65536+600000
- 162 fonts using 58673423 bytes
- 59i,11n,114p,10117b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 772 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 55 attribute, 79 glue_spec
+, 29 attribute_list, 1 write nodes
+   avail lists: 1:1,2:879,3:132,4:32,5:243,6:27,7:3437,8:91,9:299,10:17,11:383
+ 51912 multiletter control sequences out of 65536+600000
+ 162 fonts using 58674203 bytes
+ 59i,17n,114p,10117b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.ot
 f></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-
-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-r
-egular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/lat
-inmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/l
-mroman10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/l
-mroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/l
-m/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/publi
-c/lm/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public
-/lm/lmroman12-bold.otf>
-Output written on main.pdf (12 pages, 144757 bytes).
+math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-
+bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latin
+modern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmr
+oman8-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-m
+ath/latinmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
+ublic/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentyp
+e/public/lm/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype
+/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (14 pages, 225501 bytes).
 
-PDF statistics: 572 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 32 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 634 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 50 named destinations out of 1000 (max. 131072)
+ 105 words of extra memory for PDF output out of 10000 (max. 100000000)
 
