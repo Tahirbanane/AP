@@ -14,8 +14,6 @@ print (f'\n -----------------------------------Aufgabe a------------------------
 d1,N1=np.genfromtxt('a.txt', unpack = True)
 d1 = d1/1000      #in meter
 d1 = d1/5.046     #mit übersetzung
-d1 = np.array([d1[0],d1[1],d1[2],d1[3],d1[4],d1[5],d1[6],d1[7],d1[8],d1[9]])
-N1 = np.array([N1[0],N1[1],N1[2],N1[3],N1[4],N1[5],N1[6],N1[7],N1[8],N1[9]])
 lambda1 = 2*d1/N1 
 lambda1_mittel=sum(lambda1)/10
 lambda_std = np.std(lambda1, ddof=1)
