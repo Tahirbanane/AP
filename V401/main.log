@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  26 APR 2021 20:55
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.12.9)  10 MAY 2021 20:19
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1606,47 +1606,111 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 
 [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex [3])
-(./content/auswertung.tex [4]
+] (./content/theorie.tex
 
-LaTeX Warning: Reference `tab:lambda' on page 5 undefined on input line 13.
+LaTeX Warning: Reference `eqn:Int' on page 3 undefined on input line 29.
 
-[5]
-! Undefined control sequence.
-<argument> \torr 
-      
-l.69   $ \Delta \text{p}$ \,/\, $\si{\torr}
-                                          $ & N & $\text{n}$\\
+
+LaTeX Warning: Reference `eqn:ansatz' on page 3 undefined on input line 51.
+
+
+LaTeX Warning: Reference `eqn:ansatz' on page 3 undefined on input line 52.
+
+[3]) (./content/durchfuehrung.tex [4]
+
+LaTeX Warning: Reference `fig:1' on page 5 undefined on input line 3.
+
+
+LaTeX Warning: File `Picture/Pic1.JPG' not found on input line 7.
+
+
+! Package luatex.def Error: File `Picture/Pic1.JPG' not found: using draft sett
+ing.
+
+See the luatex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...ncludegraphics[scale = 0.7]{Picture/Pic1.JPG}
+                                                  
 ? return
 OK, entering \nonstopmode...
-! Undefined control sequence.
-<argument> \torr 
-      
-l.69   $ \Delta \text{p}$ \,/\, $\si{\torr}
-                                          $ & N & $\text{n}$\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 9.
 
-) (./content/diskussion.tex)
+LaTeX Warning: Citation 'V401' on page 5 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'V401' on page 5 undefined on input line 9.
+
+
+LaTeX Warning: Reference `fig:2' on page 5 undefined on input line 43.
+
+
+LaTeX Warning: File `Picture/Pic2.JPG' not found on input line 47.
+
+
+! Package luatex.def Error: File `Picture/Pic2.JPG' not found: using draft sett
+ing.
+
+See the luatex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 ...cludegraphics[scale = 0.7]{Picture/Pic2.JPG}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation 'V401' on page 5 undefined on input line 49.
+
+
+LaTeX Warning: Citation 'V401' on page 5 undefined on input line 49.
+
+[5]) (./content/auswertung.tex [6]
+
+LaTeX Warning: Reference `eqn:d1' on page 7 undefined on input line 3.
+
+
+LaTeX Warning: Reference `eqn:lam2' on page 7 undefined on input line 13.
+
+
+LaTeX Warning: Reference `eqn:brech' on page 7 undefined on input line 48.
+
+
+LaTeX Warning: Reference `eqn:brech' on page 7 undefined on input line 59.
+
+[7]) (./content/diskussion.tex)
 
 LaTeX Warning: Empty bibliography on input line 23.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
-[6]
+[8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
-Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 6E3123295C037BFBE2CFA7A4A2A33538;3316.
-Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: C1C1F74CE9F69CC9DC41F5A479C19B3A;395.
 
+
+Package rerunfilecheck Warning: File `main.aux' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `main.aux':
+(rerunfilecheck)             Before: 6E3123295C037BFBE2CFA7A4A2A33538;3316
+(rerunfilecheck)             After:  5A96E1C1E35F546FC8F2BDC1ADBBEB98;7332.
+
+Package rerunfilecheck Warning: File `main.toc' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `main.toc':
+(rerunfilecheck)             Before: C1C1F74CE9F69CC9DC41F5A479C19B3A;395
+(rerunfilecheck)             After:  9A66E1AE656A2469B398A0A7D755ED7F;812.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1659,27 +1723,34 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35060 strings out of 480992
+ 35429 strings out of 480992
  100000,1977958 words of node,token memory allocated
- 665 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 21 attribute, 78 glue_spec
-, 12 attribute_list, 1 write nodes
-   avail lists: 1:1,2:653,3:59,4:8,5:95,6:14,7:1392,8:31,9:210,10:5,11:91
- 51618 multiletter control sequences out of 65536+600000
- 149 fonts using 54066179 bytes
+ 749 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 49 attribute, 78 glue_spec
+, 26 attribute_list, 1 write nodes
+   avail lists: 1:1,2:677,3:105,4:24,5:256,6:19,7:3101,8:57,9:212,10:11,11:312
+ 51876 multiletter control sequences out of 65536+600000
+ 162 fonts using 58673943 bytes
  59i,14n,114p,10117b,2933s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
-th.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bo
-ld.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmo
-dern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmrom
-an10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lm
-roman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm
-/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/
-lmroman12-bold.otf>
-Output written on main.pdf (6 pages, 31855 bytes).
 
-PDF statistics: 114 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
- 33 words of extra memory for PDF output out of 10000 (max. 100000000)
+warning  (pdf backend): unreferenced destination with name 'table.caption.3'
+
+warning  (pdf backend): unreferenced destination with name 'table.caption.2'
+</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
+f></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
+f></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-
+math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-r
+egular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/lat
+inmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm-m
+ath/latinmodern-math.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/p
+ublic/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentyp
+e/public/lm/lmsans10-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype
+/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (8 pages, 57544 bytes).
+
+PDF statistics: 172 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 131072)
+ 73 words of extra memory for PDF output out of 10000 (max. 100000000)
 

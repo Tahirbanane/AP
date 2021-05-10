@@ -4,37 +4,42 @@
 \noindent
 In diesem Abschnitt wird die theoretische Grundlage des Versuches erläutert.  
 \subsection{allgemeine Grundlagen}
-Licht ist eine elektromagnetische Welle. Eine ebene Welle in ihrer einfachsten Form lässt sich durch ihre elektische Feldstärke in Orts- und Zeitabhängigkeit darstestellen als
+Licht ist eine elektromagnetische Welle. Eine ebene Welle in ihrer einfachsten Form lässt sich durch ihre elektische Feldstärke in Orts- und Zeitabhängigkeit darstellen als
 \begin{equation}
     \vec{E}(x, t) = \vec{E_0} \cdot \text{cos}(kx - \omega t - \delta) \; , 
     \label{eqn:ansatz}
 \end{equation}
+
 \noindent
 wobei x die Ortskoordinate, t die Zeit, k die Wellenzahl $2 \pi/\lambda$, $\lambda$ die Wellenlänge, $\omega$ die Kreisfrequenz, $\delta$ den Phasenwinkel, in Bezug auf einen festen Zeit- und Ortsnullpunkt, darstellt.
-Für Licht gilt im allgemeinen das Superpositionsprinzip. Dies bedeutet, dass das elektrische Feld als eine Komposition aus vielen anderen Feldstärken dargestellt werden kann.
-Da die Feldstärken des Lichts auf Grund der hohen Frequenz, in der Größenordnung $10^{15} \si{\hertz}$, nicht messen kann, kann diese aus der Intensität, mit dem Zusammenhang
+Für Licht gilt im Allgemeinen das Superpositionsprinzip. Dies bedeutet, dass das elektrische Feld als eine Komposition aus vielen anderen Feldstärken dargestellt werden kann.
+Da die Feldstärken des Lichts auf Grund der hohen Frequenz in der Größenordnung $10^{15} \si{\hertz}$ nicht messen kann, kann diese aus der Intensität, mit dem Zusammenhang
 \begin{equation*}
     \text{I} = \text{const} |\vec{E}|^2 \; ,
     \label{eqn:Int}
 \end{equation*}
+
 \noindent
-welche aus den Maxwell-Gleichungen berechnet werden. Für die Intensität gilt jedoch nicht das Superpositionsprinzip in klassischen Sinne. Falls die Wellen $\vec{E_1}$ und $\vec{E_2}$ 
+welche aus den Maxwell-Gleichungen berechnet werden. Für die Intensität gilt jedoch nicht das Superpositionsprinzip im klassischen Sinne. Falls die Wellen $\vec{E_1}$ und $\vec{E_2}$ 
 an einem Ort $x$  aufeinander treffen, ergibt sich unter der Bedingung, dass $t_2 - t_1$ groß gegen die Periodendauer $T = \frac{2 \pi}{\omega}$ ist, als
 
 \begin{equation}
     I_\text{ges} = \frac{C}{t_2 - t_1} \int^{t_2}_{t_1} |\vec{E_1} + \vec{E_2}|^2 (x, t) \: \text{d}t 
     \; , \; C \text{ konstant. } 
 \end{equation}
+
 \noindent
-Wird nun der Zusammenhang (\ref{eqn:Int}) und das Superpositionsprinzip, so ergibt sich für die Intensität 
+Mit dem Zusammenhang (\ref{eqn:Int}) und dem Superpositionsprinzip ergibt sich für die Intensität 
 \begin{equation*}
     I_\text{ges} = 2 \cdot C \cdot \vec{E_0}^2 (1 + \text{cos}(\delta_2 - \delta_1))
 \end{equation*}
+
 \noindent 
 der sogenannte Interferenzterm 
 \begin{equation*}
     2 C \vec{E_0}^2 \; .
 \end{equation*}
+
 \noindent 
 Es fällt jedoch auf, dass je nach Phasenlage die Gesamtintensität um bis zu $\pm 2 C \vec{E_0}^2$ von ihrem Mittelwert $2 C \vec{E_0}^2$ abweicht und komplett verschwindet, für
 den Fall 
@@ -43,14 +48,15 @@ den Fall
 \end{equation}
 
 \subsection{Kohärenz}
-Außerhalb von Laborbedingungen fällt schnell auf, dass interferenzeffekte selten beobachtet werden können. Dies hängt damit zusammen, dass die Phasenkonstanten bei alltagsüblichen Quellen 
+Außerhalb von Laborbedingungen fällt schnell auf, dass Interferenzeffekte selten beobachtet werden können. Dies hängt damit zusammen, dass die Phasenkonstanten bei alltagsüblichen Quellen 
 Funktionen der Zeit sind, sodass die Differenz $\delta_2(t) - \delta_1(t)$ während der Beobachtung zwischen positiven und negativen Werten schwankt. Das bedeutet, dass wenn die
 Intensität über einen großen Zeitraum im Vergleich zu $2*\pi/\lambda$ gemittelt wird, der Interferenzterm verschwindet.
 
+\noindent
 Um also Interferenzeffekte über einen großen Zeitraum zu beobachten wird Licht benötigt, dass eine konstante Phasenkonstante besitzt. Dieses Licht wird kohärentes Licht genannt. Koheräntes
 Licht lässt sich also immer durch eine einheitliche Gleichung, wie Gleichung (\ref{eqn:ansatz}), mit konstanten $k, \omega \text{ und } \delta$ beschreiben. Licht das im Alltag erfahren wird, 
 ist in der Regel inkohärentes Licht, also Licht das sich nicht durch eine einheitliche Gleichung, wie Gleichung (\ref{eqn:ansatz}), mit konstanten $k, \omega \text{ und } \delta$ beschreiben lässt.
-\noindent
 
+\noindent
 Daher wird im Versuch kohärentes Laserlicht benutzt.
 
