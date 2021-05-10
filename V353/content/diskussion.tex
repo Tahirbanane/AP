@@ -10,9 +10,26 @@ Die durch unterschiedliche Verfahren ermittelten Werte für den gleichen RC-Krei
 
 \noindent
 Da leider die Werte aus dem RC-Kreis uns nicht bekannt sind, können wir leider
-nicht auf die Genauigkeit und das beste Verfahren zur Ermittlung des RC Wertes eines RC-Kreises rückschließen. Da jedoch alle Werte relativ dicht bei einander liegen, kann angenommen werden,
-dass alle Verfahren ungefähr gleich gut sind. 
+nicht auf die Genauigkeit und das beste Verfahren zur Ermittlung des RC Wertes eines RC-Kreises rückschließen. Jedoch ist es trotzdem möglich die Abweichungen untereinander zu berechnen,
+dies kann man mit:
+
+\begin{equation*}
+\Delta p = \frac{f-g}{f}
+\end{equation*}
 \noindent
-Die Abweichungen der Werte können untereinander können auf Messungenaugkeiten zurückgeführt werden, da zum Beispiel die Amplituden an einem digitalen Oszilloskop lediglich mit dem einem Kursor 
+berechnen, wobei man f und g die zu untersuchenden Zahlen sind und $\Delta p$ die Abweichung von f zu g angibt.
+
+\begin{align*}
+    \Delta p_\text{4.1. --> 4.2.} &= 49.09\% \\
+    \Delta p_\text{4.1. --> 4.3.} &= 04.22\% \\
+    \Delta p_\text{4.2. --> 4.3.} &= 35.76\% \\
+\end{align*}
+
+
+\noindent
+Es fällt auf, dass der RC Wert aus 4.1. und 4.3. sehr dicht bei einander liegen, aber doch der Wert aus 4.2. stark abweicht. Daraus könnte geschlussfolgert werden, dass das Verfahren aus
+4.2. ungenauer ist als beide anderen.
+\noindent
+Die Abweichungen der Werte untereinander können auf Messungenaugkeiten zurückgeführt werden, da zum Beispiel die Amplituden an einem digitalen Oszilloskop lediglich mit dem einem Kursor 
 bestimmt wurden, welcher nicht unendlich genau eignestellt werden konnte. Zudem wurde nur mit Werten bis zu 2. Stelle nach dem Komma gerechnet, sodasss auch dardurch Ungenauigkeiten nicht auszuschließen sind.
 Zudem kann ein schwanken in der Spannungsquelle, sowie ein Wackelkontakt im System für einen Fehler sorgen.
