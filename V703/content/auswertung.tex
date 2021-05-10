@@ -1,7 +1,7 @@
 \newpage
-
-\section{Plateau-Bereich}
-
+\section{Auswertung}
+\subsection{Plateau-Bereich}
+\noindent
 Es werden zunächst folgende Daten gemessen:
 \begin{table}
         \centering
@@ -53,27 +53,28 @@ Es werden zunächst folgende Daten gemessen:
         \end{tabular}
     \label{tab:a}
     \end{table}
-
+    \newpage
+\noindent
     Der absolute Fehler für N Entladungen ergibt sich durch die Poissonverteilung zu:
     \begin{equation}
     \label{eqn:absoluterfehler}
     \Delta N = \sqrt{N}
     \end{equation}
-
-    Die Werte werden mit Fehlern aus der Tabelle (\ref{tab:a}) in eine Grafik eingetragen und es es wird für das Plateau eine Ausgleichgerade modelliert. 
+\noindent
+    Die Werte werden mit Fehlern aus der Tabelle (\ref{tab:a}) in eine Grafik eingetragen und für das Plateau wird eine Ausgleichgerade modelliert. 
     \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{Daten/a.pdf}
 	\caption{Charakteristik des Zählrohres mit Fehlern und Plateaugerade.}
 	\label{fig:plateau}
     \end{figure}
-
+\noindent
     Daraus ergibt sich für die Ausgleichgerade in der Form: 
     \begin{equation*}
     \label{eq:ausgleichsgerade}
     y = mx + b
     \end{equation*}
-
+    folgende Werte:
     \begin{align*}
     m &= 1.1377 \pm 0.2407\\
     b &= 9590.7346 \pm 121.8236.
@@ -87,16 +88,16 @@ Es werden zunächst folgende Daten gemessen:
 
 
 
-
-\section{Bestimmung der Totzeit}
-    \subsection{Zwei-Quellen-Methode}
-    Zur Bestimmung der Totzeit wurden die ermittelten Werte aus (\ref{n:n}) genutzt. Mithilfe der Formel (\ref{eqn:t}) und der Gauss Fehlerfortpflanzung welche gegeben ist durch:
+\newpage
+\subsection{Bestimmung der Totzeit}
+    \subsubsection{Zwei-Quellen-Methode}
+    Zur Bestimmung der Totzeit wurden die ermittelten Werte aus (\ref{tab:n}) genutzt. Mithilfe der Formel (\ref{eqn:t}) und der Gauss Fehlerfortpflanzung welche gegeben ist durch:
 
     \begin{equation}
     \label{eqn:gauß}
     \sigma_T = \sqrt{ \left(\frac{N_{1+2}-N_{2}}{2N_{1}^{2}N_{2}}\right)^2 \cdot \sigma_{N_{1}}^2+ \left(\frac{N_{1+2}-N_{1}}{2N_{1}N_{2}^{2}}\right)^2 \cdot \sigma_{N_{2}}^2+\left(\frac{1}{2N_1N_2}\right)^2 \cdot \sigma_{N_{1+2}}^2} 
     \end{equation}
-
+\noindent
     Ergibt sich für die Totzeit folgender Wert:
 
     \begin{equation*}
@@ -105,7 +106,7 @@ Es werden zunächst folgende Daten gemessen:
 
 
 
-    \subsection{Oszilloskop}
+    \subsubsection{Oszilloskop}
     Mithilfe des Oszilloskops kann die Totzeit ebenfalls bestimmt werden. Die Methode ist jedoch sehr ungenau. Anhand des folgenden Bildes kann diese auf $T = 0.5 \pm 0.1 \si{\micro\second}$ 
     bestimmt werden. Die Zeitachse am Oszilloskop ist durch $100 \si{\micro\second}/DIV$ gegeben.
     \begin{figure}
@@ -114,7 +115,7 @@ Es werden zunächst folgende Daten gemessen:
 	\caption{Momentaufnahme eines Oszilloskops}
     \end{figure}
 
-\section{Bestimmung des Zählrohrstroms}
+\subsection{Bestimmung des Zählrohrstroms}
     Aus dem mittleren Zählrohrstrom I kann die Zahl $Z = \frac{I}{\varepsilon_0 N} $ der freigesetzten Ladungen pro eingefallenen Teilchen berechnet werden. 
     Dazu wurden folgende Werte erhoben:
 
@@ -137,10 +138,11 @@ Es werden zunächst folgende Daten gemessen:
         \end{tabular}
     \label{tab:c}
     \end{table}
-
+\noindent
     Mithilfe der Formel (\ref{eqn:i}) und $Z = \frac{I}{\varepsilon_0 N} $ kann der Zählerstrom berechnet und in eine Grafik eingetragen werden:
     \begin{table}
     \centering
+    \label{tab:d}
     \caption{Errrechnete Daten}
     \begin{tabular}
     {S[table-format = 1.1] @{${}\pm{}$} S[table-format = 1.2]

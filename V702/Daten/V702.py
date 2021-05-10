@@ -77,7 +77,7 @@
 #
 #plt.figure()
 #plt.errorbar(t, N, xerr = 0, yerr = dN, fmt = '.', label = 'Messpunkte')
-##plt.xscale('log')
+#plt.xscale('log')
 #plt.xlabel(r't in s')
 #plt.ylabel(r'Zerfälle / 15s')
 #
@@ -129,7 +129,7 @@
 #
 #plt.fill_between(x, 10**2 * 2 * np.exp(-1 * (-params[0]-err[0]) * x),
 #         10**2 * 2 * np.exp(-1 * (-params[0]+err[0]) * x),
-#         alpha=0.1, color='b')
+#         alpha=0.2, color='b')
 #        
 #print(f'Halbwertszeit von Rhodium kurz: {np.log(2) / ufloat(-params[0], err[0])}')
 #
