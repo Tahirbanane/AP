@@ -4,7 +4,7 @@
 In diesem Abschnitt wird der Versuc hausgewertet.
 
 \subsection{gedämpften Schwingung}
-Zunächst wird bei einer gedämpften Schwingung die Zeitabhängigkeit der Amplitude untersucht, um den effektiven Dämpfungswidesdtand bestimmen zu können.
+Zunächst wird bei einer gedämpften Schwingung die Zeitabhängigkeit der Amplitude untersucht, um den effektiven Dämpfungswiderstand bestimmen zu können.
 Dabei wird zunächst die in der Messung bestimmte Amplitudenspitzen in die \autoref{tab:1} eingetragen.
 
 \begin{table}
@@ -37,9 +37,9 @@ Dabei wird zunächst die in der Messung bestimmte Amplitudenspitzen in die \auto
 \end{table}
 
 \noindent
-Es reicht jedoch lediglich sich die einhüllende zu betrachten. Da jedoch die einhüllende unterhalb der X-Achse und Oberhalb sich lediglich um einen Vorzeichen unterschreiben, kann 
-zur Modelierung dieser, lediglich der Betrag der gemessen Spannung betrachtet werden. Daraus folgen die Grafiken (\ref{fig:1}), in welcher der die Zeit gegen die Spannung und gegen den 
-Spannungsbetrag aufgetragen.
+Es reicht jedoch die Einhüllende zu betrachten. Da die Einhüllende unterhalb der X-Achse und Oberhalb sich um einen Vorzeichen unterscheiden, kann 
+zur Modelierung dieser, lediglich der Betrag der gemessen Spannung betrachtet werden. Daraus folgen die Grafiken (\ref{fig:1}), in welcher die Zeit gegen die Spannung und gegen den 
+Spannungsbetrag aufgetragen werden.
 
 \newpage
 \begin{figure}
@@ -49,13 +49,13 @@ Spannungsbetrag aufgetragen.
     \caption{Gemessene Spannungsamplituden mit Ausgleichsfunktion}
 \end{figure}
 
-Um die einhüllende zu modelieren, kann diese in der Form
+Um die Einhüllende zu modelieren, kann diese in der Form
 \begin{equation}
     U = a \symup{e}^{b*t}
 \end{equation}
 
 \noindent
-angenommen werden.Aus der Theorie gilt mit der \autoref{} der Zusammenhang $a = U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
+angenommen werden. Aus der Theorie gilt mit der \autoref{eqn:einh} der Zusammenhang $a = U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
 
 
 \begin{align*}
@@ -71,7 +71,7 @@ lässt sich der Dämpfungswiderstand R, mit $L = 3.5 \pm 0.01 \si{\milli\henry}$
 \begin{equation*}
     R_\text{eff} = 0.0760 \pm 0.0012 \si{\ohm}
 \end{equation*}
-bestimmen. Damit ist die Abweichung vom im verbauten Widerstand $R = 30,3 \pm 0,1 \si{\ohm}$ $99.749 \pm 00.004 \si{\percent}$.
+bestimmen. Damit ist die Abweichung des im verbauten Widerstands $R = 30,3 \pm 0,1 \si{\ohm}$ $99.749 \pm 00.004 \si{\percent}$.
 
 \noindent
 Die Abklingdauer kann mithilfe der Formel 
@@ -86,7 +86,7 @@ berechnet werden zu
 
 
 \subsection{aperiodische Grenzfall}
-Zusätzlich lässt sich der Dämpfungswiderstand $R_\text(ap)$ experimentell bestimmen zu $R_ap = 12,725 \si{\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{}) %R = 2(L/C)^1/2
+Zusätzlich lässt sich der Dämpfungswiderstand $R_\text(ap)$ experimentell bestimmen zu $R_ap = 12,725 \si{\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{eqn:rap}) %R = 2(L/C)^1/2
 mit den gegeben Werten
 \begin{align*}
    R &= 30,3 \pm 0,1 \si{\ohm}
@@ -95,6 +95,6 @@ mit den gegeben Werten
 \end{align*}
 
 \noindent
-aus dem Aufbau. Daraus folgt das $$ R_\text(ap) = \si{\ohm} $$ und eine Abweichung von $ \pm \si{\percent}$.
+aus dem Aufbau bestimmen. Daraus folgt $$ R_\text(ap) = \si{\ohm} $$ mit einer Abweichung von $ \pm \si{\percent}$.
 
 \subsection{Serienresonanzkreis}

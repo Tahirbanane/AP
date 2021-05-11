@@ -56,7 +56,13 @@ Ihr Verlauf ist in Abbildung (\ref{fig:schwingfall}) dargestellt.
        \label{fig:schwingfall}
 \end{figure}
 
-Die Einhüllende ist eine e-Funktion der Form $\pm e^{-2\pi\mu t}$
+Die Einhüllende ist eine e-Funktion der Form 
+
+\begin{equation}
+\pm U_0 e^{-2\pi\mu t}
+\label{eqn:einh}
+\end{equation}
+
 und die Abklingdauer, die Zeit nach der die Amplitude auf den e-ten Teil ihres ursprünglichen Wertes reduziert wurde,
 lässt sich schreiben als:
 
@@ -70,6 +76,12 @@ In diesem Fall ist der Wurzelterm eine imaginäre Zahl und die Lösung für I(t)
 In diesem Versuch soll nur der Spezialfall $\frac{1}{LC} = \frac{R^2}{4L^2}$ betrachtet werden, 
 bei der die Stromstärke I(t) ohne Überschwingen am schnellsten gegen Null geht, 
 wie es die gestrichelte Linie in Abbildung (\ref{fig:grenzfall}) darstellt.
+Der Widerstand, der den aperiodischen Grenzfall hervorruft ist definiert als:
+
+\begin{equation}
+    R_{ap} = 2\sqrt{\frac{L}{C}}
+\label{eqn:rap}
+\end{equation}
 
 \begin{figure}
     \centering
@@ -80,6 +92,7 @@ wie es die gestrichelte Linie in Abbildung (\ref{fig:grenzfall}) darstellt.
 
 \end{enumerate}
 
+\newpage
 \subsection{Erzwungene Schwingung}
 Um eine erzwungene Schwingung zu erhalten, wird der Schaltung aus Abbildung (\ref{fig:gedaempft}) ein Generator hinzugefügt,
 der eine Wechselspannung liefert, sodass der Aufbau eine wie in Abbildung (\ref{fig:erzwungen}) dargestellte Form hat.
@@ -127,7 +140,7 @@ bei denen $U_C$ auf den Bruchteil $\frac{1}{\sqrt{2}}$ seines Maximalwertes abge
 Der Zusammenhang kann geschrieben werden als:
 
 \begin{equation}
-q = \frac{\omega_0}{\omega_- - \omega_+}.
+q = \frac{\omega_0}{\omega_- - \omega_+}= \frac{1}{\sqrt{LC}(\omega_- - \omega_+)}.
 \label{eqn:guete}
 \end{equation}
 
