@@ -4,7 +4,7 @@
 In diesem Abschnitt wird der Versuc hausgewertet.
 
 \subsection{gedämpften Schwingung}
-Zunächst wird bei einer gedämpften Schwingung die Zeitabhängigkeit der Amplitude untersucht, um den effektiven Dämpfungswidesdtand bestimmen zu können.
+Zunächst wird bei einer gedämpften Schwingung die Zeitabhängigkeit der Amplitude untersucht, um den effektiven Dämpfungswiderstand bestimmen zu können.
 Dabei wird zunächst die in der Messung bestimmte Amplitudenspitzen in die \autoref{tab:1} eingetragen.
 
 \begin{table}
@@ -37,9 +37,9 @@ Dabei wird zunächst die in der Messung bestimmte Amplitudenspitzen in die \auto
 \end{table}
 
 \noindent
-Es reicht jedoch lediglich sich die einhüllende zu betrachten. Da jedoch die einhüllende unterhalb der X-Achse und Oberhalb sich lediglich um einen Vorzeichen unterschreiben, kann 
-zur Modelierung dieser, lediglich der Betrag der gemessen Spannung betrachtet werden. Daraus folgen die Grafiken (\ref{fig:1}), in welcher der die Zeit gegen die Spannung und gegen den 
-Spannungsbetrag aufgetragen.
+Es reicht jedoch die Einhüllende zu betrachten. Da die Einhüllende unterhalb der X-Achse und Oberhalb sich um einen Vorzeichen unterscheiden, kann 
+zur Modelierung dieser, lediglich der Betrag der gemessen Spannung betrachtet werden. Daraus folgen die Grafiken (\ref{fig:1}), in welcher die Zeit gegen die Spannung und gegen den 
+Spannungsbetrag aufgetragen werden.
 
 \newpage
 \begin{figure}
@@ -49,13 +49,13 @@ Spannungsbetrag aufgetragen.
     \caption{Gemessene Spannungsamplituden mit Ausgleichsfunktion}
 \end{figure}
 
-Um die einhüllende zu modelieren, kann diese in der Form
+Um die Einhüllende zu modelieren, kann diese in der Form
 \begin{equation}
     U = a \symup{e}^{b*t}
 \end{equation}
 
 \noindent
-angenommen werden.Aus der Theorie gilt mit der \autoref{} der Zusammenhang $a = \pm U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
+angenommen werden. Aus der Theorie gilt mit der \autoref{eqn:einh} der Zusammenhang $a = U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
 
 
 \begin{align*}
@@ -76,7 +76,7 @@ lässt sich der Dämpfungswiderstand R, mit $L = 3.5 \pm 0.01 \si{\milli\henry}$
 \end{equation*}
 
 \noindent
-bestimmen. Damit ist die Abweichung vom im verbauten Widerstand $R = 30,3 \pm 0,1 \si{\ohm}$ $151 \pm 0.04 \si{\percent}$.
+bestimmen. Damit ist die Abweichung des verbauten Widerstands $R = 30,3 \pm 0,1 \si{\ohm}$ $151 \pm 0.04 \si{\percent}$.
 
 \noindent
 Die Abklingdauer kann mithilfe der Formel 
@@ -91,7 +91,7 @@ berechnet werden zu
 
 
 \subsection{aperiodische Grenzfall}
-Zusätzlich lässt sich der Dämpfungswiderstand $R_\text{ap}$ experimentell bestimmen zu $R_ap = 12,725 \si{\kilo\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{}) %R = 2(L/C)^1/2
+Zusätzlich lässt sich der Dämpfungswiderstand $R_\text(ap)$ experimentell bestimmen zu $R_ap = 12,725 \si{\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{eqn:rap}) %R = 2(L/C)^1/2
 mit den gegeben Werten
 \begin{align*}
    R &= 30,3 \pm 0,1 \, \si{\ohm} \\
@@ -100,12 +100,68 @@ mit den gegeben Werten
 \end{align*}
 
 \noindent
-aus dem Aufbau. Daraus folgt das $$ R_\text{ap} = 1673.3 \pm 2.4 \, \si{\ohm} $$ und eine Abweichung von $ 660.46 \, \si{\percent}$.
+aus dem Aufbau bestimmen. Daraus folgt das $$ R_\text{ap} = 1673.3 \pm 2.4 \, \si{\ohm} $$ und eine Abweichung von $ 660.46 \, \si{\percent}$.
 
 \subsection{Frequenzabhängigkeit der Kondensatorspannung}
 
 Die gemessene Kondensatorspannung $U_C$ und die dazugehörige Frequenz $\omega$ wird in die \autoref{tab:2} eingetragen und 
 der Quotient $\frac{U_C}{U_\text{Err}}$ gegen die Frequenz $\omega$ halblogarithmisch in die \autoref{fig:2} aufgetragen.
+
+\begin{table}
+    \centering
+    \caption{Messwerte zur Kondensator- und Erregerspannung}
+    \label{tab:frequence}
+    \begin{tabular} {S[table-format=2.2] S[table-format=1.2] S[table-format=1.2] S[table-format=1.2]}
+        \toprule
+        {$\nu \mathbin{/} \si{\kilo\hertz}$}&
+        {$U_\text{C} \mathbin{/} \si{\volt}$} & {$U_\text{Err} \mathbin{/} \si{\volt}$}   \\
+        \midrule
+        10		    &        50			&         50
+        15		    &        55			&         50
+        20		    &        65			&         50
+        25		    &        87.5		&         50
+        30		    &        130		&	      50
+        32		    &        177.5		&         50
+        34		    &        265		&	      40
+        36		    &        430		&	      30
+        38		    &        405		&	      30
+        40		    &        235		&	      40
+        42		    &        150		&	      50
+        45		    &        97.5		&         50
+        50		    &        55			&         50
+        55		    &        40			&         50
+        58		    &        32			&         50		
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}
+    \centering
+    \label{fig:1}
+    \includegraphics{Daten/c.pdf}
+    \caption{Quotient $\frac{U_C}{U_\text{Err}}$ gegen die Frequenz $\omega$ halblogarithmisch aufgetragen}
+\end{figure}
+
+
+\noindent
+Aus der Grafik lässt sich für die Frequenzen, bei denen die Spannung den Wert $\frac{U_\text{max}}{U_\text{Err}}\frac{1}{\sqrt{2}}$ erreicht, entnehmen als
+
+\begin{align*}
+    \omega_+ &= \SI{35,1} \pm 0,3 \,  {\kilo\hertz} \\
+    \omega_- &= \SI{38,5} \pm 0,3 \,  {\kilo\hertz} \, .
+\end{align*}
+
+\noindent
+Daraus folgt die Breite 
+\begin{equation*}
+    b = 3,4 \pm 0,3 \si{\kilo\hertz} \, .
+\end{equation*}
+
+Daraus folgt für die Güte mit der \autoref{eqn:guete} $$ q = 70 \pm 6 \, .$$ 
+
+\noindent
+Die theoretische Breite der Ressonanzkurve lässt sich der \autoref{eqn:wmp} nähern. Mithilfe dieser Näherung lässt sich für die Güte berechnen zu %w+ - w- = R/L
+
 
 
 
