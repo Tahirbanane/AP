@@ -121,8 +121,8 @@ plt.yscale('log')
 
 plt.tight_layout()
 plt.legend(loc = 'center left')
-plt.show()
-#plt.savefig('c.jpg')
+#plt.show()
+plt.savefig('c.pdf')
 
 L = ufloat(3.5*1e-3, 0.01*1e-3) #Henry
 Rv = ufloat(30.3,0,1) #Ohm
@@ -137,4 +137,5 @@ print(F'Güte theoretisch q =',  w0/ww )
 
 print(F'Güte gemessen q =',  w0/wwg )
 
+print(f'Fehler = ', ((w0/ww)-(w0/wwg))/(w0/ww) )
 
