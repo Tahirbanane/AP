@@ -15,23 +15,23 @@ Dabei wird zunächst die in der Messung bestimmte Amplitudenspitzen in die \auto
         \toprule
         {$t \mathbin{/} \si{\micro\second}$} & {$U \mathbin{/} \si{\volt}$}  \\
     \midrule
-    0 	    &  -82   \\
-    12.5 	&   76   \\
-    25.5	&  -64   \\
-    40  	&   56   \\
-    55	    &  -48   \\
-    67.5	&   40   \\	
-    80	    &  -36   \\
-    93.75	&   32   \\
-    107.5	&  -26   \\
-    122.5	&   22   \\
-    135	    &  -20   \\
-    148.75  &	16  \\
-    162.5	&  -14  \\
-    175	    &   11  \\
-    188.75  &	-10 \\
-    202.5	&   9 \\
-    216.25  &	-8 \\
+    0 	    & \,\,  -82   \\
+    12.5 	& \,\,   76   \\
+    25.5	& \,\,  -64   \\
+    40  	& \,\,   56   \\
+    55	    & \,\,  -48   \\
+    67.5	& \,\,   40   \\	
+    80	    & \,\,  -36   \\
+    93.75	& \,\,   32   \\
+    107.5	& \,\,  -26   \\
+    122.5	& \,\,   22   \\
+    135	    & \,\,  -20   \\
+    148.75  & \,\,	 16   \\
+    162.5	& \,\,  -14   \\
+    175	    & \,\,   11   \\
+    188.75  & \,\,	-10   \\
+    202.5	& \,\,   9    \\
+    216.25  & \,\,	-8    \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -55,46 +55,57 @@ Um die einhüllende zu modelieren, kann diese in der Form
 \end{equation}
 
 \noindent
-angenommen werden.Aus der Theorie gilt mit der \autoref{} der Zusammenhang $a = U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
+angenommen werden.Aus der Theorie gilt mit der \autoref{} der Zusammenhang $a = \pm U_0$ und $b = -2 \pi \mu$. Daraus folgt %U_0 e^-2*pi*my*t
 
 
 \begin{align*}
-    a &= 84.684 \pm 0.831 \Leftrightarrow U_0 = 84.684 \pm 0.831 \si{\volt} \\
-    b &= -10.8530 \pm 0.17499 \Leftrightarrow \mu = 1.727 \pm 0.027 \si{\per\second} \, .\\
+    a &= 0.0846 \pm 0.0008 \Leftrightarrow U_0 = 0.0846 \pm 0.0008 \si{\volt} \\
+    b &= -10852.9624 \pm 174.9926 \Leftrightarrow \mu = 1727.3026 \pm 27.8509 \si{\per\second} \, .\\
 \end{align*}
 
+\noindent
 Mit der Beziehung 
 \begin{equation}
-    R_\text{eff} = 4\pi\mu L 
+    R_\text{eff} = 4\pi\mu L = -2 L b
 \end{equation}
+
+\noindent
 lässt sich der Dämpfungswiderstand R, mit $L = 3.5 \pm 0.01 \si{\milli\henry}$ zu
 \begin{equation*}
-    R_\text{eff} = 0.0760 \pm 0.0012 \si{\ohm}
+    R_\text{eff} = 76 \pm 1,2 \si{\ohm}
 \end{equation*}
-bestimmen. Damit ist die Abweichung vom im verbauten Widerstand $R = 30,3 \pm 0,1 \si{\ohm}$ $99.749 \pm 00.004 \si{\percent}$.
+
+\noindent
+bestimmen. Damit ist die Abweichung vom im verbauten Widerstand $R = 30,3 \pm 0,1 \si{\ohm}$ $151 \pm 0.04 \si{\percent}$.
 
 \noindent
 Die Abklingdauer kann mithilfe der Formel 
 \begin{equation*}
-    T_\text{ex} = \frac{1}{2\pi\mu} 
+    T_\text{ex} = \frac{1}{2\pi\mu} = - \frac{1}{b}
 \end{equation*}
 berechnet werden zu
 \begin{align*}
-    T_\text{ex} = 0.011808 \pm 0.007830 \si{\second} \, . \\
+    T_\text{ex} = 92,1 \pm 1,5 \si{\micro\second} \, . \\
 \end{align*}
 
 
 
 \subsection{aperiodische Grenzfall}
-Zusätzlich lässt sich der Dämpfungswiderstand $R_\text(ap)$ experimentell bestimmen zu $R_ap = 12,725 \si{\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{}) %R = 2(L/C)^1/2
+Zusätzlich lässt sich der Dämpfungswiderstand $R_\text{ap}$ experimentell bestimmen zu $R_ap = 12,725 \si{\kilo\ohm}$. Der theoretische Wert lässt sich mit der Formel (\ref{}) %R = 2(L/C)^1/2
 mit den gegeben Werten
 \begin{align*}
-   R &= 30,3 \pm 0,1 \si{\ohm}
-   L &= 3.5 \pm 0.01 \si{\milli\henry}
-   C &= \pm \si{\nano\farad}    
+   R &= 30,3 \pm 0,1 \, \si{\ohm} \\
+   L &= 3,5 \pm 0,01 \, \si{\milli\henry} \\
+   C &= 5 \pm 0 \, \si{\nano\farad} \\
 \end{align*}
 
 \noindent
-aus dem Aufbau. Daraus folgt das $$ R_\text(ap) = \si{\ohm} $$ und eine Abweichung von $ \pm \si{\percent}$.
+aus dem Aufbau. Daraus folgt das $$ R_\text{ap} = 1673.3 \pm 2.4 \, \si{\ohm} $$ und eine Abweichung von $ 660.46 \, \si{\percent}$.
 
-\subsection{Serienresonanzkreis}
+\subsection{Frequenzabhängigkeit der Kondensatorspannung}
+
+Die gemessene Kondensatorspannung $U_C$ und die dazugehörige Frequenz $\omega$ wird in die \autoref{tab:2} eingetragen und 
+der Quotient $\frac{U_C}{U_\text{Err}}$ gegen die Frequenz $\omega$ halblogarithmisch in die \autoref{fig:2} aufgetragen.
+
+
+

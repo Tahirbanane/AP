@@ -14,10 +14,11 @@ print (f'\n -----------------------------------Aufgabe a------------------------
 
 t, U = np.genfromtxt('a.txt', unpack = True)
 
-t *= 10**(-3) #Zeit wurde in Mikrosekunden gemessen
-U1 = abs(U) # da nur die Amplitude unterscuht wird, schauen wir uns die einhüllende an
-U2 = np.array([U[1], U[3], U[5], U[7], U[9], U[11], U[13], U[15]])
-t2 = np.array([t[1], t[3], t[5], t[7], t[9], t[11], t[13], t[15]])
+t *= 10**(-6)
+U *= 10**(-3) #Zeit wurde in Mikrosekunden gemessen
+U1 = abs(U) # da nur die Amplitude untersucht wird, schauen wir uns die einhüllende an
+#U2 = np.array([U[1], U[3], U[5], U[7], U[9], U[11], U[13], U[15]])
+#t2 = np.array([t[1], t[3], t[5], t[7], t[9], t[11], t[13], t[15]])
 
 def f(x, a, b):
     return a*np.exp(b*x) # b = -2*np.pi*μ
@@ -25,8 +26,8 @@ def f(x, a, b):
 params1, covarianzmatrix1 = curve_fit(f, t, U1)
 error1 = np.sqrt(np.diag(covarianzmatrix1))
 
-params2, covarianzmatrix2 = curve_fit(f, t2, U2)
-error2 = np.sqrt(np.diag(covarianzmatrix2))
+#params2, covarianzmatrix2 = curve_fit(f, t2, U2)
+#error2 = np.sqrt(np.diag(covarianzmatrix2))
 
 
 plt.figure()
@@ -61,9 +62,10 @@ print(f'mu = { params1[1]/ (-2*np.pi)} +- {error1[1]/(-2*np.pi)} ')
 #print('a2 = {:.10f} ± {:.10f}'.format(params2[0], error2[0]))
 #print('b2 = {:.4f} ±   {:.5f}'.format(params2[1], error2[1]))
 
-print('T_ex = {:.10f} ± {:.10f}'.format(1/params1[0], np.sqrt(1/(params1[0]**2/2*np.pi) * error1[0]**2)))
-
 b = ufloat(params1[1], error1[1])
+
+print(f'T_ex =' , 1/b)
+
 L = ufloat(3.5*1e-3, 0.01*1e-3) #Henry
 Rv = ufloat(30.3,0,1)
 
@@ -77,14 +79,16 @@ print (f'\n -----------------------------------Aufgabe b------------------------
 # diskrepanz da Drähte kabel und co ebenfalls einen wiederstand haben, theorie wert sollte niedriger als der experimentell festgestellte wert sein
 
 R = np.genfromtxt('b.txt', unpack = True)
+L = ufloat(3.5*1e-3, 0.01*1e-3) #Henry
+C = ufloat(5*1e-9, 0) #Farad
 
-C = ufloat(999*1e-9, 0.1*1e-9) #Farad Kapazität fehlt
+R *= 1e3 # in Ohm
 
-Rt = 2*(L/C)**(1/2)
+Rt = 2*unp.sqrt(L/C)
 
-print(f'R_ap = {Rt}')
-
-print(f'p = {(Rt.n-R)/Rt.n}') #Messwerte überprüfen?
+print(f'R_apt = {Rt}')
+print(f'R_ap = {R}')
+print(f'p = {(R-Rt.n)/Rt.n}') #Messwerte überprüfen?
 
 print (f'\n -----------------------------------Aufgabe c-----------------------------------')
 
@@ -107,7 +111,7 @@ print(max(UC/Ue))
 
 plt.figure()
 plt.plot(f, UC/Ue, 'x', label = 'Messpunkte')
-plt.plot(f, k(f, *params), label = 'Ausgleichskurve')
+#plt.plot(f, k(f, *params), label = 'Ausgleichskurve')
 plt.axhline(y = max(UC/Ue) / np.sqrt(2), color = 'tab:red', label = r'$\frac{U_{max}}{U_{err}}\cdot \frac{1}{\sqrt{2}}$' )
 
 plt.xlabel(r'$f \: / \: Hz$')
@@ -119,4 +123,18 @@ plt.tight_layout()
 plt.legend(loc = 'center left')
 plt.show()
 #plt.savefig('c.jpg')
+
+L = ufloat(3.5*1e-3, 0.01*1e-3) #Henry
+Rv = ufloat(30.3,0,1) #Ohm
+C = ufloat(5*1e-9, 0) #Farad
+
+w0 = 1/(unp.sqrt(L*C))
+ww = Rv/L
+
+wwg = ufloat(3.4*1e3,0.3*1e3)
+print(ww,wwg)
+print(F'Güte theoretisch q =',  w0/ww )
+
+print(F'Güte gemessen q =',  w0/wwg )
+
 
