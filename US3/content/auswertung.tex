@@ -27,10 +27,10 @@ Die aufgenommen Messwerte bei den unterschiedlichen Rohr Innendurchmessern $d$ w
 
 \begin{table}
     \centering
-    \caption{Messergebnisse der Dopplerverschiebung}
+    \caption{Messergebnisse der Dopplerverschiebung mit der Flussgeschwindigkeit $v_0$}
     \begin{tabular}{c | c c c c}
         \toprule
-        {$d \, \si{\milli\meter} $} & {$Flussgeschwindigkeit \, \si{\liter\per\minute}$} & {$Dopplerwinkel bei 15°$} & {$Dopplerwinkel bei 30°$} & {$Dopplerwinkel bei 60°$} \\
+        {$d \, \si{\milli\meter} $} & {$v_0 \, / \, \si{\liter\per\minute}$} & {$Dopplerwinkel \, bei \, 15°$} & {$Dopplerwinkel \, bei \, 30°$} & {$Dopplerwinkel \, bei \, 60°$} \\
         \midrule
     7 &    2     &      55    &      195   &      378    \\
      &    3      &     146    &     342    &     647   \\
@@ -68,12 +68,12 @@ Mithilfe der Formel (\ref{equ:Geschw}) und der verwendeten Ultraschallsonde mit 
 
 \begin{table}
     \centering
-    \caption{Berechnete Flussgeschwindigkeit in Abhängigkeit des Winkels}
+    \caption{Berechnete Flussgeschwindigkeit $v_0$ in Abhängigkeit des Winkels}
     \begin{tabular}{c | c c c c}
         \toprule
-        {$d \, in \, \si{\milli\meter} $} & {$Flussgeschwindigkeit \, in \, \si{\liter\per\minute}$} & {$\nu \, bei 15° \, in \,in \, \si{\meter\per\second}$} & {$\nu \, bei 30° \, in \, \si{\meter\per\second}$} & {$\nu \, bei 60° \, in \, \si{\meter\per\second}$} \\
+        {$d \, in \, \si{\milli\meter} $} & {$v_0 \, in \, \si{\liter\per\minute}$} & {$\nu \, bei 15° \, in \,in \, \si{\meter\per\second}$} & {$\nu \, bei 30° \, in \, \si{\meter\per\second}$} & {$\nu \, bei 60° \, in \, \si{\meter\per\second}$} \\
         \midrule
-    7mm &    2     &      0.14343999    &      0.26325   &      0.29462184 \\
+    7 &    2     &      0.14343999    &      0.26325   &      0.29462184 \\
      &    3      &     0.38076796    &     0.4617    &     0.50428659 \\
      &    4      &     0.63635193    &     0.70875    &     0.77084921 \\
      &    5      &     0.9232319    &     0.9882    &     1.07950067 \\
@@ -100,24 +100,73 @@ Mithilfe der Formel (\ref{equ:Geschw}) und der verwendeten Ultraschallsonde mit 
 \end{table}
 
 \noindent
-Die foglenden Grafiken zeigen $\frac{\increment \nu}{cos(\alpha)}$ in Abhängigkeit von der Strömungsgeschwindigkeit, für alle drei Rohr Innendurchmesser.
+Die folgenden Grafiken zeigen $\frac{\increment \nu}{cos(\alpha)}$ in Abhängigkeit von der Strömungsgeschwindigkeit, für alle drei Rohr Innendurchmesser.
 
 \begin{figure}
     \centering
-    \includegraphics{7mm.pdf}
-    \caption{Verhältnis der Frequenzverschiebung zum Dopplerwinkel abhängig von der Strömungsgeschwindigkeit.}
+    \includegraphics{Daten/7mm.pdf}
+    \caption{Innendurchmesser von 7mm.}
     \label{fig:KeineAhnung}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics{10mm.pdf}
-    \caption{Verhältnis der Frequenzverschiebung zum Dopplerwinkel abhängig von der Strömungsgeschwindigkeit.}
+    \includegraphics{Daten/10mm.pdf}
+    \caption{Innendurchmesser von 10mm.}
     \label{fig:KeineAhnung}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics{16mm.pdf}
-    \caption{Verhältnis der Frequenzverschiebung zum Dopplerwinkel abhängig von der Strömungsgeschwindigkeit.}
+    \includegraphics{Daten/16mm.pdf}
+    \caption{Innendurchmesser von 16mm.}
     \label{fig:KeineAhnung}
 \end{figure}
+
+
+
+\subsection{Erstellung eines Strömungsprofil}
+
+Nun wird um das Strömungsprofil zu untersuchen, bei einem Prismenwinkel von $\theta$ = 15° gemessen. Einmal bei einer Leistung von 70\% und einmal bei einer Leistung von 45\%.
+Das entspricht etwas einer Flussgeschwindigkeit von $5,3$ und $3,4 \, \si{\liter\per\minute}$. Alle Messwerte mit dem Index 1 sind bei $5,3 \, \si{\liter\per\minute}$ und 
+alle Messwerte mit dem Index 2 sind bei $3,4 \, \si{\liter\per\minute}$ gemessen worden. Daraus folgt die Tabelle (\ref{}).
+
+\begin{table}
+    \centering
+    \caption{Messwerte des Strömungsprofils}
+    \begin{tabular}{c c c c c}
+        \toprule
+
+       {$Tiefe\, / \, \si{\micro\second}$} & {$\nu _1\, / \, \si{\hertz}$}& { $I_1 \, / \, 100\si{\volt\squared\per\second} $} & {$\nu_2 \, / \, \si{\hertz}$} & {$I_2 \, / \, 100\si{\volt\squared\per\second}$}\\
+        \midrule
+        13         &     -171    &        60   & -98   & 55  \\
+        13.5       &     -220    &        90   & -110  & 70  \\
+        14         &     -244    &        100  & -122  & 87  \\
+        14.5       &     -256    &        100  & -134  & 97  \\
+        15         &     -269    &        104  & -146  & 120  \\
+        15.5       &     -256    &        100  & -134  & 114  \\
+        16         &     -232    &        105  & -122  & 116  \\
+        16.5       &     -195    &        101  & -110  & 88  \\
+        17         &     -159    &        90   & -98    & 49  \\
+        17.5       &     -134    &        60   & 0      & 0  \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:profil}
+\end{table}
+
+Nun kann für beide Flussgeschwindigkeit in je einem Diagramm die Streuintensität $I_x$ und die Momentangeschwindigkeit $v$, welche sich äquivalent, wie in der vorherigen 
+Teilauswertung, als Funktion der Messtiefe aufgetragen werden. Daraus folgen die Grafiken (\ref{fig:1},\ref{fig:2}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Daten/45.pdf}
+    \caption{Plot bei einer Leistung von 45\%}
+    \label{fig:1}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Daten/70.pdf}
+    \caption{Plot bei einer Leistung von 70\%}
+    \label{fig:2}
+\end{figure}
+

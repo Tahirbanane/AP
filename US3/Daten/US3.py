@@ -139,7 +139,7 @@ print (f'\n -----------------------------------Aufgabe b------------------------
 
 T, W, I = np.genfromtxt('b.txt', unpack = True)
 
-#I *= 1e3
+I *= 1e-2
 
 W = np.abs(W) #Der Betrag wird genommen
 
@@ -152,11 +152,11 @@ W45 = W[10:]
 I45 = I[10:]
 
 plt.figure()
-plt.plot(T70,W70,'.', label = r'Dopplerwinkel bei 70% Leistung')
-plt.plot(T70,I70,'.', label = r'Intensität bei 70% Leistung')
+plt.plot(T70,v(W70, alpha(15)),'.', label = r'Geschwindigkeit v bei 70% Leistung')
+plt.plot(T70,I70,'.', label = r'Intensität I bei 70% Leistung')
 
 plt.xlabel(r'Messtiefe [$\mu s$]')
-plt.ylabel(r'I [$\frac{V^2}{s}] / v [\frac{m}{s}$]')
+plt.ylabel(r'I [$\frac{10MV^2}{s}] / v [\frac{m}{s}$]')
 
 plt.legend(loc='best', fontsize = 10)
 plt.tight_layout()
@@ -164,11 +164,11 @@ plt.grid()
 plt.savefig('70.pdf')
 
 plt.figure()
-plt.plot(T45,W45,'.', label = r'Dopplerwinkel bei 45% Leistung')
-plt.plot(T45,I45,'.', label = r'Intensität bei 45% Leistung')
+plt.plot(T45,v(W45, alpha(15)),'.', label = r'Geschwindigkeit v bei 45% Leistung')
+plt.plot(T45,I45,'.', label = r'Intensität I bei 45% Leistung')
 
 plt.xlabel(r'Messtiefe [$\mu s$]')
-plt.ylabel(r'I $[\frac{V^2}{s}]$ / $v$ $[\frac{m}{s}]$')
+plt.ylabel(r'I $[\frac{10MV^2}{s}]$ / $v$ $[\frac{m}{s}]$')
 
 plt.legend(loc='best')
 plt.tight_layout()
