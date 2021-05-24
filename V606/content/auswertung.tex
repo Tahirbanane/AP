@@ -1,174 +1,151 @@
 \newpage
 \section{Auswertung}
-
-In diesem Abschnitt wird der Versuch ausgewertet.
-
-\subsection{Vorbereitungsaufgabe}
-Als Vorbereitungsaufgabe für den Versuch wurden die Dopplerwinkel $\alpha$ zu den Prismenwinkel $\theta = 15° , 30°$ und $60°$ bestimmt.
-
-\begin{table}
-    \centering
-    \caption{Prismenwinkel zu Dopplerwinkel}
-    \begin{tabular}{c c}
-        \toprule
-        {$\theta$} & {$\alpha$}  \\
-        \midrule
-        15° & 80.06411625951776°  \\
-        30° & 70.52877936550931°  \\
-        60° & 54.735610317245346°  \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:vor}
-\end{table}
-
-\subsection{Bestimmung der Strömungsgeschwindigkeit}
-
-Die aufgenommenen Messwerte bei den unterschiedlichen Rohr Innendurchmessern $d$ werden in die Tabelle (\ref{tab:a}) eingetragen.
-
-\begin{table}
-    \centering
-    \caption{Messergebnisse der Dopplerverschiebung mit der Flussgeschwindigkeit $v_0$}
-    \begin{tabular}{c | c c c c}
-        \toprule
-        {$d \, \si{\milli\meter} $} & {$v_0 \, / \, \si{\liter\per\minute}$} & {$Dopplerwinkel \, bei \, 15°$} & {$Dopplerwinkel \, bei \, 30°$} & {$Dopplerwinkel \, bei \, 60°$} \\
-        \midrule
-    7 &    2     &      55    &      195   &      378    \\
-     &    3      &     146    &     342    &     647   \\
-     &    4      &     244    &     525    &     989   \\
-     &    5      &     354    &     732    &     1385   \\
-     &    6      &     452    &     964    &     1843   \\
-     &    7.5    &     647    &     1367   &     2515   \\
-    \midrule 
-    10 &    2     &      -49  &       85     &     -122 \\
-     &    3       &    -73    &     134      &   -220 \\
-     &    4       &    -110   &     208      &   -342 \\
-     &    5       &    -146   &     305      &   -464 \\
-     &    6       &    -183   &     403      &   -647 \\
-     &    7.5     &    -256   &     598      &   -879 \\
-    \midrule 
-    16 &    2      &     49  &        49   &       61 \\
-     &    3        &   61    &      73     &     122 \\
-     &    4        &   73    &      110    &     183 \\
-     &    5        &   98    &      134    &     256 \\
-     &    6        &   110   &      171    &     342 \\
-     &    7.5      &   171   &      256    &     500 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:a}
-\end{table}
-
 \noindent
-Mithilfe der Formel (\ref{equ:Geschw}) und der verwendeten Ultraschallsonde mit $\nu_0 = 2 \si{\mega\hertz} $ lässt sich die Strömungsgeschwindigkeit $\nu$, sowie der Winkel $\alpha$ bestimmen. Diese werden in die Tabelle (\ref{tab:b}) eingetragen.
-
-\begin{equation}
-    \label{equ:Geschw}
-    v = \frac{\increment \nu \cdot c}{2\nu \cdot cos(\alpha)}
-\end{equation}
-
-
-\begin{table}
-    \centering
-    \caption{Berechnete Flussgeschwindigkeit $v_0$ in Abhängigkeit des Winkels}
-    \begin{tabular}{c | c c c c}
-        \toprule
-        {$d \, in \, \si{\milli\meter} $} & {$v_0 \, in \, \si{\liter\per\minute}$} & {$\nu \, bei 15° \, in \,in \, \si{\meter\per\second}$} & {$\nu \, bei 30° \, in \, \si{\meter\per\second}$} & {$\nu \, bei 60° \, in \, \si{\meter\per\second}$} \\
-        \midrule
-    7 &    2     &      0.14343999    &      0.26325   &      0.29462184 \\
-     &    3      &     0.38076796    &     0.4617    &     0.50428659 \\
-     &    4      &     0.63635193    &     0.70875    &     0.77084921 \\
-     &    5      &     0.9232319    &     0.9882    &     1.07950067 \\
-     &    6      &     1.17881588    &     1.3014    &     1.43647634 \\
-     &    7.5    &     1.68737583    &     1.84545   &     1.9602485 \\
-    \midrule
-    10 &    2     &      -0.12779199  &       0.11475     &     -0.09508959  \\
-     &    3       &    -0.19038398    &     0.1809      &    -0.17147303  \\
-     &    4       &    -0.28687997   &     0.2808      &   -0.26656262  \\
-     &    5       &    -0.38076796   &     0.41175      &   -0.36165221  \\
-     &    6       &    -0.47726395   &     0.54405      &   -0.50428659  \\
-     &    7.5     &    -0.66764793   &     0.8073      &   -0.6851127  \\
-    \midrule
-    16 &    2      &     0.12779199  &        0.06615   &       0.04754479  \\
-     &    3        &   0.15908798    &      0.09855     &     0.09508959 \\
-     &    4        &   0.19038398    &      0.1485    &     0.14263438 \\
-     &    5        &   0.25558397    &      0.1809    &     0.19953225 \\
-     &    6        &   0.28687997   &      0.23085    &     0.26656262 \\
-     &    7.5      &   0.44596795   &      0.3456    &     0.38971143 \\
-
-        \bottomrule
-    \end{tabular}
-    \label{tab:b}
-\end{table}
-
-\noindent
-In den folgenden Grafiken ist $\frac{\increment \nu}{cos(\alpha)}$ gegen die Strömungsgeschwindigkeit, für alle drei Rohr Innendurchmesser, aufgetragen.
+Die aufgenommenen Messdaten zur Untersuchung des Selektivverstärkers sind in Tabelle (\ref{tab:selektiv}) aufgeführt.
+Dabei wurde die Ausgangsspannung $U_A$ in Abhängigkeit von der Frequenz $\nu$ bei konstanter Eingangsspannung $U_E$ = 495 mV und der Güte Q = 100 gemessen.
+Die dazugehörige Filterkurve ist in Abbildung (\ref{fig:selektiv}) dargestellt, 
+wo bei einer Frequenz von 35.5 kHz ein Maximum von $U_A =$ 5.36 V
+zu beobachten ist.
 
 \begin{figure}
     \centering
-    \includegraphics{Daten/7mm.pdf}
-    \caption{Innendurchmesser von 7mm.}
-    \label{fig:KeineAhnung}
+       \includegraphics[width=\textwidth]{selektiv.pdf}
+       \caption{Filterkurve des Selektivverstärkers.}
+       \label{fig:selektiv}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics{Daten/10mm.pdf}
-    \caption{Innendurchmesser von 10mm.}
-    \label{fig:KeineAhnung}
-\end{figure}
-\begin{figure}
-    \centering
-    \includegraphics{Daten/16mm.pdf}
-    \caption{Innendurchmesser von 16mm.}
-    \label{fig:KeineAhnung}
-\end{figure}
+\begin{table}
+\centering
+\begin{tabular}{c c}
+\toprule
+{$\nu \mathbin{/} \si{\kilo\hertz} $} & {$U_A \mathbin{/} \si{\milli\volt}$}  \\
+\midrule
+20.8  &    76 \\
+21.9  &    84 \\
+23.2  &    94 \\
+24.7  &   108 \\
+25.5  &   120 \\
+26.5  &   132 \\
+27.9  &   160 \\
+28.8  &   180 \\
+29.7  &   212 \\
+30.9  &   280 \\
+31.6  &   324 \\
+32.5  &   440 \\
+33.6  &   680 \\
+34.2  &   980 \\
+34.5  &  1240 \\
+35.2  &  3240 \\
+35.4  &  5040 \\
+35.5  &  5360 \\
+35.8  &  3540 \\
+36    &  2560 \\
+36.4  &  1480 \\
+37    &   860 \\
+38    &   576 \\
+39.3  &   408 \\
+41    &   280 \\
+\bottomrule
+\end{tabular}
+\caption{Messdaten zur Untersuchung der Filterkurve.}
+\label{tab:selektiv}
+\end{table}
 
-
-
-\subsection{Erstellung eines Strömungsprofil}
-
+\newpage
 \noindent
-Nun wird um das Strömungsprofil zu untersuchen, bei einem Prismenwinkel von $\theta$ = 15° gemessen. Einmal bei einer Leistung von 70\% und einmal bei einer Leistung von 45\%.
-Das entspricht etwas einer Flussgeschwindigkeit von $5,3$ und $3,4 \, \si{\liter\per\minute}$. Alle Messwerte mit dem Index 1 sind bei $5,3 \, \si{\liter\per\minute}$ und 
-alle Messwerte mit dem Index 2 sind bei $3,4 \, \si{\liter\per\minute}$ gemessen worden. Daraus folgt die Tabelle (\ref{tab:profil}).
+Für die experimentelle Bestimmung der Suszeptibilitäten werden zunächst die Daten der beiden Proben aufgenommen.
+In Tabelle (\ref{tab:proben}) sind die Masse $m$, die Dichte $\rho$ und die Länge $l$, 
+die sich aus der tatsächlich eingeführten Länge ohne Löcher zusammensetzt, aufgeführt.
+Außerdem befindet sich dort der reale Querschnitt $Q_{real}$ %Formel fehlt
+der aus den aufgeführten Daten nach ?? berechnet wird.
 
 \begin{table}
     \centering
-    \caption{Messwerte des Strömungsprofils}
     \begin{tabular}{c c c c c}
         \toprule
-
-       {$Tiefe\, / \, \si{\micro\second}$} & {$\nu _1\, / \, \si{\hertz}$}& { $I_1 \, / \, 100\si{\volt\squared\per\second} $} & {$\nu_2 \, / \, \si{\hertz}$} & {$I_2 \, / \, 100\si{\volt\squared\per\second}$}\\
-        \midrule
-        13         &     -171    &        60   & -98   & 55  \\
-        13.5       &     -220    &        90   & -110  & 70  \\
-        14         &     -244    &        100  & -122  & 87  \\
-        14.5       &     -256    &        100  & -134  & 97  \\
-        15         &     -269    &        104  & -146  & 120  \\
-        15.5       &     -256    &        100  & -134  & 114  \\
-        16         &     -232    &        105  & -122  & 116  \\
-        16.5       &     -195    &        101  & -110  & 88  \\
-        17         &     -159    &        90   & -98    & 49  \\
-        17.5       &     -134    &        60   & 0      & 0  \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:profil}
+        {Stoff} & {$m \mathbin{/} \si{\gram}$} & {$\rho \mathbin{/} \si[per-mode=fraction]{\gram\per\cubic\centi\meter}$} & {$l \mathbin{/} \si{\centi\meter}$} & {$Q_{real} \mathbin{/} \si{\centi\meter\squared}$} \\
+    \midrule
+    $\ce{Dy2O3}$ & 15.1  & 7.8 & 14.8 & 0.131 \\
+    $\ce{Gd2O3}$ & 14.08 & 7.4 & 15.5 & 0.123 \\
+    \bottomrule
+\end{tabular}
+\caption{Daten der Proben.}
+\label{tab:proben}
 \end{table}
 
 \noindent
-Nun kann für beide Flussgeschwindigkeit in je einem Diagramm die Streuintensität $I_x$ und die Momentangeschwindigkeit $v$, welche sich äquivalent, wie in der vorherigen 
-Teilauswertung, als Funktion der Messtiefe aufgetragen werden. Daraus folgen die Grafiken (\ref{fig:1},\ref{fig:2}).
+In Tabelle (\ref{tab:exp1}) und (\ref{tab:exp2}) befinden sich die gemessenen die Brückenspannungen $U_o$ ohne Probe nach Abgleich und $U_m$ mit Probe sowie die dazugehörigen Widerstände
+$R_o$ ohne Probe und $R_m$ mit Probe und Differenzen. 
 
-\begin{figure}
+\begin{table}
     \centering
-    \includegraphics[width=\textwidth]{Daten/45.pdf}
-    \caption{Plot bei einer Leistung von 45\%}
-    \label{fig:1}
-\end{figure}
+    \begin{tabular}{c c c c c c}
+        \toprule
+        {$U_o \mathbin{/} \si{\milli\volt}$} & {$U_m \mathbin{/} \si{\milli\volt}$} & {$R_o \mathbin{/} \si{\ohm}$} & {$R_m \mathbin{/} \si{\ohm}$} & {$\Delta U \mathbin{/} \si{\milli\volt}$} & {$\Delta R \mathbin{/} \si{\ohm}$} \\
+    \midrule
+    0.5     &   3.8   &     3.215     &     1.645    &   3.3   &  1.57  \\
+    0.55    &   3.79  &     3.210     &     1.65     &   3.24  &  1.56  \\ 
+    0.52    &   3.7   &     3.175     &     1.597    &   3.18  &  1.579 \\
+    \bottomrule
+\end{tabular}
+\caption{Messdaten und Differenzen von $\ce{Dy2O3}$.}
+\label{tab:exp1}
+\end{table}
 
-\begin{figure}
+\begin{table}
     \centering
-    \includegraphics[width=\textwidth]{Daten/70.pdf}
-    \caption{Plot bei einer Leistung von 70\%}
-    \label{fig:2}
-\end{figure}
+    \begin{tabular}{c c c c c c}
+        \toprule
+        {$U_o \mathbin{/} \si{\milli\volt}$} & {$U_m \mathbin{/} \si{\milli\volt}$} & {$R_o \mathbin{/} \si{\ohm}$} & {$R_m \mathbin{/} \si{\ohm}$} & {$\Delta U \mathbin{/} \si{\milli\volt}$} & {$\Delta R \mathbin{/} \si{\ohm}$} \\
+    \midrule
+    0.51    &   1.19   &     3.223     &     2.437    &   1.4   &  0.786  \\
+    0.5     &   1.79   &     3.144     &     2.422    &   1.29  &  0.722  \\ 
+    0.5     &   1.95   &     3.222     &     2.422    &   1.45  &  0.8    \\
+    \bottomrule
+\end{tabular}
+\caption{Messdaten und Differenzen von $\ce{Gd2O3}$.}
+\label{tab:exp2}
+\end{table}
 
+\noindent 
+Die Spule in die die Proben eingeführt werden hat einen Querschnitt von $F=0.866\si{\centi\meter\squared}$ und $N=250$ Wicklungen.
+Damit lassen sich die Suszeptibilitäten $\chi_U$ nach Formel %xi_u
+und $\chi_R$ nach Formel %xi_r
+bestimmen.
+Die experimentell bestimmten Suszeptibilitäten befinden sich in Tabelle (\ref{tab:expsus}).
+
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+        {Stoff} & {$\chi_U $} & {$\chi_R $} \\
+    \midrule
+    $\ce{Dy2O3}$ & 0.1730 $\pm$ 0.0026  &  0.0208 $\pm$ 0.0001 \\
+    $\ce{Gd2O3}$ & 0.0785 $\pm$ 0.0038  & 0.0109  $\pm$ 0.0005 \\
+    \bottomrule
+\end{tabular}
+\caption{Mittelwert und Standardabweichung der experimentell bestimmten Suszeptibilitäten.}
+\label{tab:expsus}
+\end{table}
+
+\newpage
+\noindent
+Nun werden die theoretischen Suszeptibilitäten bestimmt.
+Dazu werden einige atomare Daten der Stoffe wie die Quantenzahlen und die molare Masse M in Tabelle (\ref{tab:th1}) gesammelt, aus denen sich der Landé-Faktor $g_J$ nach Formel %landé
+berechnen lässt.
+Mit den gesammelten Daten lassen sich die theoretischen Suszeptibilitäten $\chi_T$ nach Formel mit $N$ nach bestimmen. %chi_T N
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{c c c c c c c c}
+        \toprule
+        {Stoff} & {L} & {S} & {J} & {M $\mathbin{/} \si[per-mode=fraction]{\gram\per\mol}$ } & {$g_J$} & {N $\cdot 10^{28} \mathbin{/} \si[per-mode=fraction]{\per\cubic\meter} $} & {$\chi_T$} \\
+    \midrule
+    $\ce{Dy2O3}$ & 5 & 2.5 & 7.5 & 372.998 & 1.33 & 2.519 & 0.0254 \\
+    $\ce{Gd2O3}$ & 0 & 3.5 & 3.5 & 362.49  & 2    & 2.649 & 0.0149 \\
+    \bottomrule
+\end{tabular}
+\caption{Atomare Daten der Stoffe und theoretische Suszeptibilitäten.}
+\label{tab:th1}
+\end{table}
