@@ -1,6 +1,7 @@
 \newpage
 \section{Auswertung}
 \subsection{Bragg Bedingung}
+\label{sub:bragg}
 
 \begin{figure}
     \centering
@@ -19,6 +20,7 @@ Daraus lässt sich die absolute und relative Abweichung vom Sollwinkel bestimmen
 \end{align*}
 
 \subsection{Emissionsspektrum}
+\label{sub:emi}
 \noindent
 Aus den Messdaten lässt sich das Emissionsspektrum einer Kupferröntgenröhre in (\ref{fig:emi}) graphisch darstellen.
 
@@ -28,7 +30,13 @@ Zu erkennen sind die ermittelten Peaks, die die $\text{K}_\alpha$ und $\text{K}_
 
 \noindent
 Die maximale Energie $\text{E}_\text{max}$ und die minimale Wellenlänge lassen sich aus der Beschleunigungsspannung U=35 $\si{\kilo\volt}$ bestimmen. 
-Mit (xx) ergibt sich für den Grenzwinkel dann:
+Mit 
+
+\begin{equation}
+\theta_{\text{Grenz}} = \text{arcsin} \, \Bigl( \frac{hc}{2dUe_0} \Bigr)
+\end{equation}   
+\noindent
+ergibt sich für den Grenzwinkel dann:
 
 \begin{align*}
     \text{E}_\text{max} &= 35 \, \mathrm{keV}\\
@@ -102,7 +110,7 @@ bestimmt werden. Mit n=1, m=2 und l=3 ergeben sie sich zu:
 \subsection{Das Absorptionsspektrum}
 
 \noindent
-Im Folgenden sind die K-Kanten von Zink, Gallium, Brom, Rubidium und Strontium aufgetragen.
+Im Folgenden werden die Maxima und Minima der Impulshöhen von Zink, Gallium, Brom, Rubidium und Strontium gekennzeichnet.
 
 \begin{figure}
     \centering
@@ -139,9 +147,16 @@ Im Folgenden sind die K-Kanten von Zink, Gallium, Brom, Rubidium und Strontium a
        \label{fig:strontium}
 \end{figure}
 
+\begin{figure}
+    \centering
+       \includegraphics[height=9cm]{daten/zirkonium.pdf}
+       \caption{Absorptionsspektrum eines Zirkoniumabsorbers.}
+       \label{fig:zirkonium}
+\end{figure}
+
 \noindent
-Aus den gemessenen K-Kanten lassen sich die Bragg-Winkel $\theta_\text{K}$ sowie die Energieübergänge bestimmen,
-woraus sich die Abschirmzahlen $\sigma_\text{K}$ bestimmen lassen.
+Aus den dieses lassen sich die Bragg-Winkel $\theta_\text{K}$ durch Mittelung der Minima und Maxima sowie die Energieübergänge bestimmen,
+woraus sich die Abschirmzahlen $\sigma_\text{K}$ nach Formel (\ref{eqn:sigmaK}) bestimmen lassen.
 
 \begin{table}
     \centering
@@ -152,21 +167,16 @@ woraus sich die Abschirmzahlen $\sigma_\text{K}$ bestimmen lassen.
     \toprule
          & $\text{Z}$ & $\text{E}_\text{K} \,/\, \mathrm{keV}$ & $\theta_\text{K} \,/\, ° $ & $\sigma_\text{K} $\\
     \midrule 
-      Zn & 30 & 9.6005  & 18.7 & 3.6345 \\
-      Ga & 31 & 10.3508 & 17.3 & 3.6359 \\
-      Br & 35 & 13.4795 & 13.2 & 3.8365 \\
-      Rb & 37 & 15.0519 & 11.8 & 4.1091 \\
-      Sr & 38 & 15.9881 & 11.1 & 4.1203 \\
+      Zn & 30 & 9.6503  & 18.6 & 3.5652 \\
+      Ga & 31 & 10.3508 & 17.5 & 3.6359 \\
+      Br & 35 & 13.4795 & 13.3 & 3.8365 \\
+      Rb & 37 & 15.1788 & 11.7 & 3.9677 \\
+      Sr & 38 & 15.8471 & 11.2 & 4.2737 \\
+      Zr & 40 & 17.7258 & 10   & 4.3729 \\
     \bottomrule
     \end{tabular}
     \end{table}
 
-Die Abweichungen zu den Literaturwerten für die Werte für Zink betragen somit:
-\begin{align*}
-    \Delta\text{E}_\text{abs}&=49.4578 \, \mathrm{keV} & \Delta\text{E}_\text{rel}&=5.13\%\\
-    \Delta\theta_\text{abs}&=0.0996° & \Delta\sigma_\text{rel}&=0.54\%\\
-    \Delta\sigma_\text{abs}&=0.0745 & \Delta\sigma_\text{rel}&=2.09\%
-\end{align*}
 
 \subsection{Bestimmung der Rydbergkonstante}    
 
@@ -181,18 +191,19 @@ kann die Rydbergenergie aus der Steigung des $ \sqrt{\text{E}_\text{K}}-\text{Z}
        \label{fig:mose}
 \end{figure}
 
+\newpage
 \noindent
 Aus der Linearen Regression ergibt sich die Ausgleichsgerade
 
 \begin{align*}
-    g=3.5394\, x -8.0559.
+    g=3.4913\, x -6.3950.
 \end{align*}
 
 \noindent
 Aus dem Quadrat der Steigung wird nun die Rydbergenergie zu 
 
 \begin{align*}
-    \text{R}_\infty =12.5271 \, \mathrm{eV}
+    \text{R}_\infty =12.1894 \, \mathrm{eV}
 \end{align*}
 
 \noindent
@@ -207,7 +218,7 @@ Daraus kann nun die Rydbergkonstante $\text{R}_\text{y}$ mit
 zu 
 
 \begin{align*}
-\text{R}_\text{y} =10103826.71 \, \frac{1}{\text{m}}.
+\text{R}_\text{y} =9831438.62 \, \frac{1}{\text{m}}.
 \end{align*}
 
 \noindent

@@ -114,6 +114,14 @@ E_K_peakb=E_K_peakb/const.e #eV
 Aa = E_K_peaka/FWHMa
 Ab = E_K_peakb/FWHMb
 
+E_K_a_lit = 8046 #ev
+E_K_b_lit = 8904 #ev
+
+E_K_a_rel = abs(E_K_a_lit-E_K_peaka)/E_K_peaka
+E_K_b_rel = abs(E_K_b_lit-E_K_peakb)/E_K_peakb
+theta_b_rel = abs(22.49-22.5)/22.49
+theta_a_rel = (20.22-20.2)/20.22
+
 z=29
 E_K_lit =  8980.476 #eV
 sigma_1 = z - np.sqrt(E_K_lit/ry) #°
@@ -124,13 +132,14 @@ print(f"sigma_1 = {sigma_1} , sigma_2 = {sigma_2} , sigma_3 = {sigma_3}")
 print(f"E_K_alpha = {E_K_peaka}eV, E_K_beta = {E_K_peakb}eV ")
 print(f"E_FWHM_alpha = {FWHMa}eV, E_FWHM_beta = {FWHMb}eV")
 print(f"A_alpha = {Aa} A_beta = {Ab}")
+print(f"rel. abw.: E_K_a = {E_K_a_rel}, E_K_b = {E_K_b_rel},theta_a_rel = {theta_a_rel}, theta_b_rel = {theta_b_rel}")
 
 print (f'\n -----------------------------------Absorptionsspektrum-----------------------------------')
 
 #zink
 theta_zn,N_zn=np.genfromtxt('zink.txt', unpack = True)
 plt.plot(theta_zn, N_zn,'kx',label = 'Messdaten')
-plt.axvline(18.5, color='steelblue', ls = '--', label = r'$N_{min}$')
+plt.axvline(18.26666, color='steelblue', ls = '--', label = r'$N_{min}$')
 plt.axvline(19.0, color='g', ls = '--', label = r'$N_{max}$')
 plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
 plt.xlabel(r'$\theta \,/\, °$')
@@ -138,15 +147,15 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("zink.pdf")
 plt.close()
-theta_zn=18.7
-N_K_zn = N_zn[5]+(N_zn[10]-N_zn[5])/2
-E_K_zn=(h*c)/(e*2*d_LiF*np.sin(18.7*np.pi/180))
+theta_zn=18.6
+N_K_zn = N_zn[1]+(N_zn[10]-N_zn[1])/2
+E_K_zn=(h*c)/(e*2*d_LiF*np.sin(18.6*np.pi/180))
 E_K_zn_abs=9650-E_K_zn
 E_K_zn_rel=E_K_zn_abs/9.65
 sigma_K_zn=30-np.sqrt((E_K_zn/ry)-(alpha**2 * 30**4 /4))
 sigma_K_zn_abs=sigma_K_zn-3.56
 sigma_K_zn_rel=sigma_K_zn_abs/3.56
-theta_zn_abs=18.7-18.60042993
+theta_zn_abs=18.6-18.60042993
 theta_zn_rel=theta_zn_abs/18.60042993
 print(f"E_K_zn = {E_K_zn} theta_zn = {theta_zn} sigma_K_zn = {sigma_K_zn} sigma abs {sigma_K_zn_abs} sigma rel {sigma_K_zn_rel} theta abs {theta_zn_abs} theta rel {theta_zn_rel} E abs {E_K_zn_abs} E rel = {E_K_zn_rel}")
 
@@ -154,14 +163,14 @@ print(f"E_K_zn = {E_K_zn} theta_zn = {theta_zn} sigma_K_zn = {sigma_K_zn} sigma 
 theta_br,N_br=np.genfromtxt('brom.txt', unpack = True)
 plt.plot(theta_br, N_br,'kx',label = 'Messdaten')
 plt.axvline(13.0, color='steelblue', ls = '--', label = r'$N_{min}$')
-plt.axvline(13.5, color='g', ls = '--', label = r'$N_{max}$')
+plt.axvline(13.55, color='g', ls = '--', label = r'$N_{max}$')
 plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
 plt.xlabel(r'$\theta \,/\, °$')
 plt.legend()
 plt.tight_layout()
 plt.savefig("brom.pdf")
 plt.close()
-theta_br=13.2
+theta_br=13.3
 N_K_br = N_br[2]+(N_br[7]-N_br[2])/2
 E_K_br=(h*c)/(e*2*d_LiF*np.sin(13.2*np.pi/180))
 sigma_K_br=35-np.sqrt((E_K_br/ry)-(alpha**2 * 35**4 /4))
@@ -171,16 +180,16 @@ print(f"E_K_br = {E_K_br} theta_br = {theta_br} sigma_K_br = {sigma_K_br}")
 #gallium
 theta_ga,N_ga=np.genfromtxt('gallium.txt', unpack = True)
 plt.plot(theta_ga, N_ga,'kx',label = 'Messdaten')
-plt.axvline(17.1, color='steelblue', ls = '--', label = r'$N_{min}$')
-plt.axvline(17.6, color='g', ls = '--', label = r'$N_{max}$')
+plt.axvline(17.05, color='steelblue', ls = '--', label = r'$N_{min}$')
+plt.axvline(17.85, color='g', ls = '--', label = r'$N_{max}$')
 plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
 plt.xlabel(r'$\theta \,/\, °$')
 plt.legend()
 plt.tight_layout()
 plt.savefig("gallium.pdf")
 plt.close()
-theta_ga=17.3
-N_K_ga = N_ga[1]+(N_ga[6]-N_ga[1])/2
+theta_ga=17.5
+N_K_ga = N_ga[1]+(N_ga[8]-N_ga[1])/2
 E_K_ga=(h*c)/(e*2*d_LiF*np.sin(17.3*np.pi/180))
 sigma_K_ga=31-np.sqrt((E_K_ga/ry)-(alpha**2 * 31**4 /4))
 print(f"E_K_ga = {E_K_ga} theta_ga = {theta_ga} sigma_K_ga = {sigma_K_ga}")
@@ -189,7 +198,7 @@ print(f"E_K_ga = {E_K_ga} theta_ga = {theta_ga} sigma_K_ga = {sigma_K_ga}")
 #rubidium
 theta_rb,N_rb=np.genfromtxt('rubidium.txt', unpack = True)
 plt.plot(theta_rb, N_rb,'kx',label = 'Messdaten')
-plt.axvline(11.5, color='steelblue', ls = '--', label = r'$N_{min}$')
+plt.axvline(11.35, color='steelblue', ls = '--', label = r'$N_{min}$')
 plt.axvline(12.1, color='g', ls = '--', label = r'$N_{max}$')
 plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
 plt.xlabel(r'$\theta \,/\, °$')
@@ -197,9 +206,9 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("rubidium.pdf")
 plt.close()
-theta_rb=11.8
+theta_rb=11.7
 N_K_rb = N_rb[3]+(N_rb[9]-N_rb[3])/2
-E_K_rb=(h*c)/(e*2*d_LiF*np.sin(11.8*np.pi/180))
+E_K_rb=(h*c)/(e*2*d_LiF*np.sin(11.7*np.pi/180))
 sigma_K_rb=37-np.sqrt((E_K_rb/ry)-(alpha**2 * 37**4 /4))
 print(f"E_K_rb = {E_K_rb} theta_rb = {theta_rb} sigma_K_rb ={sigma_K_rb}")
 
@@ -208,29 +217,46 @@ print(f"E_K_rb = {E_K_rb} theta_rb = {theta_rb} sigma_K_rb ={sigma_K_rb}")
 #strontium
 theta_sr,N_sr=np.genfromtxt('strontium.txt', unpack = True)
 plt.plot(theta_sr, N_sr,'kx',label = 'Messdaten')
-plt.axvline(10.9, color='steelblue', ls = '--', label = r'$N_{min}$')
-plt.axvline(11.4, color='g', ls = '--', label = r'$N_{max}$')
+plt.axvline(10.7, color='steelblue', ls = '--', label = r'$N_{min}$')
+plt.axvline(11.6, color='g', ls = '--', label = r'$N_{max}$')
 plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
 plt.xlabel(r'$\theta \,/\, °$')
 plt.legend()
 plt.tight_layout()
 plt.savefig("strontium.pdf")
 plt.close()
-theta_sr=11.1
-N_K_sr = N_sr[4]+(N_sr[9]-N_sr[4])/2
-E_K_sr=(h*c)/(e*2*d_LiF*np.sin(11.1*np.pi/180))
+theta_sr=11.2
+N_K_sr = N_sr[2]+(N_sr[11]-N_sr[2])/2
+E_K_sr=(h*c)/(e*2*d_LiF*np.sin(11.2*np.pi/180))
 sigma_K_sr=38-np.sqrt((E_K_sr/ry)-(alpha**2 * 38**4 /4))
 print(f"E_K_sr = {E_K_sr} theta_sr = {theta_sr} sigma_K_sr = {sigma_K_sr}")
+
+#zirkonium
+theta_zr,N_zr=np.genfromtxt('zirkonium.txt', unpack = True)
+plt.plot(theta_zr, N_zr,'kx',label = 'Messdaten')
+plt.axvline(9.5, color='steelblue', ls = '--', label = r'$N_{min}$')
+plt.axvline(10.4, color='g', ls = '--', label = r'$N_{max}$')
+plt.ylabel(r'$N \,/\, \mathrm{\frac{Imp}{s}}$')
+plt.xlabel(r'$\theta \,/\, °$')
+plt.legend()
+plt.tight_layout()
+plt.savefig("zirkonium.pdf")
+plt.close()
+theta_zr=10
+N_K_zr = N_zr[0]+(N_zr[9]-N_zr[0])/2
+E_K_zr=(h*c)/(e*2*d_LiF*np.sin(10*np.pi/180))
+sigma_K_zr=40-np.sqrt((E_K_zr/ry)-(alpha**2 * 40**4 /4))
+print(f"E_K_zr = {E_K_zr} theta_zr = {theta_zr} sigma_K_zr = {sigma_K_zr}")
 
 
 print (f'\n -----------------------------------Moseleysches-Gesetz-----------------------------------')
 
-Z = np.array ([30,31,35,37,38])
-E_K = np.array ([E_K_zn,E_K_ga,E_K_br,E_K_rb,E_K_sr])
+Z = np.array ([30,31,35,37,38,40])
+E_K = np.array ([E_K_zn,E_K_ga,E_K_br,E_K_rb,E_K_sr, E_K_zr])
 
 params, covariance_matrix = np.polyfit(Z, np.sqrt(E_K), deg=1, cov=True)
 
-x_plot = np.linspace(30, 38)
+x_plot = np.linspace(30, 40)
 plt.plot(
     x_plot,
     params[0] * x_plot + params[1],
@@ -255,3 +281,19 @@ rconstrel=(10973731.56816-(params[0]**2)*e/(h*c))/10973731.56816
 
 
 print(f"berechnete rydberg energie = {params[0]**2} rydberg const {rconst} ryconst abs{rconstabs} ryconst rel {rconstrel}")
+
+print(f"---------------------------------Diskussion------------------------------")
+
+E_K_lit= np.array([9650, 10370, 13470, 15200, 16100, 17990])
+E_K_rel = abs(E_K-E_K_lit)/E_K_lit
+print(f"relative abweichungen E_K: {E_K_rel}")
+
+sigma_K = np.array ([sigma_K_zn,sigma_K_ga,sigma_K_br,sigma_K_rb,sigma_K_sr, sigma_K_zr])
+sigma_K_lit = np.array ([3.56, 3.68, 3.85, 3.95, 4.01, 4.11])
+sigma_K_rel = abs(sigma_K-sigma_K_lit)/sigma_K_lit
+print(f"relative abweichungen sigma_K: {sigma_K_rel}")
+
+theta = np.array ([theta_zn,theta_ga,theta_br,theta_rb,theta_sr, theta_zr])
+theta_lit = np.array ([ 18.60042993, 17.26690807 ,13.20934876,11.68329037,11.02175704,9.851577763])
+theta_rel = abs(theta-theta_lit)/theta_lit
+print(f"relative abweichungen theta_rel: {theta_rel}")
