@@ -22,6 +22,7 @@ die gemessen werden kann.
 Zunächst wird zwischen zwei Arten der Biegung unterschieden.
 
 \subsection{Einseitige Einspannung}
+\label{sec:eins}
     Wirkt auf einen einseitig eingespannten elastischen stabförmigen Körper eine Gravitationskraft $F$,
     entsteht eine Durchbiegung $D(x)$ nach Abbildung (\ref{fig:eins}).
     
@@ -96,10 +97,29 @@ D(x) = \frac{F}{2EI} \Bigl(Lx^2-\frac{x^3}{3}\Bigr)
 \noindent
 Wird der Stab beidseitig aufgelegt, wirkt nach Abbildung (\ref{fig:beids}) die Kraft $F$ in der Mitte 
 und der Stab lässt sich in zwei Bereiche mit verschiedenen Drehmomenten unterteilen.
-Es gilt
+Es gilt:
 
+\begin{align*}
+    M_{F1}  &=-\frac{F}{2}x & (\text{für} \,\, 0\leq \, &x \leq \frac{L}{2}) \\
+    M_{F2}  &=-\frac{F}{2}(L-x) & (\text{für}\,\, \frac{L}{2} \leq \, &x \leq 0 ) \\
+\end{align*}
+    
+\noindent
+Daraus folgen nach Überlegungen aus der Differentialgeometrie und Integrationen analog zu Kapitel (\ref{sec:eins}) die Funktionen der Durchbiegung
 
+\begin{equation}
+D_1(x) = \frac{F}{48EI}\cdot (3L^2x-4x^3)
+\label{eqn:d1}
+\end{equation}
 
+\noindent
+und 
+
+\begin{equation}
+    D_2(x) = \frac{F}{48EI}\cdot (4x^3-12Lx^2+9L^2x-L^3).
+    \label{eqn:d2}
+\end{equation}
+    
 
 
 
