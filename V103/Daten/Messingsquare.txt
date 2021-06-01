@@ -1,0 +1,32 @@
+# 
+# Messing Eckig 
+# 
+# Einseitig eingespannt: m_angehängt = 747.2g , L_eingehangen_gesamt = 54.8cm , x_eingehangen = 52cm (Masse bei)
+#
+#   x       D
+#  cm      um 
+#
+12.1        256
+28.1       1000
+34         1371
+16          393
+22.8        700
+40         1745
+11          199
+45         2100
+50         2410
+38         1620
+#
+# Beidseitig eingespannt: m_angehängt = 1238.6g , x_eingehangen = 27.5cm (Masse bei)
+#links
+49.65        37
+47           72
+45           81
+40          112
+35          139
+#rechts
+9            40
+11.3         57
+15           78
+19         99.5
+21          112

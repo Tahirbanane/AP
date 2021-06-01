@@ -1,0 +1,32 @@
+# 
+# Kupfer rund
+# 
+# Einseitig eingespant: m_angehängt = 750g , L_eingehangen_gesamt = 54.6cm , x_eingehangen = 52cm (Masse bei)
+#
+#   x       D
+#  cm      um 
+#
+23          1340
+30          2445
+47          4270
+16           740
+42          4150
+12           550
+8            269
+40          3812
+6            157
+35          3080
+#
+# Beidseitig eingespannt: m_angehängt = 747.2g , x_eingehangen = 28cm (Masse bei)
+#links
+35         315
+40         265
+45         180
+47         141
+50         105
+#rechts
+9           72
+12         115
+15         161
+19         230
+23         268

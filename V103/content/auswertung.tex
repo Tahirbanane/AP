@@ -1,4 +1,100 @@
 \newpage
 \section{Auswertung}
 
+In diesem Abschnitt wird der Versuch ausgewertet.
+
+\subsection{Berechnung der Flächenträgheitsmomente}
+Zunächst müssen die Flächenträgheitsmomente der Stäbe berechnet werden. Es liegen drei Arten von Stäben vor. Zwei mit runder und jeweils einer mit rechteckiger und  
+ quadratischer Querschnittsfläche.
+
+\noindent
+Für den runden Stab gilt, mit $d$ als den Durchmesser,
+\begin{align}
+    \symbf{I}_\text{R} &= \int_0^{2\pi} \int_0^\frac{d}{2} (r \cdot \sin(\varphi))²\cdot \symup{d}r \symup{d}\varphi
+    = \frac{1}{4}\left(\frac{d}{2}\right)⁴ \int_0^{2\pi} \sin(\varphi)² \symup{d}\varphi\\
+    &= \left.\frac{d⁴}{64} \frac{\varphi}{2} - \frac{\sin(\varphi) \cos{\varphi}}{2} \right|_0^2\pi
+    = \frac{\pi}{64} d⁴.
+    \label{eqn:Rund}
+\end{align}
+
+\noindent
+Für einen Stab mit rechteckiger Querschnittsfläche folgt dann äquivalent mit den Seitenlängen $a$ und $b$
+\begin{equation}
+    \symbf{I}_\text{Recht} = \int_\frac{-a}{2}^\frac{a}{2} \int_\frac{-b}{2}^\frac{b}{2} y² \symup{d}y \symup{d}z 
+    = \int_\frac{-b}{2}^\frac{b}{2} \frac{a³}{12} \symup{d}z 
+    = b \cdot \frac{a³}{12} 
+    = \frac{a⁴}{12}
+    \label{eqn:Quadratisch}
+\end{equation}
+
+\noindent
+und speziell für eine quadratische Flächen
+\begin{equation}
+    \symbf{I}_\text{Q} = \frac{a⁴}{12}.
+    \label{eqn:Quadratisch}
+\end{equation}
+
+\subsection{Bestimmung der Metalle}
+Um die Metalle später vergleichen zu können ist es hilfreich über die Dichte diese zu bestimmen. Dies kann mit dem Zusammenhang
+\begin{equation}
+    \rho = \frac{m}{V}
+    \label{rqn:dichte}
+\end{equation}
+
+\noindent
+erfolgen. Die Stäbe werden gewogen und abgemessen dem Durchmesser $d$, der Masse $m$ und der Länge $l$, sowie den Seitenlängen $a$ und $b$
+
+\begin{table}
+	\centering
+	\caption{Messwerte zu den Rundenstäben.} 
+	\label{tab:vana} 
+	\begin{tabular}{c c c}
+	\toprule
+	$d \, / \, \si{\centi\meter}$ & $m \, / \, \si{\gram} $ & $l \, / \, \si{\centi\meter}$\\
+	\midrule
+    1   &   393.8   &   60.0 \\
+    1   &   416.6   &   60.1 \\
+\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\caption{Messwerte zu den eckigen Messtäben.} 
+	\label{tab:vana} 
+	\begin{tabular}{c c c c}
+	\toprule
+	$a \, / \, \si{\centi\meter}$ & $b \, / \, \si{\centi\meter}$ & $m \, / \, \si{\gram} $ & $l \, / \, \si{\centi\meter}$\\
+	\midrule
+    1   &   1   &   163.4   &   59.1 \\
+    1   &   1.2   &  603.8  &   60.4 \\
+\bottomrule
+	\end{tabular}
+\end{table}
+
+\noindent
+Das Volumen der runden Stäbe ist gegeben durch $V_\text{r} = \pi \cdot \left( \frac{d}{2} \right)^2 \cdot l$ und das Volumen der eckigen Stäbe durch 
+$V_\text{e} = a \cdot b \cdot l$.
+
+\noindent
+Daraus folgt für das die Dichten gegeben sind durch
+\begin{align*}
+    m = 393.8 \, \si{\gram} &: \rho = 8.356\, \si{\gram\per\centi\meter\tothe{3}}\\
+    m = 416.6 \, \si{\gram} &: \rho = 8.840\, \si{\gram\per\centi\meter\tothe{3}}\\
+    m = 163.4 \, \si{\gram} &: \rho = 2.764\, \si{\gram\per\centi\meter\tothe{3}}\\
+    m = 603.8 \, \si{\gram} &: \rho = 8.330\, \si{\gram\per\centi\meter\tothe{3}}\\
+\end{align*}    
+
+\noindent
+Mit der Dichte lässt sich die Stange mit einer Masse von $m = 393.8 \, \si{\gram}$ und die mit einer Masse von $m = 603.8 \, \si{\gram}$ als Messing (\cite{Messing}), 
+die Stange mit einer Masse von $m = 416.6 \, \si{\gram}$ als Kupfer (\cite{Kupfer}) und
+die Stange mit einer Masse von $m = 163.4 \, \si{\gram}$ als Aluminium (\cite{Aluminium}) identifizieren. Diese Identifikationen passen auch mit den beobachteten Farben
+der Stange.
+
+\subsection{Einseitig eingehängt Stange}
+
+
+
+
+
 

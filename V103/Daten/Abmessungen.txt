@@ -1,0 +1,11 @@
+#
+# Messung eckig: m = 603.8g , l = 60.4cm , a = 1cm b = 1.2cm Hochkant gemessen
+#
+# Messing rund: m = 393.8g , l = 60cm , durchmesser = 1cm 
+#
+# Kupfer rund: m = 416.6g , l = 60.1cm , durchmesser = 1cm 
+#
+# Aluminium eckig: m = 163.4g , l = 59.1cm , a = b = 1cm
+#
+# Messskala Apperatur: 0cm - 55.4cm
+#

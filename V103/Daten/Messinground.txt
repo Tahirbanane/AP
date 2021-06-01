@@ -1,0 +1,32 @@
+# 
+# Messing Rund
+# 
+# Einseitig eingespant: m_angehängt = 750g , L_eingehangen_gesamt = 54.3cm , x_eingehangen = 52cm (Masse bei)
+#
+#   x       D
+#  cm      um 
+#
+6           200
+30         3462
+10          500
+35         4450
+14          872
+40         5351
+22         1865
+37         4891
+25         2462
+33         3929
+#
+# Beidseitig eingespannt: m_angehängt = 1238.5g , x_eingehangen = 27.5cm (Masse bei)
+#links
+33          570
+37          650
+40          575
+43          515
+46          500
+#rechts
+5            35
+9           125
+13          220
+18          360
+23          472

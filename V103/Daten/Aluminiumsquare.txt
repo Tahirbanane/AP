@@ -1,0 +1,34 @@
+# 
+# Aluminium Eckig 
+# 
+# Einseitig eingespant: m_angehängt = 550g , L_eingehangen_gesamt = 53.4cm , x_eingehangen = 52cm (Masse bei)
+#
+#   x       D
+#  cm      um 
+#
+40         2929
+15.4        569
+34         2251
+15          530
+10          283
+49         3570
+21.1       1028
+31         2004
+17.5        695
+38         2671
+#
+# Beidseitig eingespannt: m_angehängt = 747.2g , x_eingehangen = 28cm (Masse bei)
+# links
+45          88
+37.3       195
+51.05       60
+33.8       210
+40         179
+# rechts
+14          85
+13.7       100
+18.41      129
+18.4       131
+8.01        35
+
+
