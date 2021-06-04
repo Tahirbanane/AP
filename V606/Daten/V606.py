@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 import uncertainties.unumpy as unp
 from scipy.optimize import curve_fit
 import scipy.constants as const
+from uncertainties import ufloat
+from scipy import optimize
+from uncertainties.umath import *
+
 
 e=const.e
 h=const.hbar
@@ -11,8 +15,31 @@ mu_0=const.mu_0
 k=const.k
 N_A=const.N_A
 
-f, U_A = np.genfromtxt('a.txt', unpack=True)
-plt.plot(f, U_A/496,'k.', label ='Messwerte')
+w, U_A = np.genfromtxt('a.txt', unpack=True)
+U_A=U_A/10 #verstärkung mV
+U=U_A/496 #mV
+
+def gaussian(x, amplitude, mean, stddev):
+    return amplitude * np.exp(-((x - mean) / 4 / stddev)**2)
+
+popt, _ = optimize.curve_fit(gaussian, w[4:], U[4:],p0=[300, 200, 30])
+x = np.linspace(20.8, 41, 100)
+#plt.plot(x, data)
+plt.plot(x, gaussian(x, *popt))
+
+#def f(x, x0, y, a):
+#    return a/((x**2-x0**2)**2+y**2*x0**2)
+#
+#par, cov = optimize.curve_fit(f, U, w)
+#x_plot = np.linspace(20.8, 41, 1000)
+#plt.plot(x_plot, f(x_plot, *par), 'b-', label=r'Ausgleichskurve', linewidth=1)
+#
+#x0 = ufloat(par[0], np.sqrt(cov[0][0]))
+#y = ufloat(par[1], np.sqrt(cov[1][1]))
+#a = ufloat(par[2], np.sqrt(cov[2][2]))
+#nu_0 = x0
+
+plt.plot(w, U,'k.', label ='Messwerte')
 plt.xlabel(r'Frequenz $\nu$ / $\mathrm{kHz}$')
 plt.ylabel(r'Spannungsverhältnis $\frac{U_A}{U_E}$')
 plt.legend()
