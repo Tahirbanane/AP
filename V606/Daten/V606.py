@@ -22,10 +22,18 @@ U=U_A/496 #mV
 def gaussian(x, amplitude, mean, stddev):
     return amplitude * np.exp(-((x - mean) / 4 / stddev)**2)
 
-popt, _ = optimize.curve_fit(gaussian, w[4:], U[4:],p0=[300, 200, 30])
-x = np.linspace(20.8, 41, 100)
+popt, _ = optimize.curve_fit(gaussian, w[4:], U[4:],p0=[30, 15, 30])
+print(popt)
+x = np.linspace(20.8, 42, 1000)
 #plt.plot(x, data)
-plt.plot(x, gaussian(x, *popt))
+plt.plot(x, gaussian(x, *popt), label = 'Gaußkurve')
+
+def h (x, x0, y, a,k,i):
+    return k*x**3 + i*x**9 + a/((x**2-x0**2)**2+y**2*x0**2) 
+
+params, covarianzmatrix = optimize.curve_fit(h, w, U, p0 = [35.5076301,1.05833979,1436.58107,0.03,0.2]) #Lorentzfunktion ist mit der Modifikation nur auf diesem Intervall die beste Approximation
+print(params)
+plt.plot(x, h(x, *params), label = 'Lorentzkurve')
 
 #def f(x, x0, y, a):
 #    return a/((x**2-x0**2)**2+y**2*x0**2)
@@ -44,7 +52,8 @@ plt.xlabel(r'Frequenz $\nu$ / $\mathrm{kHz}$')
 plt.ylabel(r'Spannungsverhältnis $\frac{U_A}{U_E}$')
 plt.legend()
 plt.tight_layout()
-plt.savefig('selektiv.pdf')
+#plt.show()
+plt.savefig('x6.pdf')
 
 
 F = 0.866 #cm^2
