@@ -16,12 +16,28 @@ zu beobachten ist.
 
 \noindent
 Mittels Python wird eine Ausgleichskurve ermittelt.
-Dabei ergibt sich ein besseres Ergebnis mit einer Lorentzkurve, da für die Gaußkurve keine passenden Parameter bestimmt werden können.
+Dabei ergibt sich ein besseres Ergebnis mit einer Lorentzkurve, da für die Gaußkurve keine gute Näherung bestimmt werden kann.
+Die Funktionsvorschrift der gefitteten Kurve lautet
+
+\begin{equation*}
+f(\nu) = k\nu^3 + i\nu^9 + \frac{\alpha}{(\nu^2 - \nu_0^2)^2 + \gamma^2\nu_0^2},
+\end{equation*}
+
+\noindent
+wobei die ersten beiden Terme die Lorentzkurve an den Rändern nach oben verschieben und keinen Einfluss auf die Breite der Glocke haben.
+Die Parameter sind:
+
+\begin{align*}
+    k      &= (2.29\pm0.35)\cdot 10^{-6}\\
+    i      &= (-2.6\pm1.1)\cdot 10^{-16}\\
+    \nu_0  &= 35.519\pm0.010\\
+    \alpha &= (8.5\pm0.7) \cdot 10^2\\
+    \gamma &= 0.83\pm0.04\\
+\end{align*}
 
 \noindent
 In Abbildung (\ref{fig:guete}) ist die Lorentzkurve auf einem passenden Intervall zur Bestimmung der Güte Q dargestellt.
 
-\newpage
 \begin{figure}
     \centering
        \includegraphics[width=\textwidth]{Daten/x7.pdf}
@@ -34,7 +50,6 @@ Die Folgenden Werte lassen sich aus der Kurve mittels Python bestimmen:
 
 \begin{align*}
 \nu_- &= 35.234 \pm 0.010 \\
-\nu_0 &= 35.519 \pm 0.010 \\
 \nu_+ &= 35.803 \pm 0.010 \\
 \end{align*}
 
@@ -48,7 +63,6 @@ Mit Formel (\ref{eqn:guete}) kann daraus die Güte des Selektivverstärkers zu
 \noindent
 berechnet werden.
 
-\newpage
 \begin{table}
 \centering
 \caption{Messdaten zur Untersuchung der Filterkurve.}
