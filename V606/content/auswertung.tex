@@ -9,11 +9,46 @@ zu beobachten ist.
 
 \begin{figure}
     \centering
-       \includegraphics[width=\textwidth]{selektiv.pdf}
+       \includegraphics[width=\textwidth]{Daten/x6.pdf}
        \caption{Filterkurve des Selektivverstärkers.}
        \label{fig:selektiv}
 \end{figure}
 
+\noindent
+Mittels Python wird eine Ausgleichskurve ermittelt.
+Dabei ergibt sich ein besseres Ergebnis mit einer Lorentzkurve, da für die Gaußkurve keine passenden Parameter bestimmt werden können.
+
+\noindent
+In Abbildung (\ref{fig:guete}) ist die Lorentzkurve auf einem passenden Intervall zur Bestimmung der Güte Q dargestellt.
+
+\newpage
+\begin{figure}
+    \centering
+       \includegraphics[width=\textwidth]{Daten/x7.pdf}
+       \caption{Filterkurve des Selektivverstärkers.}
+       \label{fig:guete}
+\end{figure}
+
+\noindent
+Die Folgenden Werte lassen sich aus der Kurve mittels Python bestimmen: 
+
+\begin{align*}
+\nu_- &= 35.234 \pm 0.010 \\
+\nu_0 &= 35.519 \pm 0.010 \\
+\nu_+ &= 35.803 \pm 0.010 \\
+\end{align*}
+
+\noindent
+Mit Formel (\ref{eqn:guete}) kann daraus die Güte des Selektivverstärkers zu 
+
+\begin{equation*}
+    Q = 62.376 \pm 0.018 
+\end{equation*}
+
+\noindent
+berechnet werden.
+
+\newpage
 \begin{table}
 \centering
 \caption{Messdaten zur Untersuchung der Filterkurve.}
@@ -68,6 +103,7 @@ berechnet wird.
 
 \begin{table}
     \centering
+    \caption{Daten der Proben.}
     \begin{tabular}{c c c c c}
         \toprule
         {Stoff} & {$m \mathbin{/} \si{\gram}$} & {$\rho \mathbin{/} \si[per-mode=fraction]{\gram\per\cubic\centi\meter}$} & {$l \mathbin{/} \si{\centi\meter}$} & {$Q_{real} \mathbin{/} \si{\centi\meter\squared}$} \\
@@ -76,7 +112,6 @@ berechnet wird.
     $\ce{Gd2O3}$ & 14.08 & 7.4 & 15.5 & 0.123 \\
     \bottomrule
 \end{tabular}
-\caption{Daten der Proben.}
 \label{tab:proben}
 \end{table}
 
@@ -86,31 +121,31 @@ $R_o$ ohne Probe und $R_m$ mit Probe und Differenzen.
 
 \begin{table}
     \centering
+    \caption{Messdaten und Differenzen von $\ce{Dy2O3}$.}
     \begin{tabular}{c c c c c c}
         \toprule
         {$U_o \mathbin{/} \si{\milli\volt}$} & {$U_m \mathbin{/} \si{\milli\volt}$} & {$R_o \mathbin{/} \si{\ohm}$} & {$R_m \mathbin{/} \si{\ohm}$} & {$\Delta U \mathbin{/} \si{\milli\volt}$} & {$\Delta R \mathbin{/} \si{\ohm}$} \\
     \midrule
-    0.5     &   3.8   &     3.215     &     1.645    &   3.3   &  1.57  \\
-    0.55    &   3.79  &     3.210     &     1.65     &   3.24  &  1.56  \\ 
-    0.52    &   3.7   &     3.175     &     1.597    &   3.18  &  1.579 \\
+    0.05     &   0.38   &     3.215     &     1.645    &   0.33  &  1.57  \\
+    0.055    &   0.38   &     3.210     &     1.65     &   0.32  &  1.56  \\ 
+    0.052    &   0.37   &     3.175     &     1.597    &   0.32  &  1.579 \\
     \bottomrule
 \end{tabular}
-\caption{Messdaten und Differenzen von $\ce{Dy2O3}$.}
 \label{tab:exp1}
 \end{table}
 
 \begin{table}
     \centering
+    \caption{Messdaten und Differenzen von $\ce{Gd2O3}$.}
     \begin{tabular}{c c c c c c}
         \toprule
         {$U_o \mathbin{/} \si{\milli\volt}$} & {$U_m \mathbin{/} \si{\milli\volt}$} & {$R_o \mathbin{/} \si{\ohm}$} & {$R_m \mathbin{/} \si{\ohm}$} & {$\Delta U \mathbin{/} \si{\milli\volt}$} & {$\Delta R \mathbin{/} \si{\ohm}$} \\
     \midrule
-    0.51    &   1.19   &     3.223     &     2.437    &   1.4   &  0.786  \\
-    0.5     &   1.79   &     3.144     &     2.422    &   1.29  &  0.722  \\ 
-    0.5     &   1.95   &     3.222     &     2.422    &   1.45  &  0.8    \\
+    0.051    &   0.12   &     3.223     &     2.437    &   0.14  &  0.786  \\
+    0.05     &   0.18   &     3.144     &     2.422    &   0.13  &  0.722  \\ 
+    0.05     &   0.2    &     3.222     &     2.422    &   0.15  &  0.8    \\
     \bottomrule
 \end{tabular}
-\caption{Messdaten und Differenzen von $\ce{Gd2O3}$.}
 \label{tab:exp2}
 \end{table}
 
@@ -123,15 +158,15 @@ Die experimentell bestimmten Suszeptibilitäten befinden sich in Tabelle (\ref{t
 
 \begin{table}
     \centering
+    \caption{Mittelwert und Standardabweichung der experimentell bestimmten Suszeptibilitäten.}
     \begin{tabular}{c c c}
         \toprule
         {Stoff} & {$\chi_U $} & {$\chi_R $} \\
     \midrule
-    $\ce{Dy2O3}$ & 0.1730 $\pm$ 0.0026  &  0.0208 $\pm$ 0.0001 \\
-    $\ce{Gd2O3}$ & 0.0785 $\pm$ 0.0038  & 0.0109  $\pm$ 0.0005 \\
+    $\ce{Dy2O3}$ & 0.0173 $\pm$ 0.0003  &  0.0208 $\pm$ 0.0001 \\
+    $\ce{Gd2O3}$ & 0.0079 $\pm$ 0.0004  &  0.0109 $\pm$ 0.0005 \\
     \bottomrule
 \end{tabular}
-\caption{Mittelwert und Standardabweichung der experimentell bestimmten Suszeptibilitäten.}
 \label{tab:expsus}
 \end{table}
 
@@ -153,6 +188,7 @@ Dabei ist $N_A$ die Avogadrokonstante.
 
 \begin{table}
     \centering
+    \caption{Atomare Daten der Stoffe und theoretische Suszeptibilitäten.}
     \begin{tabular}{c c c c c c c c}
         \toprule
         {Stoff} & {L} & {S} & {J} & {M $\mathbin{/} \si[per-mode=fraction]{\gram\per\mol}$ } & {$g_J$} & {N $\cdot 10^{28} \mathbin{/} \si[per-mode=fraction]{\per\cubic\meter} $} & {$\chi_T$} \\
@@ -161,6 +197,5 @@ Dabei ist $N_A$ die Avogadrokonstante.
     $\ce{Gd2O3}$ & 0 & 3.5 & 3.5 & 362.49  & 2    & 2.649 & 0.0149 \\
     \bottomrule
 \end{tabular}
-\caption{Atomare Daten der Stoffe und theoretische Suszeptibilitäten.}
 \label{tab:th1}
 \end{table}
