@@ -33,13 +33,15 @@ def h (x, x0, y, a, k, i):
 
 params, covarianzmatrix = optimize.curve_fit(h, w, U, p0 = [35.5076301,1.05833979,1436.58107,0.03,0.2]) #Lorentzfunktion ist mit der Modifikation nur auf diesem Intervall die beste Approximation
 print(params)
+a = 1.0688491170389607
 
 errors = np.sqrt(np.diag(covarianzmatrix))
 m = ufloat(params[0], errors[0])
-a = 1.0688491170389607#ufloat(params[1], errors[1])
-Q = m / sqrt(2 * np.log(2) / a)
-print(f'Güte Q = {Q}')
-print(f'm = {m} \na = {a}')# \nn = {n}')
+y = ufloat(params[1], errors[1])
+alpha = ufloat(params[2], errors[2])
+k = ufloat(params[3], errors[3])
+i = ufloat(params[4], errors[4])
+print(f'm = {m} \ny = {y} \nalpha = {alpha} \nk = {k} \ni = {i}')
 
 nu_plus = m + (sqrt(1/(2*a) * np.log(2)))/2
 nu_minus = m - (sqrt(1/(2*a) * np.log(2)))/2
