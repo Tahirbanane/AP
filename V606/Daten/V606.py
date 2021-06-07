@@ -53,7 +53,7 @@ plt.ylabel(r'Spannungsverhältnis $\frac{U_A}{U_E}$')
 plt.legend()
 plt.tight_layout()
 #plt.show()
-plt.savefig('x6.pdf')
+plt.savefig('selektiv.pdf')
 
 
 F = 0.866 #cm^2
