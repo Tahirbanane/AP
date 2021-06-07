@@ -10,6 +10,7 @@ fequenzverschoben, da diese durch den Stoß am Elektron Energie an dieses abgibt
 Wenn $\lambda_1$ die einfallende und $\lambda_2$ die auslaufende Wellenlänge ist, kann die Differenz berechnet werden über
 \begin{equation}
     \Delta \lambda = \frac{h}{m_ec} \left(1 - cos \theta \right) \, .
+    \label{eqn:lambda}
 \end{equation}
 
 \noindent
@@ -22,8 +23,33 @@ Die Bremsstrahlung entsteht, wie es der Name suggeriert, durch die Abbremsung de
 und die charakeristische Röntgenstrahlung entsteht durch die Ionisierung eines Atoms in der Anode, wodurch ein Elektron, unter Aussendung eines $\gamma$-Quanten, nachrückt. Diese
 Energien sind diskret. Die charakeristische Röntgenstrahlung ist somit Materialabhängig. \\
 \noindent
-Die Compton-Wellenlänge kann durch die Transmission und Absorbtion von Röntgenstrahlung durch Aluminium bestimmt werden.
+Die Compton-Wellenlänge kann durch die Transmission und Absorbtion von Röntgenstrahlung durch Aluminium bestimmt werden. Die Transmission eines Stoffes nimmt mit zunehmender Wellenlänge
+ab, wodurch ebenfalls die Intensität der Compton-Wellenlänge sinkt. 
+DerTransmissionskoeffizient kann durch
+\begin{align}
+    T=\frac{I}{I_0} \label{eq:3}
+\end{align}
+berechnet werden, wobei $I_0$ die Intensität der gesamten einfallenden Strahlung und I die transmittierte Strahlung, die gerde betrachtet wird, beschreibt.\\
 
+\noindent
+Die Absorbtion durch Materie kann mit dem dem Delamber´schen Gesetz beschrieben werden. Dies ist gegeben durch 
+\begin{equation}
+    I = I_0 \, e^{\mu d} \, ,
+    \label{eqn:Delamber}
+\end{equation}
 
+\noindent
+wobei $d$ die Dicke, $\mu$ der Absorptionskoeffizient und $I_0$ die einfallende Intensität ist. Der Absorptionskoeffizient $\mu$ ist gegeben durch 
+$\mu = \mu_\text{Paar} + \mu_\text{Photo} + \mu_\text{Com}$, wobei $\mu_\text{Paar}$ für den Paarbildungskoeffizienten, $\mu_\text{Photo}$  für den Photoeffektkoeffizienten und
+$\mu_\text{Com}$ für den Comptoneffektkoeffizienten steht.
 
+\noindent
+Wenn Strahlung auf ein Gitter fällt, dann wird diese am Gitter gebeugt. Durch Interferenz wird lediglich im Winkel $\alpha$, auch Glanzwinkel genannt, Strahlung reflektiert.
+Dieser Winkel kann durch die Bragg'sche Bedingung beschrieben werden, welche gegeben ist durch
+\begin{equation}
+    2 d \, sin \alpha = n \, \lambda \, ,
+    \label{eqn:Bragg}
+\end{equation}
 
+\noindent
+wobei $\lambda$ die gebeugte Wellenlänge und $d$ die Gitterkonstanten ist. Der ganze Effekt wird Bragg'sche Reflextion genannt.
