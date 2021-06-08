@@ -1,0 +1,211 @@
+\newpage
+\section{Auswertung}
+Im diesem Kapitel wird der Versuch ausgewertet. Bei jeder durchgeführten Messung besteht eine Messunsicherheit von $\Delta \alpha \, = 0.5 °$, zusätzlich wurden alle 
+berechneten Unsicherheiten mit Python mit dem Paket uncertainties\cite{uncertainties}.
+
+\subsection{Reflextion}
+Um das Reflextionsgesetz $\alpha_1 \, = \alpha_2$ zu überprüfen werden für 7 Einfallswinkel $\alpha_1$ die Reflextionswinkel $\alpha_2$ bestimmt.
+Die Messergebnisse befinden sich in der \autoref{tab:ref}. 
+
+\begin{table}
+    \centering
+    \caption{Messwerte des Einfallswinkels $\alpha_1$ und dem Reflextionswinkel $\alpha_2$}
+    \label{tab:ref}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c}
+    \toprule
+         $\alpha_1 \, / \, ° $ & $\alpha_2 \, / \, ° $\\
+    \midrule 
+    20 & 20\\
+    30 & 30\\
+    40 & 40\\
+    45 & 45\\
+    50 & 50\\
+    60 & 60\\
+    70 & 70\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Die Messergebnisse bestätigen ziemlich gut das Reflextionsgesetz.
+
+\subsection{Brechungsgesetz}
+Das Brechungsgesetz wird an der planparallelen Platte untersucht und der Brechungsindex wird an der Winkelskala abgelesen. Die Messergebnisse befinden sich in der \autoref{tab:bre}. 
+\begin{table}
+    \centering
+    \caption{Messwerte des Einfallswinkels $\alpha$, dem Brechungswinkel $\beta$ und dem Brechungsindex $n$}
+    \label{tab:bre}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\alpha \, / \, ° $ & $\beta \, / \, °$ & Brechungsindex $n$\\
+    \midrule
+    10 & 7    & 1.42 $\pm$ 0.10\\
+    20 & 13,5 & 1.47 $\pm$ 0.05\\
+    30 & 20   & 1.462$\pm$ 0.035\\
+    40 & 25   & 1.521$\pm$ 0.028\\
+    50 & 31   & 1.487$\pm$ 0.022\\
+    60 & 35,5 & 1.491$\pm$ 0.018\\
+    70 & 39   & 1.491$\pm$ 0.018\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Aus der \autoref{} und dem Brechungsindex $n_1 = 1$ und $n_2 = n$ kann der Zusammenhang 
+\begin{equation}
+    \frac{sin \, \alpha}{sin \, \beta} = n
+\end{equation}
+
+\noindent
+daraus lässt sich dann der Brechungsindex für die 7 Messergebnisse berechnen und mitteln. Die 7 berechneten Brechungsindezes befinden sich ebenfalls in der \autoref{tab:bre}.
+Alle Werte gemittelt ergeben sich zu 
+\begin{align*}
+    n = 1.478 \pm 0.018
+\end{align*} 
+
+Zusätzlich lässt sich mit Hilfe der \autoref{} die Geschwindigkeit im Plexiglas bestimmen. Dazu wird die Gleichung nach $v_2$ umgestellt, somit ergibt sich
+\begin{equation}
+    v_2 = \frac{v_1}{n} \, .
+\end{equation}
+
+\noindent
+Wenn $n = 1.478 \pm 0.018$ und $v_1 = c = 2,9979 \cdot 10^8 \si{\meter\per\second}$ ergibt sich für die Ausbreitungsgescchwindigkeit
+\begin{align*}
+    v_2 = 2.029 \cdot 10^8 \, \pm \, 0.025 \cdot 10^8 \, \si{\meter\per\second} \, .
+\end{align*}
+
+\subsection{Strahlversatz}
+Der Strahlversatz $s$ durch einen Körper mit planparallelen Flächen ist gegeben durch die Formel
+\begin{equation}
+    s = d \, \frac{sin(\alpha - \beta)}{cos \, \beta} \, .
+\end{equation}
+
+\noindent
+Mithilfe dieser Gleichung lässt sich der Strahlversatz für jedes einzelne Messpaar berechnen. Der Strahlversatz für jedes einzelne Messpaar 
+befindet sich in der \autoref{tab:str}.
+
+\begin{table}
+    \centering
+    \caption{Messwerte des Einfallswinkels $\alpha$, dem Brechungswinkel $\beta$ und dem berechneten Strahlenversatz $s$}
+    \label{tab:str}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\alpha \, / \, ° $ & $\beta \, / \, °$ & Strahlenversatz $s  \, / \, \si{\centi\meter}$\\
+    \midrule
+    10 & 7    & 0.31  $\pm$  0.05\\
+    20 & 13,5 & 0.68  $\pm$  0.05\\
+    30 & 20   & 1.08  $\pm$  0.05\\
+    40 & 25   & 1.67  $\pm$  0.05\\
+    50 & 31   & 2.22  $\pm$  0.04\\
+    60 & 35,5 & 2.98  $\pm$  0.04\\
+    70 & 39   & 3.877 $\pm$  0.029\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Zum Vergleich kann der Winkel $\beta$ auch mit dem im vorherigen Kapitel berechneten Brechungsindex über das Gesetz von Snellius berechnet werden und zwar abgelesen
+\begin{equation}
+    \beta = arcsin\left(\frac{sin(\alpha)}{n}\right) \, .
+\end{equation}
+
+\noindent
+So ergibt sich für jedes $\alpha$ ein neues $\beta$ mit welchem der Strahlenversatz $s$ neu berechnet werden kann. Die errechneten Werte befinden sich in der \autoref{tab:beta}.
+
+\begin{table}
+    \centering
+    \caption{Messwerte des Einfallswinkels $\alpha$, dem errechneten Brechungswinkel $\beta$ und dem berechneten Strahlenversatz $s$}
+    \label{tab:beta}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\alpha \, / \, ° $ & $\beta \, / \, °$ & Strahlenversatz $s  \, / \, \si{\centi\meter}$\\
+    \midrule
+    10 & 6.7494 $\pm$ 0.0859  & 0.334 $\pm$ 0.009\\
+    20 & 13.384 $\pm$ 0.1661  & 0.693 $\pm$ 0.017\\
+    30 & 19.767 $\pm$ 0.2291  & 1.103 $\pm$ 0.025\\
+    40 & 25.783 $\pm$ 0.3437  & 1.596 $\pm$ 0.033\\
+    50 & 31.226 $\pm$ 0.4010  & 2.20  $\pm$ 0.04\\
+    60 & 35.867 $\pm$ 0.5156  & 2.95  $\pm$ 0.04\\
+    70 & 39.476 $\pm$ 0.5729  & 3.849 $\pm$ 0.034\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Prisma}
+Das Prisma besteht aus Kronglas. Dieses hat einen Brechungsindex von $n_\text{Kron} = 1,51673$ (\label{}).%Vorbereitungsaufgabe
+Die Dispersion $\delta$ ist im allgemeinen gegeben durch
+\begin{equation}
+    \delta = \left( \alpha_1 + \alpha_2 \right) - \left( \beta_1 + \beta_2 \right) =(\alpha_1+\alpha_2)-( \arcsin(\frac{\sin\left(\alpha_1)}{n_{kron}}\right) + \arcsin(\frac{\sin\left(\alpha_2)}{n_{kron}}\right) )\, ,
+\end{equation}
+
+\noindent
+wobei im allgemeinen die Winkelbeziehung $\beta_1 + \beta_2 = \gamma$ hergeleitet werden. Im Prisma gilt im allgemein $\gamma = 60°$.\\
+
+\noindent
+Bei der Messung wurde mit einem grünen Laser und einem roten Laser gemessen. Die Messergebnisse befinden sich in der \autoref{tab:las}. Mithilfe dieser und $\gamma = 60°$ lässt sich die Dispersion 
+berechnen. Die berechneten Werte für diese sind in der \autoref{tab:dis} eingetragen. Zusätzlich lässt sich noch über den Brechungsindex des Prismas die Dispersion berechnen. Diese Messergebnisse 
+befinden sich in der \autoref{tab:dis2}.
+
+\begin{table}
+    \centering
+    \caption{Messwerte des Einfallswinkels $\alpha_1$ und den Austrittswinkel $\alpha_2$, je für das grüne und rote Laserlicht}
+    \label{tab:las}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\alpha_1 \, / \, ° $ & Rot $\alpha_2 \, / \, °$ & Grün $\alpha_2 \, / \, °$\\
+    \midrule
+    30 & 81,5 & 83,5 \\
+    40 & 61   & 61,5 \\
+    50 & 50   & 50,5 \\
+    60 & 41,6 & 42,4 \\
+    70 & 36   & 36,7 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Errechnete Werte für die Dispersion vom roten und grünen Laser}
+    \label{tab:dis}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\delta_\text{Rot} \, / \, ° $ & $\delta_\text{Grün} \, / \, °$\\
+    \midrule
+    51,5 &  53,5 \\
+    41,0 &  41,5 \\
+    40,0 &  40,5 \\
+    41,6 &  42,4 \\
+    46,0 &  46,7 \\ 
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Errechnete Werte für die Dispersion vom roten und grünen Laser}
+    \label{tab:dis2}
+    \sisetup{table-format=2.1}
+    \begin{tabular}{c c c}
+    \toprule
+         $\delta_\text{Rot} \, / \, ° $ & $\delta_\text{Grün} \, / \, °$\\
+    \midrule
+    51,5 &  53,5 \\
+    41,0 &  41,5 \\
+    40,0 &  40,5 \\
+    41,6 &  42,4 \\
+    46,0 &  46,7 \\ 
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
+\subsection{Beugung am Gitter}
+
+
