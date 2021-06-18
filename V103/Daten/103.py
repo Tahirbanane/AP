@@ -131,6 +131,22 @@ print(f'Messing rund:{params_mr1,uncertainties_mr1}')
 print(f'Kupfer rund:{params_cr1,uncertainties_cr1}')
 print(f'Alu eckig:{params_as1,uncertainties_as1}')
 
+
+a_ms1 = ufloat(params_ms1[0], uncertainties_ms1[0])
+a_mr1 = ufloat(params_mr1[0], uncertainties_mr1[0])
+a_cr1 = ufloat(params_cr1[0], uncertainties_cr1[0])
+a_as1 = ufloat(params_as1[0], uncertainties_as1[0])
+
+
+print(f'Messing eckig:{747.2 * 1e-3 * 9.81/ (2*a_ms1 * 1 * 1.2 /12)}')
+print(f'Alu eckig:{550 * 1e-3* 9.81/ (2*a_as1 * 1 /12)}')
+print(f'Kupfer rund:{750* 1e-3 * 9.81/ (2*a_cr1 * np.pi * (1)**4 /64)}')
+print(f'Messing rund:{750* 1e-3 * 9.81/ (2*a_mr1 * np.pi *(1)**4 /64)}')
+
+
+
+
+
 params_ms2_r, covariance_matrix = np.polyfit(LX(X_ms2_r), D_ms2_r, deg = 1, cov = True)
 uncertainties_ms2_r = np.sqrt(np.diag(covariance_matrix))
 
@@ -170,6 +186,18 @@ print(f'Messing rund :{params_mr2_r,uncertainties_mr2_r}')
 print(f'Kupfer rund :{params_cr2_r,uncertainties_cr2_r}')
 print(f'Alu eckig :{params_as2_r,uncertainties_as2_r}')
 
+a_ms2_r = ufloat(params_ms2_r[0], uncertainties_ms2_r[0])
+a_mr2_r = ufloat(params_mr2_r[0], uncertainties_mr2_r[0])
+a_cr2_r = ufloat(params_cr2_r[0], uncertainties_cr2_r[0])
+a_as2_r = ufloat(params_as2_r[0], uncertainties_as2_r[0])
+
+
+print(f'Messing eckig:{ 1238.6 * 1e-3 * 9.81/ (48*a_ms2_r * 1 * 1.2 /12)}')
+print(f'Alu eckig:{747.2 * 1e-3* 9.81/ (48*a_as2_r * 1 /12)}')
+print(f'Kupfer rund:{747.2* 1e-3 * 9.81/ (48*a_cr2_r * np.pi * (1)**4 /64)}')
+print(f'Messing rund:{1238.6* 1e-3 * 9.81/ (48*a_mr2_r * np.pi *(1)**4 /64)}')
+
+
 
 params_ms2_l, covariance_matrix = np.polyfit(LX(X_ms2_l), D_ms2_l, deg = 1, cov = True)
 uncertainties_ms2_l = np.sqrt(np.diag(covariance_matrix))
@@ -203,7 +231,6 @@ plt.ylabel(r'$ D(x)  \, in \, m$')
 plt.legend()
 plt.savefig('AS2_l.png')
 plt.close()
-
 
 print (f'\n -----------------------------------Beidseitig eingespannt - links betrachtet-----------------------------------')
 print(f'Messing eckig:{params_ms2_l,uncertainties_ms2_l}')

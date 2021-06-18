@@ -95,10 +95,12 @@ print(s1,s2,s3,s4,s5,s6,s7)
 
 print(f'\n -----------------------------------Prisma-----------------------------------')
 
+
+
 #Messwerte #Fehlerergänzen
 a1 = np.array([30,40,50,60,70])
-r  = np.array([81.5, 61, 50, 41.6, 36]) 
-g  = np.array([83.5, 61.5, 50.5, 42.4, 36.7])   
+r  = np.array([ufloat(81.5,0.5), ufloat(61,0.5), ufloat(50,0.5), ufloat(41.6,0.5), ufloat(36,0.5)]) 
+g  = np.array([ufloat(83.5,0.5), ufloat(61.5,0.5), ufloat(50.5,0.5), ufloat(42.4,0.5), ufloat(36.7,0.5)])   
 
 print(f'------------------rot------------------')
 for i in range(5):
@@ -109,12 +111,14 @@ for i in range(5):
     print(a1[i] + g[i] - 60)
 
 
-print(f'\n ----------------------mit Brechungsindex----------------------')
+print(f'\n ----------------------mit Brechungsindex----------------------') #np.array([ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5) ])
 
 nKron = 1.51673
-b1 = np.zeros(5)
-b2r = np.zeros(5)
-b2g = np.zeros(5)
+fehler = [0.5,0.5,0.5,0.5,0.5]
+zero = np.zeros(5)
+b1 = unp.uarray(zero, fehler)
+b2r = unp.uarray(zero, fehler)
+b2g = unp.uarray(zero, fehler)
 
 for i in range(5):
     b1[i] = np.arcsin(np.sin(np.deg2rad(a1[i])/nKron))
@@ -128,3 +132,4 @@ for i in range(5):
 print(np.rad2deg(b1))
 print(np.rad2deg(b2r))
 print(np.rad2deg(b2g))
+
