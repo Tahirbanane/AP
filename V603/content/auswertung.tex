@@ -3,7 +3,7 @@
 \subsection{Emissionsspektrum}
 \label{sub:emi}
 \noindent
-Aus den Messdaten aus Tabelle (\ref{tab:emi})lässt sich das Emissionsspektrum einer Kupferröntgenröhre in (\ref{fig:emi}) graphisch darstellen.
+Aus den Messdaten aus Tabelle \ref{tab:emi} lässt sich das Emissionsspektrum der verwendeten Kupferröntgenröhre in \ref{fig:emi} graphisch darstellen.
 
 \noindent
 Zu erkennen sind die ermittelten Peaks, die die $\text{K}_\alpha$ und $\text{K}_\beta$ Linie darstellen, sowie der orange makierte Bremsberg.
@@ -11,12 +11,12 @@ Zu erkennen sind die ermittelten Peaks, die die $\text{K}_\alpha$ und $\text{K}_
 \begin{figure}
     \centering
        \includegraphics[height=9cm]{daten/emissionsspektrum.pdf}
-       \caption{Emissionsspektrum einer Cu-Röntgenröhre.}
+       \caption{Emissionsspektrum der verwendeten Cu-Röntgenröhre.}
        \label{fig:emi}
 \end{figure}
 
 \noindent
-Mittels Python lassen sich die Winkel zu den Peaks bestimen, woraus die Energie nach
+Mittels der von scipy \cite{scipy} importierten Funktion find.peaks lassen sich mit Python die Winkel zu den Peaks bestimen, woraus die Energie nach
 
 \begin{equation}
     E = \frac{h \, c}{2 \, d_{LiF} \, \text{sin}\, (\theta)}
@@ -32,7 +32,7 @@ berechnet wird.
 
 \newpage
 \subsection{Bestimmung der Transmission}
-Aus den gegebenen Zählraten $N$ aus Tabelle (\ref{tab:l_c}) lässt sich die Transmission $T$ mit
+Aus den gegebenen Zählraten $N$ aus Tabelle \ref{tab:l_c} lässt sich die Transmission $T$ mit
 
 \begin{equation}
 I = \frac{N}{1 - \tau \, N}
@@ -51,12 +51,12 @@ T = \frac{I_{Al}}{I_O}
 bestimmen.
 
 \noindent
-In Abbildung (\ref{fig:trans}) ist die Transmission mit dem Fehler $\Delta N = \sqrt{N}$ in Abhängigkeit von der Wellenlänge $\lambda$ aufgetragen.
+In Abbildung \ref{fig:trans} ist die Transmission mit dem Fehler $\Delta N = \sqrt{N}$ in Abhängigkeit von der Wellenlänge $\lambda$ aufgetragen.
 
 \begin{figure}
     \centering
        \includegraphics[height=9cm]{daten/transmission.pdf}
-       \caption{Transmission.}
+       \caption{Transmission als Funktion der Wellenlänge.}
        \label{fig:trans}
 \end{figure}
 
@@ -68,7 +68,7 @@ f(x) = m \cdot x + b
 \end{equation*}
 
 \noindent
-lässt sich über polyfit bestimmen, sodass folgende Parameter ermittelt werden:
+lässt sich über die numpy \cite{numpy} Funktion polyfit bestimmen, sodass über Python folgende Parameter ermittelt werden:
 
 \begin{align*}
     m &= (-1.519 \pm 0.024)\cdot 10^{10} \\
@@ -85,7 +85,7 @@ Aus den gemessenen Impulsen
 \end{align*}
 
 \noindent
-werden die Transmissionen $T_1$ und $T_2$ mit Gleichung (\ref{eqn:trans}) bestimmt. So ergibt sich
+werden die Transmissionen $T_1$ und $T_2$ mit (\ref{eqn:trans}) bestimmt. So ergibt sich
 
 \begin{align*}
     T_1 &= 0.432 \\
