@@ -1,10 +1,11 @@
 all: build/main.pdf
 
 # hier Python-Skripte:
-build/V504.pdf: matplotlibrc header-matplotlib.tex | build
+build/V702.pdf: Daten/V203.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python Daten/V203.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/V504.pdf
+build/main.pdf: build/V702.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
