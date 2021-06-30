@@ -27,6 +27,7 @@ b = ufloat(params[1], errors[1])
 
 x_plot = np.linspace(1/Tl[0], 1/Tl[-1], 1000)
 
+plt.figure()
 plt.plot(1/Tl, np.log(p/p0), 'x', label ='Messwerte')
 plt.plot(x_plot, params[0] * x_plot + params[1], label ='Regressionsgerade')
 
@@ -34,7 +35,7 @@ plt.xlabel(r'$\sfrac{1}{T_g} \mathbin{/} \si{\kelvin\tothe{-1}}$')
 plt.ylabel(r'$\ln \left ( \sfrac{p}{p_0} \right )$')
 
 plt.legend()
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.tight_layout()
 plt.savefig('Daten/tiefdruck.pdf')
 
 L = - m * R #heat of evaporation 
@@ -56,7 +57,6 @@ p, T= np.genfromtxt('Daten/hochdruck.txt', unpack = True)
 
 p *= 1e5 #p in SI
 T += 273.15
-R = 8.31446261815324 #general gas constant
 
 params, covariance_matrix = np.polyfit(T, p, deg=3, cov=True)
 errors = np.sqrt(np.diag(covariance_matrix))
@@ -68,6 +68,7 @@ d = ufloat(params[3], errors[3])
 
 x_plot = np.linspace(T[0], T[-1], 1000)
 
+plt.figure()
 plt.plot(T, p, '.', label ='Messwerte')
 plt.plot(x_plot, params[0] * x_plot**3 + params[1] * x_plot**2 + params[2] * x_plot + params[3], label ='Regressionsgerade')
 
@@ -75,7 +76,7 @@ plt.xlabel(r'$T \mathbin{/} \si{\kelvin}$')
 plt.ylabel(r'$p \mathbin{/} \si{\pascal}$')
 
 plt.legend()
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.tight_layout()
 plt.savefig('Daten/hochdruck.pdf')
 
 
@@ -84,6 +85,22 @@ print(f'Der Parameter b beim Hochdruck ist {b:.2f}')
 print(f'Der Parameter c beim Hochdruck ist {c:.2f}')
 print(f'Der Parameter d beim Hochdruck ist {d:.2f}')
 
+a = 0.9
 
+Lplus = R * T / (2* p) + np.sqrt(R**2 * T**2 / (4*p**2) - a / p)*(5.79 * T**2 + 4599.58 * T + 923918.92) 
+Lminus = R * T / (2* p) - np.sqrt(R**2 * T**2 / (4*p**2) - a / p)*(5.79 * T**2 + 4599.58 * T + 923918.92) 
+x_plot = np.linspace(T[0], T[-1], 1000)
 
+plt.figure()
+plt.plot(T, Lplus, '.', label = r'$L_+$')
+plt.plot(T, Lminus, '.', label = r'$L_-$')
 
+plt.xlabel(r'$T \mathbin{/} \si{\kelvin}$')
+plt.ylabel(r'$L \mathbin{/} \si{\joule\per\mole}$')
+
+plt.legend()
+plt.tight_layout()
+plt.savefig('Daten/zeitabhaengigkeit.pdf')
+
+print(f'Lminus {Lminus}')
+print(f'Lplus {Lplus}')
