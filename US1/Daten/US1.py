@@ -35,7 +35,7 @@ plt.figure()
 plt.plot(d, A, 'kx', label = "Messwerte")
 xplot = np.linspace(d[2],d[8],1000)
 plt.plot(xplot,exp(xplot,*param),'g', label = "Ausgleichsfunktion")
-plt.xlabel(r'$d \, / \, \mathrm{mm} $')
+plt.xlabel(r'$2 \cdot d \, / \, \mathrm{mm} $')
 plt.ylabel(r'$I \, / \, \mathrm{V}$')
 plt.legend()
 plt.tight_layout()
@@ -44,3 +44,12 @@ plt.close()
 
 print(f"schallgeschwindigkeit c = {params[0]}")
 print(param)
+
+d_iev = 0.5* 2730 * t /1000
+print(d_iev)
+
+d/=2
+d_rel = abs(d-d_iev)/d
+print(f"relative abweichung d = {d_rel}")
+c_rel = abs(params[0] - 2.730)/2.730
+print(f"c_rel = {c_rel}")
