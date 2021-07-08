@@ -99,8 +99,8 @@ print(f'\n -----------------------------------Prisma----------------------------
 
 #Messwerte #Fehlerergänzen
 a1 = np.array([30,40,50,60,70])
-r  = np.array([ufloat(81.5,0.5), ufloat(61,0.5), ufloat(50,0.5), ufloat(41.6,0.5), ufloat(36,0.5)]) 
-g  = np.array([ufloat(83.5,0.5), ufloat(61.5,0.5), ufloat(50.5,0.5), ufloat(42.4,0.5), ufloat(36.7,0.5)])   
+r  = np.array([81.5,61, 50,41.6, 36]) 
+g  = np.array([83.5,61.5, 50.5,42.4,36.7])   
 
 print(f'------------------rot------------------')
 for i in range(5):
@@ -114,22 +114,181 @@ for i in range(5):
 print(f'\n ----------------------mit Brechungsindex----------------------') #np.array([ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5),ufloat(0,0.5) ])
 
 nKron = 1.51673
-fehler = [0.5,0.5,0.5,0.5,0.5]
-zero = np.zeros(5)
-b1 = unp.uarray(zero, fehler)
-b2r = unp.uarray(zero, fehler)
-b2g = unp.uarray(zero, fehler)
+n = nKron
+#zero = np.zeros(5)
+#b1 =  np.array(zero)
+#b2r = np.array(zero)
+#b2g = np.array(zero)
+#
+#for i in range(5):
+#    b1[i] = np.arcsin(np.sin(np.deg2rad(a1[i])/nKron))
+#
+#for i in range(5):
+#    b2r[i] = np.arcsin(np.sin(np.deg2rad(r[i])/nKron))
+#
+#for i in range(5):
+#    b2g[i] = np.arcsin(np.sin(np.deg2rad(g[i])/nKron))
+#
+#b1 = (np.rad2deg(b1))
+#b2r = (np.rad2deg(b2r))
+#b2g = (np.rad2deg(b2g))
+#
+#dr = np.array(zero)
+#dg = np.array(zero)
+#
+#for i in range(5):
+#    dr[i] = a1[i] + r[i] - b1[i] + b2r[i]
+#
+#for i in range(5):
+#    dg[i] = a1[i] + g[i] - b1[i] + b2g[i]
+#
+#print(dr)
+#print(dg)
 
-for i in range(5):
-    b1[i] = np.arcsin(np.sin(np.deg2rad(a1[i])/nKron))
+alpha1 = a1
+alpha1 = np.array(alpha1)
+alpha1 = alpha1 * 2 * np.pi / 360
 
-for i in range(5):
-    b2r[i] = np.arcsin(np.sin(np.deg2rad(r[i])/nKron))
+alpha2red = r
+alpha2red = np.array(alpha2red)
+alpha2red = alpha2red * 2 * np.pi / 360
 
-for i in range(5):
-    b2g[i] = np.arcsin(np.sin(np.deg2rad(g[i])/nKron))
+alpha2green = g
+alpha2green = np.array(alpha2green)
+alpha2green = alpha2green * 2 * np.pi / 360
 
-print(np.rad2deg(b1))
-print(np.rad2deg(b2r))
-print(np.rad2deg(b2g))
+# Berechnung der beta
+beta1 = np.arcsin(np.sin(alpha1) / n)
+beta2red = np.arcsin(np.sin(alpha2red) / n)
+beta2green = np.arcsin(np.sin(alpha2green) / n)
 
+# berechnung von delta
+delta_red = (alpha1 + alpha2red) - beta1 - beta2red
+delta_green = (alpha1 + alpha2green) - beta1 - beta2green
+
+# Rückkonvertierung nach Grad
+conv = 360 / (2 * np.pi) # conversion rad -> deg
+alpha1 = alpha1 * conv
+alpha2red = alpha2red * conv
+alpha2green = alpha2green * conv
+beta1 = beta1 * conv
+beta2red = beta2red * conv
+beta2green = beta2green * conv
+delta_red = delta_red * conv
+delta_green = delta_green * conv
+
+print(delta_red)
+print(delta_green)
+
+print(f'\n -----------------------------------Gitter-----------------------------------')
+
+conv = 2 * np.pi / 360 # conversion deg->rad
+
+# 100 Linien/mm
+d = 10 * 10**(-6) # gitterkonstante in SI
+
+gruen1 = [3.1, 6.3, 9.2, 12.5, 15.9]  
+gruen2 = [3.1, 6,  9.4, 12.4, 16.5]
+kgruen = np.arange(1, 6)
+gruen = np.append(gruen1, gruen2)
+kgruen = np.append(kgruen, kgruen)
+
+rot1 = [3.5, 7.2, 11, 14.8, 18.7]  
+rot2 = [3.9, 7.5, 11.2, 15.1, 18.9]
+krot = np.arange(1, 6)
+rot = np.append(rot1, rot2)
+krot = np.append(krot, krot)
+
+# conv nach radiants
+rot = rot * conv
+gruen = gruen * conv
+
+lambda_rot = d * np.divide(np.sin(rot), krot)
+lambda_gruen = d * np.divide(np.sin(gruen), kgruen)
+
+lambda_rot_std = np.std(lambda_rot)
+lambda_gruen_std = np.std(lambda_gruen)
+lambda_rot = np.mean(lambda_rot)
+lambda_gruen = np.mean(lambda_gruen)
+
+print(f'100 Linien/mm')
+print(f'lambda_rot = {lambda_rot} \pm {lambda_rot_std}')
+print(f'lambda_gruen = {lambda_gruen} \pm {lambda_gruen_std}')
+
+lambda_rot_100 = ufloat(lambda_rot, lambda_rot_std)
+lambda_gruen_100 = ufloat(lambda_gruen, lambda_gruen_std)
+
+# 300 Linien/mm
+d = 3.3 * 10**(-6) # gitterkonstante in SI
+
+gruen1 = [9.3, 18.8, 28.5]
+gruen2 = [9, 18.5  , 28.5]
+kgruen = np.arange(1, 4)
+gruen = np.append(gruen1, gruen2)
+kgruen = np.append(kgruen, kgruen)
+
+rot1 = [10.8, 22 ,34.2]
+rot2 = [10.9, 22.25, 35]
+krot = np.arange(1, 4)
+rot = np.append(rot1, rot2)
+krot = np.append(krot, krot)
+
+rot = rot * conv
+gruen = gruen * conv
+
+lambda_rot = d * np.divide(np.sin(rot), krot)
+lambda_gruen = d * np.divide(np.sin(gruen), kgruen)
+
+lambda_rot_std = np.std(lambda_rot)
+lambda_gruen_std = np.std(lambda_gruen)
+lambda_rot = np.mean(lambda_rot)
+lambda_gruen = np.mean(lambda_gruen)
+
+print(f'300 Linien/mm')
+print(f'lambda_rot = {lambda_rot} \pm {lambda_rot_std}')
+print(f'lambda_gruen = {lambda_gruen} \pm {lambda_gruen_std}')
+
+lambda_rot_300 = ufloat(lambda_rot, lambda_rot_std)
+lambda_gruen_300 = ufloat(lambda_gruen, lambda_gruen_std)
+
+# 600 Linien/mm
+d = 1.67 * 10**(-6) # gitterkonstante in SI
+
+gruen1 = [19]
+gruen2 = [19]
+kgruen = np.arange(1, 2)
+gruen = np.append(gruen1, gruen2)
+kgruen = np.append(kgruen, kgruen)
+
+rot1 = [22.5]
+rot2 = [23]
+krot = np.arange(1, 2)
+rot = np.append(rot1, rot2)
+krot = np.append(krot, krot)
+
+rot = rot * conv
+gruen = gruen * conv
+
+lambda_rot = d * np.divide(np.sin(rot), krot)
+lambda_gruen = d * np.divide(np.sin(gruen), kgruen)
+
+
+lambda_rot_std = np.std(lambda_rot)
+lambda_gruen_std = np.std(lambda_gruen)
+lambda_rot = np.mean(lambda_rot)
+lambda_gruen = np.mean(lambda_gruen)
+
+print(f'600 Linien/mm')
+print(f'lambda_rot = {lambda_rot} \pm {lambda_rot_std}')
+print(f'lambda_gruen = {lambda_gruen} \pm {lambda_gruen_std}')
+
+lambda_rot_600 = ufloat(lambda_rot, lambda_rot_std)
+lambda_gruen_600 = ufloat(lambda_gruen, lambda_gruen_std)
+
+# calculate overall average
+lambda_rot_overall = (lambda_rot_100 + lambda_rot_300 + lambda_rot_600) / 3
+lambda_gruen_overall = (lambda_gruen_100 + lambda_gruen_300 + lambda_gruen_600) / 3
+
+print(f'Overall average')
+print(f'lambda_rot = {lambda_rot_overall}')
+print(f'lambda_gruen = {lambda_gruen_overall}')
