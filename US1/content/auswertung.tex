@@ -1,5 +1,6 @@
 \newpage
 \section{Auswertung}
+\label{sec:Auswertung}
 \subsection{Der Acrylquader}
 Die aufgenommenen Daten des Acrylquaders befinden sich in Tabelle \ref{tab:1}.
 \begin{table}
@@ -35,7 +36,13 @@ da die Schallwellen bereits an Störung Nr. 11 reflektiert werden. \\
 \noindent
 Die mit der Schiebelehre gemessenen Abstände werden nun mit dem IEV überprüft.
 Dabei wird eine Schallgeschwindigkeit in Acryl von $c_{lit} = 2730 \si[per-mode=fraction]{\meter\per\second}$ angenommen.
-Die Abstände werden nach Formel () bestimmt und sind in Tabelle \ref{tab:2} aufgeführt. %formel s=0.5ct wk,suzjgvdhcadiufzjsdiefuwghjddfghjufzgjhuefgzjuhzgvm
+Die Abstände werden mit dem Zusammenhang
+\begin{equation}
+    s = \frac{1}{2} \cdot c t
+    \label{eqn:position_fehlstelle}
+\end{equation}
+
+bestimmt und sind in Tabelle \ref{tab:2} aufgeführt.
 
 \begin{table}
     \centering
@@ -64,7 +71,7 @@ Die Abstände werden nach Formel () bestimmt und sind in Tabelle \ref{tab:2} auf
 \textbf{Schallgeschwindigkeit}
 
 \noindent
-Die Schallgeschwindigkeit in Acryl kann mit Formel ()%formel s=0.5ct kjehfeauhfaghfjsegrykdjhdruwzefgchbsjduhdfjksawefhuzfgsbchjawidufzgjvhelikjggh
+Die Schallgeschwindigkeit in Acryl kann mit Formel (\ref{eqn:position_fehlstelle})%formel s=0.5ct kjehfeauhfaghfjsegrykdjhdruwzefgchbsjduhdfjksawefhuzfgsbchjawidufzgjvhelikjggh
 bestimmt werden.
 Dazu werden die Messwerte aus Tabelle \ref{tab:1} verwendet.
 Wird der doppelte Abstand $d$, die Strecke die der Ultraschall tatsächlich zurücklegt,
@@ -95,7 +102,7 @@ Die Ausgleichsgerade hat dabei die Funktionsvorschrift:
 \textbf{Dämpfungskonstante}
 
 \noindent
-Die Dämpfungskonstante $\alpha$ aus Formel () lässt sich bestimmen, indem die Messwerte für $I$ und $d$ aus Tabelle \ref{tab:1} an eine Exponentialfunktion gefittet werden. %Formel I(t)= e^-ax bla bla liehvfkesjrhgkaervskejbkjb
+Die Dämpfungskonstante $\alpha$ aus Formel (\ref{eqn:daempfung}) lässt sich bestimmen, indem die Messwerte für $I$ und $d$ aus Tabelle \ref{tab:1} an eine Exponentialfunktion gefittet werden. %Formel I(t)= e^-ax bla bla liehvfkesjrhgkaervskejbkjb
 Mit Python kann eine e-Funktion mit passenden Parametern mit der aus scipy \cite{scipy} importierten Funktion curvefit bestimmt werden.
 
 \begin{figure}
@@ -119,7 +126,7 @@ I(d) &= 2.167 \, \si{\volt} \cdot e^{-0.0175 \, \si[per-mode=fraction]{\per\mill
 Bei der Untersuchung des Augenmodells wurden 3 Peaks aufgenommen.
 Der erste und zweite Peak entstehen beim eintreffen und ausfallen der Linse, der dritte durch Reflexion an der Retina.
 Unter Berücksichtigung der Schallgeschwindigkeit in der Linse ($c_L = 2500 \si[per-mode=fraction]{\meter\per\second}$) und in der Glaskörperflüssigkeit
-($c_{GK} = 1410 \si[per-mode=fraction]{\meter\per\second}$) kann aus der Laufzeit mit () die Strecke berechnet werden. %formel s=0.5ct xxxxxxkurfhaeolrufhefhekarguhkeugeksghrkgthrkugtrghrttkhjhgk
+($c_{GK} = 1410 \si[per-mode=fraction]{\meter\per\second}$) kann aus der Laufzeit mit (\ref{eqn:position_fehlstelle}) die Strecke berechnet werden. %formel s=0.5ct xxxxxxkurfhaeolrufhefhekarguhkeugeksghrkgthrkugtrghrttkhjhgk
 In Tabelle \ref{tab:auge} befinden sich die Messwerte und die daraus resultierenden Maße des Auges.
 
 \begin{table}
